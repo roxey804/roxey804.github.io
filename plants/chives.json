@@ -1,0 +1,138 @@
+{
+  "id": "chives",
+  "commonName": "Chives",
+  "latinName": "Allium schoenoprasum",
+  "family": "Amaryllidaceae",
+  "category": "herb",
+  "description": "A hardy perennial herb that comes back year after year with zero fuss. The mild onion-flavoured leaves are brilliant snipped over eggs, salads, and potatoes. Pretty purple pom-pom flowers in summer are edible too.",
+  "images": {
+    "plant": "images/chives/plant.jpg",
+    "seed": "images/chives/seed.jpg",
+    "flower": "images/chives/flower.jpg",
+    "fruit": null,
+    "seedling": null
+  },
+  "characteristics": {
+    "matureHeight": "20–30cm",
+    "matureSpread": "15–20cm",
+    "hardiness": "Fully hardy (survives UK winters)",
+    "lifespan": "Perennial",
+    "sunRequirement": "Full sun to partial shade (4+ hours)",
+    "waterNeeds": "Moderate — tolerates some dryness",
+    "soilType": "Any reasonable potting compost",
+    "containerSize": "2L+ pot"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "sowOutdoorsWeeks": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "hardenOffWeeks": [],
+    "plantOutWeeks": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "harvestWeeks": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "floweringWeeks": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": "Sow seeds 1cm deep in a small pot on a windowsill. They're slow to germinate (14–21 days). Easier to buy a plant from a garden centre.",
+    "sowOutdoors": "Sow directly from April. Or simply buy a pot of chives from a supermarket and repot it into a larger container — it'll thrive.",
+    "hardenOff": null,
+    "plantOut": "Plant out anytime from April onwards. Fully hardy — no frost protection needed.",
+    "watering": "Water when the compost feels dry. Chives are quite drought-tolerant once established.",
+    "feeding": "Feed once a month with a balanced liquid fertiliser during the growing season.",
+    "harvest": "Snip leaves with scissors about 3cm above soil level. They'll regrow. Cut regularly to keep fresh growth coming.",
+    "overwintering": "Leave in the pot — chives die back in winter and return in early spring. No protection needed."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Small, black, angular seeds. Slow to germinate (2–3 weeks) but straightforward.",
+    "germinationDays": "14–21 days at 15–20°C",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": true,
+    "divisionMethod": "In spring or autumn, tip the clump out of its pot, pull apart into smaller sections (each with roots), and repot. Easy way to multiply your plants."
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "Optional. The purple flowers are pretty and edible. Removing them redirects energy to leaf growth, but it's not essential."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Let the purple flower heads dry on the plant until they turn brown. Cut and shake into a paper bag. Seeds are small and black.",
+    "seedPodDescription": "Small papery capsules form inside the dried flower head, each containing tiny black seeds."
+  },
+  "companionPlants": [
+    "bush-tomato",
+    "lettuce",
+    "basil"
+  ],
+  "commonProblems": [
+    "Rust — orange spots on leaves. Remove affected leaves and improve air circulation.",
+    "Overcrowding — clumps get congested after 2–3 years. Divide and repot.",
+    "Aphids — rarely serious. Wash off with water."
+  ],
+  "funFact": "Bunches of chives were hung in doorways in medieval Europe to ward off evil spirits and disease. They're also one of the 'fines herbes' of French cuisine."
+}

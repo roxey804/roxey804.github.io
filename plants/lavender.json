@@ -1,0 +1,130 @@
+{
+  "id": "lavender",
+  "commonName": "English Lavender",
+  "latinName": "Lavandula angustifolia",
+  "family": "Lamiaceae",
+  "category": "flower",
+  "description": "A beautiful, fragrant, evergreen perennial that thrives in pots and loves the well-drained conditions that containers provide. The purple flower spikes appear in summer and are absolute magnets for bees. Low maintenance once established.",
+  "images": {
+    "plant": "images/lavender/plant.jpg",
+    "seed": "images/lavender/seed.jpg",
+    "flower": "images/lavender/flower.jpg",
+    "fruit": null,
+    "seedling": null
+  },
+  "characteristics": {
+    "matureHeight": "30–60cm",
+    "matureSpread": "30–45cm",
+    "hardiness": "Fully hardy",
+    "lifespan": "Perennial (5–15 years)",
+    "sunRequirement": "Full sun (6+ hours)",
+    "waterNeeds": "Low — drought-tolerant once established",
+    "soilType": "Well-drained, gritty compost (add perlite or grit)",
+    "containerSize": "5L+ pot with excellent drainage"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [],
+    "sowOutdoorsWeeks": [],
+    "hardenOffWeeks": [],
+    "plantOutWeeks": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "harvestWeeks": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "floweringWeeks": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": null,
+    "sowOutdoors": null,
+    "hardenOff": null,
+    "plantOut": "Buy a plant and pot it into a well-drained container. Mix 30% perlite or horticultural grit into the compost. Ensure the pot has drainage holes.",
+    "watering": "Water sparingly once established — lavender hates wet roots. Water only when compost is dry. In winter, barely water at all.",
+    "feeding": "Very light feeder. A single spring application of slow-release fertiliser is plenty. Don't overfeed — it makes growth leggy.",
+    "harvest": "Cut flower stems when the buds are just starting to open for the strongest fragrance. Dry by hanging upside down in bunches.",
+    "overwintering": "Hardy — leave outdoors. Protect from waterlogging in winter by raising pot on feet and moving to a sheltered spot if very wet."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Small, dark brown seeds. Very slow and unreliable from seed (weeks to germinate). Much easier from cuttings or buying plants.",
+    "germinationDays": "14–28 days at 15–20°C (erratic)",
+    "fromCuttings": true,
+    "cuttingsMethod": "Take 10cm semi-ripe cuttings in late summer. Strip lower leaves, dip in rooting powder, push into gritty compost. Keep moist. Roots in 4–6 weeks.",
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": true,
+    "notes": "After flowering, trim off spent flower stalks and lightly shape the plant. In late August, give it a light haircut — but never cut into old wood (the brown stems), as lavender won't regrow from them."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Let some flower heads dry on the plant. Once fully brown and dry, rub between your hands over a bowl to release the tiny seeds.",
+    "seedPodDescription": "Tiny nutlets hidden inside the calyx (the small tube that held the flower)."
+  },
+  "companionPlants": [
+    "nasturtium",
+    "chives"
+  ],
+  "commonProblems": [
+    "Root rot — from overwatering or poor drainage. Ensure gritty compost and good drainage holes.",
+    "Woody/leggy growth — prune annually after flowering. Never cut into old wood.",
+    "Frost damage on wet roots — raise pots off the ground in winter to prevent waterlogging."
+  ],
+  "funFact": "The name lavender comes from the Latin 'lavare' meaning 'to wash' — the Romans used it to scent their baths. It's been used for over 2,500 years for its calming fragrance."
+}

@@ -1,0 +1,133 @@
+{
+  "id": "basil",
+  "commonName": "Sweet Basil",
+  "latinName": "Ocimum basilicum",
+  "family": "Lamiaceae",
+  "category": "herb",
+  "description": "The classic Italian herb with bright green, aromatic leaves. Basil loves warmth and sun, making a south-facing balcony ideal. Pinch off the growing tips regularly to keep it bushy and productive.",
+  "images": {
+    "plant": "images/basil/plant.jpg",
+    "seed": "images/basil/seed.jpg",
+    "flower": "images/basil/flower.jpg",
+    "fruit": null,
+    "seedling": "images/basil/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "20–45cm",
+    "matureSpread": "15–30cm",
+    "hardiness": "Tender (dislikes cold and frost)",
+    "lifespan": "Annual",
+    "sunRequirement": "Full sun (6+ hours)",
+    "waterNeeds": "Moderate — keep moist but not waterlogged",
+    "soilType": "Rich, well-drained potting compost",
+    "containerSize": "2L+ pot (or windowsill pot)"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "sowOutdoorsWeeks": [],
+    "hardenOffWeeks": [
+      19,
+      20,
+      21
+    ],
+    "plantOutWeeks": [
+      21,
+      22,
+      23
+    ],
+    "harvestWeeks": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "floweringWeeks": [
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "bringInsideWeek": 38,
+    "successionSowWeeks": [
+      14,
+      18,
+      22,
+      26
+    ],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Scatter seeds on the surface of moist compost — don't cover them, they need light to germinate. Place on a warm, sunny windowsill (18–25°C). Sprouts in 5–10 days.",
+    "sowOutdoors": null,
+    "hardenOff": "From late May, gradually expose to outdoor conditions over a week. Basil is very sensitive to cold — don't rush this step.",
+    "plantOut": "After last frost, place in a warm, sheltered spot on your balcony. Basil hates cold wind.",
+    "watering": "Water in the morning, at the base. Keep compost moist but never waterlogged — basil hates wet roots.",
+    "feeding": "Feed every 2 weeks with a balanced liquid fertiliser during summer.",
+    "harvest": "Pinch off leaves from the top — this encourages the plant to branch out and produce more. Never strip more than a third at once.",
+    "overwintering": "Annual — will die at first frost. Take a final harvest and compost the plant."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Tiny black seeds, about 1mm. When wet, they develop a gel coating. Very easy to grow from seed.",
+    "germinationDays": "5–10 days at 18–25°C (needs light)",
+    "fromCuttings": true,
+    "cuttingsMethod": "Cut a 10cm stem just below a leaf node, remove lower leaves, and place in a glass of water. Roots appear in 5–7 days. Plant into compost once roots are 3cm long.",
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": true,
+    "notes": "Pinch off flower spikes as soon as they appear — this keeps the plant producing leaves instead of going to seed. Once basil flowers, the leaves lose flavour."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Let one plant flower and set seed at the end of the season. When the flower spikes turn brown, cut them off and shake seeds into a paper bag. Dry thoroughly.",
+    "seedPodDescription": "Tiny black seeds form inside small pods along the flower spike."
+  },
+  "companionPlants": [
+    "bush-tomato",
+    "chives",
+    "lettuce"
+  ],
+  "commonProblems": [
+    "Bolting — flowers too quickly in heat or stress. Pinch out flower buds promptly.",
+    "Cold damage — leaves turn black in cold. Keep above 10°C at all times.",
+    "Overwatering — causes root rot. Let soil surface dry slightly between waterings.",
+    "Slugs — protect young seedlings with copper tape around pots."
+  ],
+  "funFact": "In Italy, placing a pot of basil on your balcony was traditionally a signal that you were ready for a suitor to come courting!"
+}

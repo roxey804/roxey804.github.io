@@ -1,0 +1,124 @@
+{
+  "id": "mint",
+  "commonName": "Mint",
+  "latinName": "Mentha spicata",
+  "family": "Lamiaceae",
+  "category": "herb",
+  "description": "Almost impossible to kill! Mint is incredibly vigorous and perfect for beginners. Keep it in its own pot — it spreads aggressively and will take over anything it's planted with. Great for tea, cocktails, and cooking.",
+  "images": {
+    "plant": "images/mint/plant.jpg",
+    "seed": "images/mint/seed.jpg",
+    "flower": "images/mint/flower.jpg",
+    "fruit": null,
+    "seedling": null
+  },
+  "characteristics": {
+    "matureHeight": "30–60cm",
+    "matureSpread": "Indefinite (spreads by runners)",
+    "hardiness": "Fully hardy",
+    "lifespan": "Perennial",
+    "sunRequirement": "Partial shade to full sun (3+ hours)",
+    "waterNeeds": "Regular — likes moist soil",
+    "soilType": "Any potting compost",
+    "containerSize": "5L+ pot (keep it contained!)"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [],
+    "sowOutdoorsWeeks": [],
+    "hardenOffWeeks": [],
+    "plantOutWeeks": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "harvestWeeks": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "floweringWeeks": [
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": null,
+    "sowOutdoors": null,
+    "hardenOff": null,
+    "plantOut": "Buy a mint plant (supermarket ones work fine!) and repot into a 5L+ container. IMPORTANT: Always keep mint in its own pot — it will strangle other plants.",
+    "watering": "Keep moist. Mint is one of the few herbs that likes damp soil. Water daily in hot weather.",
+    "feeding": "Feed monthly with a balanced liquid fertiliser during summer.",
+    "harvest": "Pick leaves and stems as needed. Regular harvesting keeps the plant bushy and productive. Cut back hard in midsummer if it gets leggy.",
+    "overwintering": "Leave outdoors — fully hardy. It dies back in winter and bounces back in spring. Repot every 2 years in fresh compost."
+  },
+  "propagation": {
+    "fromSeed": false,
+    "seedDescription": "Mint can be grown from seed but it's unreliable — seedlings are often weak and variable. Buy plants instead.",
+    "germinationDays": null,
+    "fromCuttings": true,
+    "cuttingsMethod": "Cut a 10cm stem, strip lower leaves, and place in water. Roots appear in about a week. Plant into compost. Ridiculously easy.",
+    "fromDivision": true,
+    "divisionMethod": "In spring, tip out the root ball, cut into sections with a sharp knife, and repot each piece. Each section will grow into a new plant."
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "Not essential. Cutting back before or during flowering encourages fresh leafy growth. The flowers attract bees, so leaving some is beneficial."
+  },
+  "seedSaving": {
+    "canSaveSeeds": false,
+    "method": null,
+    "seedPodDescription": "Mint rarely sets viable seed. Propagate by cuttings or division instead."
+  },
+  "companionPlants": [
+    "bush-tomato",
+    "lettuce"
+  ],
+  "commonProblems": [
+    "Mint rust — orange/brown spots on leaves. Remove and destroy affected stems. Don't compost them.",
+    "Spreading too aggressively — ALWAYS keep in its own pot. Never plant with other herbs.",
+    "Leggy growth — cut back hard in midsummer for a flush of fresh leaves."
+  ],
+  "funFact": "In Greek mythology, mint was originally a nymph called Minthe who was transformed into a plant by the jealous goddess Persephone. But she retained her wonderful fragrance."
+}

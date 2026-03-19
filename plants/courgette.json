@@ -1,0 +1,120 @@
+{
+  "id": "courgette",
+  "commonName": "Courgette",
+  "latinName": "Cucurbita pepo",
+  "family": "Cucurbitaceae",
+  "category": "vegetable",
+  "description": "Courgettes are incredibly productive and satisfying to grow. A single plant can produce dozens of fruits throughout the summer. They love the warmth and will thrive in a large pot on a sunny balcony.",
+  "images": {
+    "plant": "images/courgette/plant.jpg",
+    "seed": "images/courgette/seed.jpg",
+    "flower": "images/courgette/flower.jpg",
+    "fruit": "images/courgette/fruit.jpg",
+    "seedling": "images/courgette/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "45–90cm",
+    "matureSpread": "90–120cm",
+    "hardiness": "Half-hardy (not frost tolerant)",
+    "lifespan": "Annual",
+    "sunRequirement": "Full sun (6+ hours)",
+    "waterNeeds": "High — requires daily watering in summer",
+    "soilType": "Rich, well-drained potting compost with added manure",
+    "containerSize": "45cm+ (30-50L) pot"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "sowOutdoorsWeeks": [
+      21,
+      22,
+      23
+    ],
+    "hardenOffWeeks": [
+      20,
+      21
+    ],
+    "plantOutWeeks": [
+      21,
+      22,
+      23,
+      24
+    ],
+    "harvestWeeks": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "floweringWeeks": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Sow seeds 1.5cm deep on their sides in 7.5cm pots. Keep at 20°C on a warm windowsill. Seeds sprout in 7–10 days.",
+    "sowOutdoors": "Sow directly in large pots from late May. Sow 2 seeds 1.5cm deep and keep the strongest seedling.",
+    "hardenOff": "Gradually acclimatise to the outdoors over 7–10 days in late May. Move outside during the day, bring in at night.",
+    "plantOut": "Move to a final large container (at least 45cm wide) after the last frost (mid-May in London).",
+    "watering": "Water daily in hot weather. Keep the soil consistently moist but avoid wetting the leaves to prevent mildew.",
+    "feeding": "Once the first flowers appear, feed weekly with a high-potash liquid fertiliser (tomato feed).",
+    "harvest": "Pick regularly when fruits are 10–15cm long to encourage continuous production.",
+    "overwintering": "Annual plant — pull up and compost after the first frost in autumn."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Large, flat, cream-coloured oval seeds. Very easy to handle. Viable for 3–5 years.",
+    "germinationDays": "7–10 days at 20°C",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "Harvesting the fruit effectively 'deadheads' the plant. You can also harvest the male flowers for cooking."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Let one fruit grow into a large marrow. Leave it on the plant until the skin is hard and the vine dies back. Scoop out and dry seeds.",
+    "seedPodDescription": "Seeds are contained within the fruit itself."
+  },
+  "companionPlants": [
+    "nasturtium",
+    "marigold",
+    "borage",
+    "beans"
+  ],
+  "commonProblems": [
+    "Powdery Mildew — white dusty coating on leaves. Improve airflow and water at base.",
+    "Slugs and Snails — protect young seedlings after planting out.",
+    "Poor Pollination — if fruits shrivel, try hand-pollination."
+  ],
+  "funFact": "If you don't harvest courgettes, they can grow into giant marrows over a metre long in just a few weeks!"
+}

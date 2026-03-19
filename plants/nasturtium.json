@@ -1,0 +1,128 @@
+{
+  "id": "nasturtium",
+  "commonName": "Nasturtium",
+  "latinName": "Tropaeolum majus",
+  "family": "Tropaeolaceae",
+  "category": "flower",
+  "description": "Cheerful, trumpet-shaped flowers in fiery oranges, reds, and yellows that bloom all summer long. Nasturtiums are ridiculously easy to grow — just push the large seeds into compost and watch them go. Bonus: the flowers, leaves, and seed pods are all edible with a peppery, watercress-like flavour.",
+  "images": {
+    "plant": "images/nasturtium/plant.jpg",
+    "seed": "images/nasturtium/seed.jpg",
+    "flower": "images/nasturtium/flower.jpg",
+    "fruit": null,
+    "seedling": "images/nasturtium/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "20–30cm (bush) or trailing 1m+",
+    "matureSpread": "30–60cm",
+    "hardiness": "Half-hardy (killed by frost)",
+    "lifespan": "Annual",
+    "sunRequirement": "Full sun to partial shade (4+ hours)",
+    "waterNeeds": "Low to moderate — actually flowers better in poor, dry soil",
+    "soilType": "Poor to average potting compost (don't enrich it!)",
+    "containerSize": "5L+ pot or hanging basket"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      14,
+      15,
+      16
+    ],
+    "sowOutdoorsWeeks": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "hardenOffWeeks": [
+      18,
+      19
+    ],
+    "plantOutWeeks": [
+      20,
+      21,
+      22
+    ],
+    "harvestWeeks": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "floweringWeeks": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Push the large, wrinkled seeds 2cm deep into small pots in April. They germinate in 7–12 days. The seeds are big enough for kids to handle easily.",
+    "sowOutdoors": "After last frost (mid-May in London), push seeds 2cm into the compost where you want them to grow. 2–3 seeds per pot.",
+    "hardenOff": "If started indoors, harden off for a week in late May before planting out.",
+    "plantOut": "Plant out after last frost. Nasturtiums don't like root disturbance, so handle gently.",
+    "watering": "Water sparingly once established. Too much water (or rich soil) produces lots of leaves but few flowers.",
+    "feeding": "Don't feed! Nasturtiums flower best in poor soil. Rich conditions produce lush foliage but few blooms.",
+    "harvest": "Pick flowers for salads — they taste peppery like watercress. The round leaves are edible too. Unripe green seed pods can be pickled like capers.",
+    "overwintering": "Annual — killed by the first frost. Pull up and compost."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Large, round, wrinkled, pale brown seeds about 8–10mm. Easy to handle and sow — perfect for children.",
+    "germinationDays": "7–12 days at 15–20°C",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "Optional but beneficial. Removing spent flowers encourages more blooms. If you want to save seeds, leave some flowers to set seed at the end of summer."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Let some flowers go to seed. The round green seeds will turn brown and fall off when ripe. Collect from the ground or pick when they separate easily from the stem. Dry and store.",
+    "seedPodDescription": "Three-lobed round green pods that split into individual seeds. They start green and ripen to pale brown."
+  },
+  "companionPlants": [
+    "bush-tomato",
+    "radish",
+    "lettuce"
+  ],
+  "commonProblems": [
+    "Blackfly / aphids — nasturtiums are 'trap plants' that attract aphids AWAY from your vegetables. This is actually useful! Blast with water if they get bad.",
+    "Caterpillars — cabbage white butterflies love nasturtiums. Pick off caterpillars by hand.",
+    "Too much foliage, not enough flowers — you're feeding/watering too much. Cut back on both."
+  ],
+  "funFact": "Nasturtium seed pods were widely used as a caper substitute during WWII rationing in Britain. They're still pickled today — search for 'poor man's capers' recipes!"
+}

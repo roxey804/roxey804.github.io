@@ -1,0 +1,146 @@
+{
+  "id": "lettuce",
+  "commonName": "Lettuce & Salad Leaves",
+  "latinName": "Lactuca sativa",
+  "family": "Asteraceae",
+  "category": "vegetable",
+  "description": "The easiest edible to grow on a balcony. Salad leaves grow fast, tolerate partial shade, and can be harvested in as little as 3–4 weeks. Sow small amounts every 2 weeks for a continuous supply all summer.",
+  "images": {
+    "plant": "images/lettuce/plant.jpg",
+    "seed": "images/lettuce/seed.jpg",
+    "flower": null,
+    "fruit": null,
+    "seedling": "images/lettuce/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "15–30cm",
+    "matureSpread": "15–25cm",
+    "hardiness": "Hardy (tolerates light frost)",
+    "lifespan": "Annual",
+    "sunRequirement": "Partial shade to full sun (3–6 hours)",
+    "waterNeeds": "Regular — keep soil consistently moist",
+    "soilType": "Any good potting compost",
+    "containerSize": "3L+ pot or window box"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sowOutdoorsWeeks": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "hardenOffWeeks": [],
+    "plantOutWeeks": [],
+    "harvestWeeks": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "floweringWeeks": [],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": "Scatter seeds thinly on moist compost, barely cover them — they need light. Keep on a cool windowsill (10–15°C). Sprouts in 4–7 days.",
+    "sowOutdoors": "From late March, sow directly into containers. Scatter seeds thinly, cover with a very thin layer of compost. Keep moist.",
+    "hardenOff": null,
+    "plantOut": "Can go straight outside from late March. Lettuce tolerates light frost and actually prefers cooler weather.",
+    "watering": "Keep consistently moist — dry soil causes bitter leaves and bolting. Water in the morning.",
+    "feeding": "Light feeder — a handful of slow-release fertiliser in the compost at planting is enough.",
+    "harvest": "Pick outer leaves as needed ('cut and come again'), or harvest whole heads. Pick before the plant bolts (sends up a flower stalk).",
+    "overwintering": "Grow winter varieties (lamb's lettuce, winter gem) under fleece from September."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Very tiny, elongated seeds — either black or white depending on variety. Incredibly easy to grow.",
+    "germinationDays": "4–7 days at 10–20°C (needs light — don't bury deep)",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "Not applicable — harvest before flowering. If the plant bolts (sends up a tall flower stalk), the leaves turn bitter. Pull it out and sow fresh."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Let one plant bolt and flower. Wait for fluffy seed heads to form (like tiny dandelion clocks). Cut the whole stem and shake seeds into a bag.",
+    "seedPodDescription": "Seeds form on dandelion-like fluffy heads at the top of the flower stalk."
+  },
+  "companionPlants": [
+    "radish",
+    "chives",
+    "basil"
+  ],
+  "commonProblems": [
+    "Bolting — shoots up and flowers in hot weather. Sow in partial shade and keep watered in summer.",
+    "Slugs and snails — the number one enemy. Use copper tape, beer traps, or raise pots off the ground.",
+    "Aphids — wash off with a jet of water or spray with diluted washing-up liquid."
+  ],
+  "funFact": "Ancient Egyptians first cultivated lettuce over 4,500 years ago — but they grew it for the oil in its seeds, not for salad!"
+}

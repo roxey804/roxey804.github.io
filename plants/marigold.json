@@ -1,0 +1,116 @@
+{
+  "id": "marigold",
+  "commonName": "French Marigold",
+  "latinName": "Tagetes patula",
+  "family": "Asteraceae",
+  "category": "flower",
+  "description": "French marigolds are one of the easiest and most rewarding flowers for balcony containers. They bloom non-stop from early summer until the first frost, producing cheerful orange, yellow, and mahogany flowers. Their strong scent naturally deters many common garden pests, making them brilliant companion plants for your tomatoes and herbs.",
+  "images": {
+    "plant": "images/marigold/plant.jpg",
+    "seed": "images/marigold/seed.jpg",
+    "flower": "images/marigold/flower.jpg",
+    "seedling": "images/marigold/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "20-30cm",
+    "matureSpread": "20-25cm",
+    "hardiness": "Half-hardy (killed by frost, but thrives outdoors May-October in London)",
+    "lifespan": "Annual",
+    "sunRequirement": "Full sun (6+ hours direct sunlight)",
+    "waterNeeds": "Moderate — water when the top centimetre of compost feels dry, daily in hot spells",
+    "soilType": "Any well-drained multipurpose compost; not fussy about soil",
+    "containerSize": "15cm+ per plant, or several in a 30cm+ pot"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      10,
+      11,
+      12
+    ],
+    "sowOutdoorsWeeks": [
+      21,
+      22,
+      23
+    ],
+    "hardenOffWeeks": [
+      17,
+      18,
+      19
+    ],
+    "plantOutWeeks": [
+      20,
+      21,
+      22
+    ],
+    "harvestWeeks": [],
+    "floweringWeeks": [
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [
+      14,
+      18
+    ],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Sow seeds 1cm deep in modules or small pots of seed compost in early-mid March. Keep at 21-24°C on a warm windowsill or in a propagator. Seeds germinate in 5-7 days. Once up, move to a bright, frost-free spot and grow on at around 15-18°C.",
+    "sowOutdoors": "After all frost risk has passed (late May), sow seeds directly into containers 1cm deep. Thin seedlings to 20cm apart once they have two true leaves.",
+    "hardenOff": "From late April, gradually acclimatise indoor-raised plants to outdoor conditions over 10-14 days. Place outside during the day and bring in at night, increasing outdoor time each day.",
+    "plantOut": "Plant into final containers from mid-May once frost risk has passed. Space 20-25cm apart. Water well after planting. Pinch out the growing tip when planting to encourage bushier growth.",
+    "watering": "Water when the top centimetre of compost feels dry. In hot summer weather, containers may need watering daily. Water at the base of the plant rather than overhead to reduce fungal disease risk.",
+    "feeding": "Feed every 2 weeks with a half-strength tomato feed (high potash) once flowering begins. Avoid high-nitrogen feeds which promote leaves over flowers. Alternatively, mix slow-release granules into the compost at planting time.",
+    "harvest": null,
+    "overwintering": "Marigolds are annuals and won't survive frost. Remove and compost spent plants after the first frost. Save seed from your best plants for next year."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Long, thin, dark needle-like seeds about 1cm long with a tuft of lighter chaff at one end. Easy to handle individually.",
+    "germinationDays": "5-7 days at 21-24°C",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": true,
+    "notes": "Deadhead spent flowers at least twice a week during peak season (July-August) by snipping the whole flower head just above the nearest set of leaves. This prevents seed formation and redirects energy into new blooms, keeping plants flowering continuously until frost. Stop deadheading in mid-September if you want to save seed."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Stop deadheading from mid-September and let the last flowers go to seed. Wait until seed heads turn brown, dry, and papery on the plant (October). Snip them off into a paper bag, pull apart to extract the long dark seeds, dry on a paper towel for 2-3 days, then store in labelled envelopes in a cool dry place. Seeds stay viable for 2-3 years. Note: F1 hybrid varieties won't come true from seed — save from open-pollinated varieties like 'Naughty Marietta' for reliable results.",
+    "seedPodDescription": "A cylindrical dried flower head that turns brown and papery when ripe, containing dozens of long, thin, dark seeds packed tightly together."
+  },
+  "companionPlants": [
+    "bush-tomato",
+    "basil",
+    "nasturtium",
+    "chives"
+  ],
+  "commonProblems": [
+    "Slugs and snails on young plants — use copper tape around pots; balcony growing naturally reduces this risk",
+    "Aphids on stems and buds — blast off with water or use insecticidal soap; marigolds actually deter aphids from neighbouring plants",
+    "Powdery mildew (white coating on leaves) — improve air circulation between plants, water at the base not overhead",
+    "Leggy seedlings — caused by too little light indoors; move to a brighter windowsill or sow later",
+    "Poor flowering — usually too much shade or high-nitrogen feed; ensure 6+ hours of sun and switch to tomato feed",
+    "Grey mould (botrytis) in wet weather — remove affected flowers promptly, improve airflow"
+  ],
+  "funFact": "Despite their names, French marigolds and African marigolds are both from Mexico — the names come from 16th-century trade routes. In Mexico, marigolds (cempasuchil) are the iconic flower of Dia de los Muertos, believed to guide spirits of the dead back to the living with their bright colour and strong scent."
+}

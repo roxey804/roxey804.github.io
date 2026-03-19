@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roksana's Plants — Balcony Planting Scheduler</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <script src="plants/data.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#2d6a4f',
+            leaf: '#52b788',
+            leafLight: '#95d5b2',
+            leafPale: '#d8f3dc',
+            terra: '#f4a261',
+            cream: '#fefae0',
+            bark: '#6b4423',
+            soil: '#3e2723',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .gantt-bar { border-radius: 4px; min-height: 20px; }
+    .scrollbar-thin::-webkit-scrollbar { height: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #95d5b2; border-radius: 3px; }
+    .fade-in { animation: fadeIn 0.3s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .img-placeholder { background: linear-gradient(135deg, #d8f3dc 0%, #95d5b2 100%); display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+    @media print { .no-print { display: none !important; } body { background: white; } }
+  </style>
+</head>
+<body class="bg-cream min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-forest text-white sticky top-0 z-50 shadow-lg no-print">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">🌿</span>
+        <h1 class="text-lg font-bold tracking-tight">Roksana's Plants</h1>
+      </div>
+      <div class="text-right text-sm">
+        <div id="currentDate" class="font-medium"></div>
+        <div class="text-leafLight text-xs">📍 London, UK</div>
+      </div>
+    </div>
+    <nav class="max-w-6xl mx-auto px-4 flex gap-1 pb-1">
+      <button onclick="switchTab('week')" id="tab-week" class="tab-btn px-4 py-2 rounded-t-lg text-sm font-medium transition-colors bg-cream text-forest">This Week</button>
+      <button onclick="switchTab('timeline')" id="tab-timeline" class="tab-btn px-4 py-2 rounded-t-lg text-sm font-medium transition-colors text-leafLight hover:text-white">Timeline</button>
+      <button onclick="switchTab('plants')" id="tab-plants" class="tab-btn px-4 py-2 rounded-t-lg text-sm font-medium transition-colors text-leafLight hover:text-white">My Plants</button>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-6">
+    <!-- Loading -->
+    <div id="loading" class="text-center py-20">
+      <div class="text-4xl mb-4 animate-bounce">🌱</div>
+      <p class="text-forest font-medium">Loading your garden...</p>
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden text-center py-20">
+      <div class="text-6xl mb-6">🌱</div>
+      <h2 class="text-2xl font-bold text-forest mb-3">No plants yet!</h2>
+      <p class="text-gray-600 mb-2 max-w-md mx-auto">Add plants using the <code class="bg-leafPale px-2 py-1 rounded text-forest font-mono text-sm">/plant</code> command in Claude Code.</p>
+      <p class="text-gray-500 text-sm">Example: <code class="bg-leafPale px-2 py-1 rounded text-forest font-mono text-sm">/plant basil</code></p>
+    </div>
+
+    <!-- THIS WEEK VIEW -->
+    <div id="view-week" class="hidden fade-in">
+      <div class="flex items-center justify-between mb-6">
+        <button onclick="navigateWeek(-1)" class="p-2 rounded-lg bg-white shadow hover:shadow-md transition-shadow">
+          <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="text-center">
+          <h2 id="weekHeading" class="text-xl font-bold text-forest"></h2>
+          <p id="weekDates" class="text-sm text-gray-500"></p>
+        </div>
+        <button onclick="navigateWeek(1)" class="p-2 rounded-lg bg-white shadow hover:shadow-md transition-shadow">
+          <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div id="lateStartBanner" class="hidden bg-terra/10 border border-terra/30 rounded-xl p-4 mb-6">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🌤️</span>
+          <div>
+            <h3 class="font-semibold text-bark">Starting mid-season?</h3>
+            <p class="text-sm text-gray-600 mt-1">No worries! There's plenty you can still grow. The tasks below are what you can do right now.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-4 mb-6 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-sm font-medium text-forest">Season Progress</span>
+          <span id="progressText" class="text-sm text-gray-500"></span>
+        </div>
+        <div class="w-full bg-leafPale rounded-full h-2">
+          <div id="progressBar" class="bg-leaf rounded-full h-2 transition-all duration-500"></div>
+        </div>
+      </div>
+
+      <div id="weekTasks" class="space-y-4"></div>
+
+      <div id="emptyWeek" class="hidden text-center py-12">
+        <div class="text-4xl mb-4">😴</div>
+        <h3 class="text-lg font-semibold text-forest mb-2">Nothing to do this week!</h3>
+        <p id="nextTaskInfo" class="text-sm text-gray-500"></p>
+      </div>
+    </div>
+
+    <!-- TIMELINE VIEW -->
+    <div id="view-timeline" class="hidden fade-in">
+      <h2 class="text-xl font-bold text-forest mb-4">Growing Timeline</h2>
+      <div id="timelineLegend" class="flex flex-wrap gap-3 mb-4 text-xs"></div>
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <div class="overflow-x-auto scrollbar-thin" id="ganttContainer">
+          <div id="ganttChart" class="relative" style="min-width: 900px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MY PLANTS VIEW -->
+    <div id="view-plants" class="hidden fade-in">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-bold text-forest">My Plants</h2>
+        <span id="plantCount" class="text-sm text-gray-500"></span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-6" id="categoryFilters"></div>
+      <div id="plantGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    </div>
+
+    <!-- PLANT PROFILE VIEW -->
+    <div id="view-profile" class="hidden fade-in">
+      <button onclick="switchTab('plants')" class="flex items-center gap-1 text-forest hover:text-leaf mb-4 text-sm font-medium">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Back to My Plants
+      </button>
+      <div id="profileContent"></div>
+    </div>
+  </main>
+
+  <!-- Glossary Tooltip -->
+  <div id="glossaryTooltip" class="hidden fixed bg-soil text-white text-sm rounded-lg px-3 py-2 max-w-xs shadow-xl z-[100] pointer-events-none"></div>
+
+  <!-- Welcome Modal -->
+  <div id="welcomeModal" class="hidden fixed inset-0 bg-black/50 z-[200] flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl">
+      <div class="text-center mb-6">
+        <div class="text-5xl mb-3">🌿</div>
+        <h2 class="text-2xl font-bold text-forest">Welcome to Roksana's Plants!</h2>
+        <p class="text-gray-500 mt-2">Your balcony planting scheduler for London</p>
+      </div>
+      <div class="space-y-3 text-sm text-gray-600 mb-6">
+        <div class="flex gap-3"><span class="text-lg">📋</span><p><strong>This Week</strong> — exactly what to do right now, with checkboxes to track progress.</p></div>
+        <div class="flex gap-3"><span class="text-lg">📊</span><p><strong>Timeline</strong> — your full year at a glance, so you can see what's ahead.</p></div>
+        <div class="flex gap-3"><span class="text-lg">🌱</span><p><strong>My Plants</strong> — your plant encyclopedia. Tap any plant for the full guide.</p></div>
+      </div>
+      <button onclick="closeWelcome()" class="w-full bg-forest text-white py-3 rounded-xl font-medium hover:bg-forest/90 transition-colors">Let's Grow! 🌱</button>
+    </div>
+  </div>
+
+<script>
+// ============================================================
+// CONFIG
+// ============================================================
+const LOCATION = { name: 'London, UK', lastFrostWeek: 15, firstFrostWeek: 44 };
+
+const TASK_TYPES = {
+  sowIndoors:  { label: 'Sow Indoors',  color: 'bg-amber-100 text-amber-800 border-amber-200',  barColor: '#fbbf24', icon: '🌱', desc: 'Plant seeds in small pots on a warm, bright windowsill.' },
+  sowOutdoors: { label: 'Sow Outdoors', color: 'bg-green-100 text-green-800 border-green-200',  barColor: '#22c55e', icon: '🌿', desc: 'Plant seeds directly into containers on your balcony.' },
+  hardenOff:   { label: 'Harden Off',   color: 'bg-blue-100 text-blue-800 border-blue-200',    barColor: '#3b82f6', icon: '🌤️', desc: 'Put seedlings outside by day, inside at night, for 7-10 days.' },
+  plantOut:    { label: 'Plant Out',    color: 'bg-emerald-100 text-emerald-800 border-emerald-200', barColor: '#10b981', icon: '🪴', desc: 'Move plants to their final outdoor container.' },
+  harvest:     { label: 'Harvest',      color: 'bg-red-100 text-red-800 border-red-200',       barColor: '#ef4444', icon: '✂️', desc: 'Pick your crops — enjoy!' },
+  succession:  { label: 'Sow Again',   color: 'bg-lime-100 text-lime-800 border-lime-200',     barColor: '#84cc16', icon: '🔄', desc: 'Sow another batch for continuous harvests.' },
+  protect:     { label: 'Protect',      color: 'bg-slate-100 text-slate-800 border-slate-200',  barColor: '#64748b', icon: '🧣', desc: 'Bring inside or cover with fleece for frost protection.' },
+};
+
+const GLOSSARY = {
+  hardenOff:   { term: 'Harden Off',        def: 'Gradually getting seedlings used to outdoors over 7-10 days. Outside by day, inside at night.' },
+  succession:  { term: 'Succession Sowing',  def: 'Sowing small batches every 2-3 weeks for continuous harvests, not everything at once.' },
+  potOn:       { term: 'Pot On',             def: 'Moving a seedling to a bigger pot so its roots have room to grow.' },
+  deadhead:    { term: 'Deadhead',           def: 'Removing spent flowers to encourage more blooms instead of seed production.' },
+  thinning:    { term: 'Thinning',           def: 'Removing some seedlings so the rest have space to grow properly.' },
+  bolting:     { term: 'Bolting',            def: 'When a plant flowers too early (usually from heat/stress). Leaves often turn bitter.' },
+  halfHardy:   { term: 'Half-Hardy',         def: 'Tolerates cool temps but killed by frost. Must be protected or brought inside in winter.' },
+  perennial:   { term: 'Perennial',          def: 'Lives for years, coming back each spring. E.g. rosemary, thyme, lavender.' },
+  annual:      { term: 'Annual',             def: 'Completes its whole life in one year — germinates, grows, flowers, seeds, dies.' },
+};
+
+// ============================================================
+// STATE
+// ============================================================
+let state = {
+  plants: [],
+  currentTab: 'week',
+  viewWeek: 1,
+  selectedPlants: new Set(),
+  completedTasks: {},
+  categoryFilter: 'all',
+  welcomeShown: false,
+};
+
+function loadState() {
+  try {
+    const s = JSON.parse(localStorage.getItem('roksanas-plants-state') || '{}');
+    if (s.selectedPlants) state.selectedPlants = new Set(s.selectedPlants);
+    if (s.completedTasks) state.completedTasks = s.completedTasks;
+    if (s.welcomeShown) state.welcomeShown = s.welcomeShown;
+  } catch (e) {}
+}
+
+function saveState() {
+  localStorage.setItem('roksanas-plants-state', JSON.stringify({
+    selectedPlants: [...state.selectedPlants],
+    completedTasks: state.completedTasks,
+    welcomeShown: state.welcomeShown,
+  }));
+}
+
+// ============================================================
+// DATE HELPERS
+// ============================================================
+function getISOWeek(d) {
+  const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  date.setUTCDate(date.getUTCDate() + 4 - (date.getUTCDay() || 7));
+  const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
+  return Math.ceil(((date - yearStart) / 86400000 + 1) / 7);
+}
+
+function weekDates(wk, yr = new Date().getFullYear()) {
+  const jan1 = new Date(yr, 0, 1);
+  const offset = (jan1.getDay() || 7) - 1;
+  const mon = new Date(yr, 0, 1 + (wk - 1) * 7 - offset);
+  const sun = new Date(mon); sun.setDate(sun.getDate() + 6);
+  const f = d => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  return { mon, sun, label: `${f(mon)} – ${f(sun)}` };
+}
+
+function monthName(i) { return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][i]; }
+
+// ============================================================
+// PLANT LOADING
+// ============================================================
+function loadPlants() {
+  return window.PLANT_DATA || [];
+}
+
+// ============================================================
+// TASK GENERATION
+// ============================================================
+function activePlants() {
+  return state.plants.filter(p => state.selectedPlants.size === 0 || state.selectedPlants.has(p.id));
+}
+
+function tasksForWeek(wk) {
+  const tasks = [];
+  for (const p of activePlants()) {
+    const s = p.schedule || {};
+    const c = p.care || {};
+    if (s.sowIndoorsWeeks?.includes(wk))  tasks.push({ plant: p, type: 'sowIndoors',  text: c.sowIndoors || 'Sow seeds indoors on a warm windowsill.' });
+    if (s.sowOutdoorsWeeks?.includes(wk)) tasks.push({ plant: p, type: 'sowOutdoors', text: c.sowOutdoors || 'Sow seeds directly into outdoor containers.' });
+    if (s.hardenOffWeeks?.includes(wk))   tasks.push({ plant: p, type: 'hardenOff',   text: c.hardenOff || 'Gradually move outside over 7-10 days.' });
+    if (s.plantOutWeeks?.includes(wk))    tasks.push({ plant: p, type: 'plantOut',    text: c.plantOut || 'Move to final outdoor container.' });
+    if (s.harvestWeeks?.includes(wk))     tasks.push({ plant: p, type: 'harvest',     text: c.harvest || 'Harvest when ready!' });
+    if (s.successionSowWeeks?.includes(wk)) tasks.push({ plant: p, type: 'succession', text: 'Sow another small batch for continuous harvests.' });
+    if (s.bringInsideWeek === wk)         tasks.push({ plant: p, type: 'protect',     text: c.overwintering || 'Bring inside or protect from frost.' });
+  }
+  const order = ['sowIndoors','sowOutdoors','hardenOff','plantOut','succession','harvest','protect'];
+  tasks.sort((a, b) => order.indexOf(a.type) - order.indexOf(b.type));
+  return tasks;
+}
+
+function taskKey(wk, pid, type) { return `${wk}-${pid}-${type}`; }
+function catEmoji(c) { return { vegetable:'🥬', herb:'🌿', flower:'🌸' }[c] || '🌱'; }
+
+// ============================================================
+// THIS WEEK VIEW
+// ============================================================
+function renderWeek() {
+  const wk = state.viewWeek;
+  const wd = weekDates(wk);
+  const now = getISOWeek(new Date());
+
+  document.getElementById('weekHeading').textContent = wk === now ? `This Week (Week ${wk})` : `Week ${wk}`;
+  document.getElementById('weekDates').textContent = wd.label;
+
+  // Late start banner
+  const banner = document.getElementById('lateStartBanner');
+  (wk >= 10 && wk <= 16 && wk === now) ? banner.classList.remove('hidden') : banner.classList.add('hidden');
+
+  // Progress
+  const pct = Math.max(0, Math.min(100, ((now - 8) / (44 - 8)) * 100));
+  document.getElementById('progressBar').style.width = `${pct}%`;
+  const done = Object.values(state.completedTasks).filter(Boolean).length;
+  document.getElementById('progressText').textContent = `${done} tasks completed`;
+
+  const tasks = tasksForWeek(wk);
+  const container = document.getElementById('weekTasks');
+  const empty = document.getElementById('emptyWeek');
+
+  if (!tasks.length) {
+    container.innerHTML = '';
+    empty.classList.remove('hidden');
+    let nw = wk + 1;
+    while (nw <= 52 && !tasksForWeek(nw).length) nw++;
+    document.getElementById('nextTaskInfo').textContent = nw <= 52
+      ? `Next tasks: Week ${nw} (${weekDates(nw).label})`
+      : 'Season winding down — time to plan for next year!';
+    return;
+  }
+  empty.classList.add('hidden');
+
+  // Group by type
+  const groups = {};
+  for (const t of tasks) { (groups[t.type] = groups[t.type] || []).push(t); }
+
+  let html = '';
+  for (const [type, items] of Object.entries(groups)) {
+    const tt = TASK_TYPES[type];
+    html += `<div class="mb-2">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-xl">${tt.icon}</span>
+        <h3 class="font-semibold text-forest">${tt.label}</h3>
+        <span class="text-xs text-gray-400">(${items.length})</span>
+      </div>
+      <p class="text-xs text-gray-500 mb-3 ml-8">${tt.desc}</p>`;
+
+    for (const t of items) {
+      const k = taskKey(wk, t.plant.id, t.type);
+      const done = state.completedTasks[k];
+      const img = t.plant.images?.plant;
+
+      html += `<div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 mb-3 ml-8 ${done ? 'opacity-50' : ''}">
+        <div class="flex items-start gap-3">
+          <button onclick="toggleTask('${k}')" class="mt-0.5 shrink-0 w-6 h-6 rounded-full border-2 ${done ? 'bg-leaf border-leaf' : 'border-gray-300 hover:border-leaf'} flex items-center justify-center transition-colors">
+            ${done ? '<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>' : ''}
+          </button>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              ${img ? `<img src="${img}" alt="" class="w-8 h-8 rounded-full object-cover" onerror="this.outerHTML='<span class=\\'text-lg\\'>${catEmoji(t.plant.category)}</span>'">` : `<span class="text-lg">${catEmoji(t.plant.category)}</span>`}
+              <span class="font-medium text-gray-800 ${done ? 'line-through' : ''}">${t.plant.commonName}</span>
+              ${t.plant.latinName ? `<span class="text-xs italic text-gray-400 hidden sm:inline">${t.plant.latinName}</span>` : ''}
+            </div>
+            <p class="text-sm text-gray-600 mt-1 ${done ? 'line-through' : ''}">${t.text}</p>
+            ${t.plant.characteristics?.containerSize ? `<p class="text-xs text-gray-400 mt-1">🪴 ${t.plant.characteristics.containerSize}</p>` : ''}
+          </div>
+          <button onclick="showProfile('${t.plant.id}')" class="shrink-0 text-gray-400 hover:text-forest p-1" title="Plant profile">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </button>
+        </div>
+      </div>`;
+    }
+    html += '</div>';
+  }
+  container.innerHTML = html;
+}
+
+function toggleTask(k) { state.completedTasks[k] = !state.completedTasks[k]; saveState(); renderWeek(); }
+function navigateWeek(d) { state.viewWeek = Math.max(1, Math.min(52, state.viewWeek + d)); renderWeek(); }
+
+// ============================================================
+// TIMELINE VIEW
+// ============================================================
+function renderTimeline() {
+  const plants = activePlants();
+  if (!plants.length) {
+    document.getElementById('ganttChart').innerHTML = '<p class="p-8 text-center text-gray-500">Select plants in My Plants first.</p>';
+    return;
+  }
+
+  // Legend
+  document.getElementById('timelineLegend').innerHTML = Object.entries(TASK_TYPES)
+    .map(([_, t]) => `<div class="flex items-center gap-1"><span class="w-3 h-3 rounded" style="background:${t.barColor}"></span><span>${t.label}</span></div>`).join('');
+
+  const cats = { vegetable: [], herb: [], flower: [] };
+  for (const p of plants) (cats[p.category] || (cats[p.category] = [])).push(p);
+
+  const catLabel = { vegetable:'🥬 Vegetables', herb:'🌿 Herbs', flower:'🌸 Flowers' };
+  const curWk = getISOWeek(new Date());
+  let h = '';
+
+  // Month header
+  h += '<div class="grid" style="grid-template-columns: 160px repeat(52, 1fr); position: sticky; top: 0; background: white; z-index: 5; border-bottom: 1px solid #e5e7eb;">';
+  h += '<div class="p-2 text-xs font-semibold text-gray-500 border-r border-gray-100">Plant</div>';
+  let cm = -1;
+  for (let w = 1; w <= 52; w++) {
+    const m = weekDates(w).mon.getMonth();
+    h += m !== cm ? (cm = m, `<div class="text-[10px] text-gray-400 pt-2 text-center font-medium">${monthName(m)}</div>`) : '<div></div>';
+  }
+  h += '</div>';
+
+  for (const [cat, ps] of Object.entries(cats)) {
+    if (!ps.length) continue;
+    h += `<div class="grid" style="grid-template-columns: 160px repeat(52, 1fr); background: rgba(216,243,220,0.3);">`;
+    h += `<div class="p-2 text-xs font-bold text-forest" style="grid-column: 1 / -1;">${catLabel[cat] || cat}</div></div>`;
+
+    for (const p of ps) {
+      h += `<div class="grid border-b border-gray-50 hover:bg-gray-50/50" style="grid-template-columns: 160px repeat(52, 1fr);">`;
+      h += `<div class="p-2 text-xs font-medium text-gray-700 border-r border-gray-100 truncate cursor-pointer hover:text-forest" onclick="showProfile('${p.id}')">${p.commonName}</div>`;
+
+      const s = p.schedule || {};
+      for (let w = 1; w <= 52; w++) {
+        let bg = '', title = '';
+        if (s.sowIndoorsWeeks?.includes(w))  { bg = TASK_TYPES.sowIndoors.barColor; title = 'Sow Indoors'; }
+        else if (s.hardenOffWeeks?.includes(w))   { bg = TASK_TYPES.hardenOff.barColor; title = 'Harden Off'; }
+        else if (s.plantOutWeeks?.includes(w))    { bg = TASK_TYPES.plantOut.barColor; title = 'Plant Out'; }
+        else if (s.sowOutdoorsWeeks?.includes(w)) { bg = TASK_TYPES.sowOutdoors.barColor; title = 'Sow Outdoors'; }
+        else if (s.successionSowWeeks?.includes(w)) { bg = TASK_TYPES.succession.barColor; title = 'Sow Again'; }
+        else if (s.harvestWeeks?.includes(w))     { bg = TASK_TYPES.harvest.barColor; title = 'Harvest'; }
+        else if (s.bringInsideWeek === w)         { bg = TASK_TYPES.protect.barColor; title = 'Protect'; }
+
+        h += `<div class="relative ${w === curWk ? 'ring-2 ring-red-400 ring-inset' : ''}" title="${title ? `Wk ${w}: ${title}` : `Wk ${w}`}">`;
+        if (bg) h += `<div class="gantt-bar w-full h-5 my-0.5" style="background:${bg};opacity:.8"></div>`;
+        h += '</div>';
+      }
+      h += '</div>';
+    }
+  }
+  document.getElementById('ganttChart').innerHTML = h;
+}
+
+// ============================================================
+// MY PLANTS VIEW
+// ============================================================
+function renderPlants() {
+  const all = state.selectedPlants.size === 0;
+  const catLabels = { all:'🌱 All', vegetable:'🥬 Veg', herb:'🌿 Herbs', flower:'🌸 Flowers' };
+
+  document.getElementById('categoryFilters').innerHTML = ['all','vegetable','herb','flower'].map(c =>
+    `<button onclick="state.categoryFilter='${c}';renderPlants()" class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${state.categoryFilter === c ? 'bg-forest text-white' : 'bg-white text-gray-600 hover:bg-leafPale'}">${catLabels[c]}</button>`
+  ).join('');
+
+  const plants = state.plants.filter(p => state.categoryFilter === 'all' || p.category === state.categoryFilter);
+  document.getElementById('plantCount').textContent = `${plants.length} plant${plants.length !== 1 ? 's' : ''}`;
+
+  document.getElementById('plantGrid').innerHTML = plants.map(p => {
+    const sel = all || state.selectedPlants.has(p.id);
+    const img = p.images?.plant;
+    return `<div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-md ${sel ? '' : 'opacity-50'}">
+      <div class="relative cursor-pointer" onclick="showProfile('${p.id}')">
+        ${img ? `<img src="${img}" alt="${p.commonName}" class="w-full h-32 object-cover" onerror="this.outerHTML='<div class=\\'img-placeholder w-full h-32\\'>${catEmoji(p.category)}</div>'">` : `<div class="img-placeholder w-full h-32">${catEmoji(p.category)}</div>`}
+      </div>
+      <div class="p-3">
+        <h3 class="font-semibold text-gray-800 text-sm cursor-pointer hover:text-forest" onclick="showProfile('${p.id}')">${p.commonName}</h3>
+        ${p.latinName ? `<p class="text-xs italic text-gray-400 mt-0.5">${p.latinName}</p>` : ''}
+        ${p.characteristics?.containerSize ? `<p class="text-[10px] text-gray-400 mt-1">🪴 ${p.characteristics.containerSize}</p>` : ''}
+        <button onclick="event.stopPropagation();togglePlant('${p.id}')" class="mt-2 w-full py-1.5 rounded-lg text-xs font-medium transition-colors ${sel ? 'bg-leafPale text-forest' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}">
+          ${sel ? '✓ Growing' : '+ Add'}
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function togglePlant(id) {
+  if (state.selectedPlants.size === 0) {
+    state.plants.forEach(p => { if (p.id !== id) state.selectedPlants.add(p.id); });
+  } else if (state.selectedPlants.has(id)) {
+    state.selectedPlants.delete(id);
+    if (state.selectedPlants.size === 0) state.selectedPlants = new Set();
+  } else {
+    state.selectedPlants.add(id);
+  }
+  saveState(); renderPlants();
+}
+
+// ============================================================
+// PLANT PROFILE
+// ============================================================
+function showProfile(id) {
+  const p = state.plants.find(x => x.id === id);
+  if (!p) return;
+
+  const ch = p.characteristics || {};
+  const s = p.schedule || {};
+  const ca = p.care || {};
+  const pr = p.propagation || {};
+  const dh = p.deadheading || {};
+  const ss = p.seedSaving || {};
+  const im = p.images || {};
+  const diffCol = { easy:'bg-green-100 text-green-700', moderate:'bg-amber-100 text-amber-700', challenging:'bg-red-100 text-red-700' };
+
+  let h = `
+  <div class="bg-white rounded-2xl overflow-hidden shadow-sm mb-6">
+    ${im.plant ? `<img src="${im.plant}" alt="${p.commonName}" class="w-full h-48 md:h-64 object-cover" onerror="this.outerHTML='<div class=\\'img-placeholder w-full h-48 md:h-64 text-5xl\\'>${catEmoji(p.category)}</div>'">` : `<div class="img-placeholder w-full h-48 md:h-64 text-5xl">${catEmoji(p.category)}</div>`}
+    <div class="p-5">
+      <div class="flex items-start justify-between">
+        <div>
+          <h1 class="text-2xl font-bold text-forest">${p.commonName}</h1>
+          ${p.latinName ? `<p class="text-sm italic text-gray-400 mt-1">${p.latinName}</p>` : ''}
+          ${p.family ? `<p class="text-xs text-gray-400">Family: ${p.family}</p>` : ''}
+        </div>
+        <span class="px-3 py-1 rounded-full text-xs font-medium ${diffCol[p.difficulty] || diffCol.easy}">${p.difficulty || 'easy'}</span>
+      </div>
+      ${p.description ? `<p class="text-gray-600 mt-3 text-sm leading-relaxed">${p.description}</p>` : ''}
+    </div>
+  </div>`;
+
+  // Image Gallery
+  const imgs = Object.entries(im).filter(([_, v]) => v);
+  if (imgs.length > 1) {
+    const labels = { plant:'Plant', seed:'Seeds', flower:'Flower', fruit:'Fruit', seedling:'Seedling' };
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">📸 Gallery</h2>
+      <div class="grid grid-cols-3 md:grid-cols-5 gap-2">
+        ${imgs.map(([k, src]) => `<div class="text-center"><img src="${src}" alt="${k}" class="w-full h-20 md:h-24 object-cover rounded-lg" onerror="this.parentElement.style.display='none'"><span class="text-[10px] text-gray-400 mt-1 block">${labels[k] || k}</span></div>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  // At a Glance
+  const glance = [
+    ch.matureHeight && ['📏 Height', ch.matureHeight],
+    ch.matureSpread && ['↔️ Spread', ch.matureSpread],
+    ch.sunRequirement && ['☀️ Sun', ch.sunRequirement],
+    ch.waterNeeds && ['💧 Water', ch.waterNeeds],
+    ch.containerSize && ['🪴 Pot', ch.containerSize],
+    ch.lifespan && ['⏳ Lifespan', ch.lifespan],
+    ch.hardiness && ['❄️ Hardiness', ch.hardiness],
+    ch.habit && ['🌳 Habit', ch.habit],
+    ch.soilType && ['🏺 Soil', ch.soilType],
+  ].filter(Boolean);
+
+  if (glance.length) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">📋 At a Glance</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+        ${glance.map(([lbl, val]) => `<div class="bg-gray-50 rounded-lg p-2.5"><span class="text-gray-400 text-xs block">${lbl}</span><span class="font-medium">${val}</span></div>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  // Mini Calendar
+  const schedTypes = [
+    ['sowIndoorsWeeks','sowIndoors'], ['sowOutdoorsWeeks','sowOutdoors'],
+    ['hardenOffWeeks','hardenOff'], ['plantOutWeeks','plantOut'],
+    ['harvestWeeks','harvest'],
+  ];
+  const hasSchedule = schedTypes.some(([k]) => s[k]?.length);
+  if (hasSchedule) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">📅 Growing Calendar</h2>
+      <div class="overflow-x-auto"><div style="min-width:400px">
+      <div class="flex mb-1">${'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',').map(m => `<div class="flex-1 text-center text-[10px] text-gray-400">${m}</div>`).join('')}</div>
+      ${schedTypes.filter(([k]) => s[k]?.length).map(([k, type]) => {
+        const tt = TASK_TYPES[type];
+        return `<div class="flex items-center gap-1 mb-1">
+          ${Array.from({length:52}, (_, i) => {
+            const w = i + 1, on = s[k].includes(w);
+            return `<div class="flex-1 h-3 rounded-sm" style="background:${on ? tt.barColor : 'transparent'};opacity:${on ? .8 : 0}"></div>`;
+          }).join('')}
+          <span class="text-[10px] text-gray-500 w-20 text-right shrink-0">${tt.label}</span>
+        </div>`;
+      }).join('')}
+      </div></div>
+    </div>`;
+  }
+
+  // Care
+  const careItems = [
+    [ca.sowIndoors, 'sowIndoors', 'Sow Indoors'],
+    [ca.sowOutdoors, 'sowOutdoors', 'Sow Outdoors'],
+    [ca.hardenOff, 'hardenOff', 'Harden Off'],
+    [ca.plantOut, 'plantOut', 'Plant Out'],
+    [ca.watering, null, 'Watering', '💧'],
+    [ca.feeding, null, 'Feeding', '🧪'],
+    [ca.harvest, 'harvest', 'Harvest'],
+    [ca.overwintering, 'protect', 'Overwintering'],
+  ].filter(([v]) => v);
+
+  if (careItems.length) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">🌱 How to Grow</h2>
+      <div class="space-y-3 text-sm">
+        ${careItems.map(([text, type, label, icon]) => `<div class="flex gap-3"><span class="text-lg shrink-0">${icon || TASK_TYPES[type]?.icon || '🌱'}</span><div><strong class="text-gray-700">${label}</strong><p class="text-gray-600 mt-0.5">${text}</p></div></div>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  // Propagation
+  if (pr.fromSeed || pr.fromCuttings || pr.fromDivision) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">🧬 Propagation</h2>
+      <div class="space-y-3 text-sm">
+        ${pr.fromSeed ? `<div><strong class="text-gray-700">From Seed</strong>${pr.seedDescription ? `<p class="text-gray-600 mt-0.5">${pr.seedDescription}</p>` : ''}${pr.germinationDays ? `<p class="text-gray-500 text-xs mt-1">⏱️ ${pr.germinationDays}</p>` : ''}</div>` : ''}
+        ${pr.fromCuttings && pr.cuttingsMethod ? `<div><strong class="text-gray-700">From Cuttings</strong><p class="text-gray-600 mt-0.5">${pr.cuttingsMethod}</p></div>` : ''}
+        ${pr.fromDivision && pr.divisionMethod ? `<div><strong class="text-gray-700">By Division</strong><p class="text-gray-600 mt-0.5">${pr.divisionMethod}</p></div>` : ''}
+      </div>
+    </div>`;
+  }
+
+  // Deadheading
+  if (dh.notes) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">✂️ Deadheading</h2>
+      <div class="flex items-start gap-2 text-sm">
+        <span class="px-2 py-0.5 rounded-full text-xs font-medium ${dh.required ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700'}">${dh.required ? 'Yes' : 'Not needed'}</span>
+        <p class="text-gray-600">${dh.notes}</p>
+      </div>
+    </div>`;
+  }
+
+  // Seed Saving
+  if (ss.method) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">🫘 Seed Saving</h2>
+      <div class="text-sm text-gray-600 space-y-1">
+        <p>${ss.method}</p>
+        ${ss.seedPodDescription ? `<p class="text-xs text-gray-500">${ss.seedPodDescription}</p>` : ''}
+      </div>
+    </div>`;
+  }
+
+  // Varieties
+  if (p.varieties?.length) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">🏷️ Varieties</h2>
+      <div class="flex flex-wrap gap-2">${p.varieties.map(v => `<span class="bg-leafPale text-forest px-3 py-1 rounded-full text-sm">${v}</span>`).join('')}</div>
+    </div>`;
+  }
+
+  // Companion Plants
+  if (p.companionPlants?.length) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">🤝 Companions</h2>
+      <div class="flex flex-wrap gap-2">${p.companionPlants.map(cp => {
+        const c = state.plants.find(x => x.id === cp);
+        return c ? `<button onclick="showProfile('${cp}')" class="bg-white border border-leafLight text-forest px-3 py-1 rounded-full text-sm hover:bg-leafPale">${c.commonName}</button>` : `<span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">${cp}</span>`;
+      }).join('')}</div>
+    </div>`;
+  }
+
+  // Problems
+  if (p.commonProblems?.length) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">⚠️ Common Problems</h2>
+      <ul class="space-y-2 text-sm text-gray-600">${p.commonProblems.map(x => `<li class="flex gap-2"><span class="text-amber-500 shrink-0">•</span>${x}</li>`).join('')}</ul>
+    </div>`;
+  }
+
+  // Fun Fact
+  if (p.funFact) {
+    h += `<div class="bg-leafPale/50 rounded-xl p-5 mb-4 border border-leafLight/30">
+      <h2 class="font-bold text-forest mb-2">💡 Did You Know?</h2>
+      <p class="text-sm text-gray-700">${p.funFact}</p>
+    </div>`;
+  }
+
+  document.getElementById('profileContent').innerHTML = h;
+  switchTab('profile');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ============================================================
+// TAB SWITCHING
+// ============================================================
+function switchTab(tab) {
+  state.currentTab = tab;
+  document.querySelectorAll('[id^="view-"]').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('bg-cream','text-forest'); b.classList.add('text-leafLight'); });
+
+  const view = document.getElementById(`view-${tab}`);
+  if (view) view.classList.remove('hidden');
+
+  const btn = document.getElementById(`tab-${tab === 'profile' ? 'plants' : tab}`);
+  if (btn) { btn.classList.add('bg-cream','text-forest'); btn.classList.remove('text-leafLight'); }
+
+  if (tab === 'week') renderWeek();
+  if (tab === 'timeline') renderTimeline();
+  if (tab === 'plants') renderPlants();
+}
+
+function closeWelcome() {
+  document.getElementById('welcomeModal').classList.add('hidden');
+  state.welcomeShown = true;
+  saveState();
+}
+
+// ============================================================
+// INIT
+// ============================================================
+function init() {
+  loadState();
+  const now = new Date();
+  state.viewWeek = getISOWeek(now);
+  document.getElementById('currentDate').textContent = `Week ${state.viewWeek} — ${now.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}`;
+
+  state.plants = loadPlants();
+  document.getElementById('loading').classList.add('hidden');
+
+  if (!state.plants.length) {
+    document.getElementById('empty-state').classList.remove('hidden');
+    return;
+  }
+
+  if (!state.welcomeShown) document.getElementById('welcomeModal').classList.remove('hidden');
+  switchTab('week');
+}
+
+init();
+</script>
+</body>
+</html>
