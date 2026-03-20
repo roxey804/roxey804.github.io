@@ -1,0 +1,167 @@
+{
+  "id": "rocket",
+  "commonName": "Rocket (Arugula)",
+  "latinName": "Eruca vesicaria",
+  "family": "Brassicaceae",
+  "category": "herb",
+  "variety": "Salad Rocket",
+  "description": "A fast-growing, peppery salad leaf that is incredibly easy to grow in pots. Regular picking keeps the leaves young and tender. Ideally grown in cooler weather (spring/autumn) as heat makes it bolt and turn spicy.",
+  "images": {
+    "plant": "images/rocket/plant.jpg",
+    "seed": "images/rocket/seed.jpg",
+    "flower": "images/rocket/flower.jpg",
+    "seedling": "images/rocket/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "20–50cm",
+    "matureSpread": "20–30cm",
+    "hardiness": "Hardy (tolerates frost)",
+    "lifespan": "Annual",
+    "sunRequirement": "Partial shade to full sun",
+    "waterNeeds": "Regular — keep moist to prevent bolting",
+    "soilType": "Any moisture-retentive potting compost",
+    "containerSize": "2L+ pot or window box"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "sowOutdoorsWeeks": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "hardenOffWeeks": [],
+    "plantOutWeeks": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "harvestWeeks": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "floweringWeeks": [
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36
+    ],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": "Sow thinly in trays or modules in March. Plant out when large enough to handle. Useful for an early crop.",
+    "sowOutdoors": "Sow thinly directly into pots from April. Cover lightly with soil. Keep moist.",
+    "hardenOff": "If started indoors, harden off for a few days before planting out.",
+    "plantOut": "Plant out seedlings or sow direct. Rocket doesn't mind crowding.",
+    "watering": "Critical! Keep soil consistently moist. Dry soil triggers bolting (flowering) and makes leaves tough and bitter.",
+    "feeding": "Feed with a general liquid fertiliser every 3-4 weeks.",
+    "harvest": "Pick leaves when young (10cm long). Pick often to encourage regrowth.",
+    "overwintering": "Hardy annual. Late sowings can be harvested into winter if protected from severe cold."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Small, round, brownish seeds. Very fast to germinate.",
+    "germinationDays": "3–7 days at 10–20°C",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "If it flowers, the leaves become bitter. You can eat the flowers though! Remove flower spikes to extend leaf harvest slightly."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Let a few plants flower and produce long pods. When pods are dry and brown, harvest and shell the seeds.",
+    "seedPodDescription": "Long, thin pods containing many small round seeds."
+  },
+  "companionPlants": [
+    "lettuce",
+    "mint",
+    "beetroot"
+  ],
+  "commonProblems": [
+    "Flea beetle — tiny holes in leaves. Cover with fleece to prevent.",
+    "Bolting — flowering prematurely due to heat or dryness. Keep watered and shaded in summer.",
+    "Bitter taste — usually due to heat or old leaves."
+  ],
+  "funFact": "Rocket has been grown in the Mediterranean since Roman times and was once considered an aphrodisiac!"
+}

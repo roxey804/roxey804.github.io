@@ -1,0 +1,115 @@
+{
+  "id": "tumbling-tom-yellow",
+  "commonName": "Tumbling Tom Yellow",
+  "latinName": "Solanum lycopersicum",
+  "family": "Solanaceae",
+  "category": "vegetable",
+  "variety": "Tumbling Tom Yellow",
+  "description": "The golden cousin of the classic red tumbler. This variety produces masses of bright yellow cherry tomatoes with a slightly zestier, citrusy flavour. Looks spectacular mixed with red varieties in a hanging basket.",
+  "images": {
+    "plant": "images/tumbling-tom-yellow/plant.jpg",
+    "seed": "images/tumbling-tom-yellow/seed.jpg",
+    "flower": "images/tumbling-tom-yellow/flower.jpg",
+    "fruit": "images/tumbling-tom-yellow/fruit.jpg",
+    "seedling": "images/tumbling-tom-yellow/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "Trailing (30cm height, trails to 50cm+)",
+    "matureSpread": "30–45cm",
+    "hardiness": "Half-hardy (killed by frost)",
+    "lifespan": "Annual",
+    "sunRequirement": "Full sun (6+ hours)",
+    "waterNeeds": "High — daily watering essential in baskets",
+    "soilType": "Rich potting compost with water-retaining gel",
+    "containerSize": "30cm+ hanging basket or tall pot"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sowOutdoorsWeeks": [],
+    "hardenOffWeeks": [
+      18,
+      19,
+      20
+    ],
+    "plantOutWeeks": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "harvestWeeks": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "floweringWeeks": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "bringInsideWeek": 40,
+    "successionSowWeeks": [],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Sow seeds 0.5cm deep in small pots on a warm windowsill (18–21°C). Keep moist. Can be slower to germinate than red varieties, so start a week earlier if possible.",
+    "sowOutdoors": null,
+    "hardenOff": "From mid-May, gradually acclimatise plants to outdoor conditions over 7–10 days.",
+    "plantOut": "After the last frost (mid-May in London). Looks great planted alongside red varieties for colour contrast.",
+    "watering": "Water daily in summer. Baskets dry out rapidly in the wind and sun.",
+    "feeding": "Feed weekly with a high-potash tomato fertiliser once flowers appear.",
+    "harvest": "Pick when fruits are a rich golden yellow. They have a tangier flavour than the red ones.",
+    "overwintering": "Annual plant — compost at the end of the season."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Small, flat, pale yellow seeds. Indistinguishable from red tomato seeds.",
+    "germinationDays": "7–14 days at 18–21°C",
+    "fromCuttings": true,
+    "cuttingsMethod": "Side shoots can be rooted, but seed is the standard method.",
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "No deadheading needed. The plant is determinate (bushy) and will stop growing at a certain size naturally."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Squeeze seeds from a ripe yellow fruit into water. Ferment for 3 days to remove the gel, rinse, and dry.",
+    "seedPodDescription": "Seeds are inside the yellow fruit."
+  },
+  "companionPlants": [
+    "basil",
+    "nasturtium",
+    "lobelia"
+  ],
+  "commonProblems": [
+    "Drying out — hanging baskets are very prone to drought.",
+    "Sunscald — fruit can get bleached spots in intense sun if foliage is sparse.",
+    "Aphids — check the underside of leaves regularly."
+  ],
+  "funFact": "Yellow tomatoes are often lower in acid than red ones, making them gentler on the stomach for some people."
+}

@@ -1,0 +1,67 @@
+{
+  "id": "snapdragon",
+  "commonName": "Snapdragon",
+  "latinName": "Antirrhinum majus",
+  "family": "Plantaginaceae",
+  "category": "flower",
+  "variety": "Common",
+  "description": "Vibrant, vertical flowers that bring height and drama to borders and containers. Known for their 'dragon-mouth' shape.",
+  "images": {
+    "plant": "images/snapdragon/plant.jpg",
+    "seed": "images/snapdragon/seed.jpg",
+    "flower": "images/snapdragon/flower.jpg",
+    "seedling": "images/snapdragon/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "20–90cm (depending on variety)",
+    "matureSpread": "25–45cm",
+    "hardiness": "Half-hardy annual",
+    "lifespan": "Annual / Short-lived perennial",
+    "sunRequirement": "Full sun (6+ hours)",
+    "waterNeeds": "Moderate — keep moist but not waterlogged",
+    "soilType": "Well-drained, fertile soil",
+    "containerSize": "1L+ pot (or larger for taller varieties)"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [6, 7, 8, 9, 10, 11, 12, 13, 14],
+    "sowOutdoorsWeeks": [18, 19, 20, 21, 22, 23, 24],
+    "hardenOffWeeks": [15, 16, 17, 18],
+    "plantOutWeeks": [16, 17, 18, 19, 20],
+    "harvestWeeks": [],
+    "floweringWeeks": [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [10, 14, 18],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Sow seeds thinly on surface of moist seed compost, do not cover as they need light to germinate. Keep at 18-21°C. Germination 7-14 days.",
+    "sowOutdoors": "Sow thinly in prepared seedbed in sunny, well-drained spot.",
+    "hardenOff": "Gradually acclimatize plants to outdoor conditions over 7-10 days before planting out.",
+    "plantOut": "Plant out after all danger of frost has passed.",
+    "watering": "Water regularly, especially during dry spells. Avoid overhead watering to reduce rust.",
+    "feeding": "Feed with a high-potash liquid feed every 2-4 weeks once flowering begins.",
+    "harvest": "Cut flower stems for indoor display when the first few florets are open.",
+    "overwintering": "In milder areas, established plants may overwinter, especially if protected."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Very tiny, dark seeds.",
+    "germinationDays": "7–14 days at 18–21°C (needs light)",
+    "fromCuttings": true,
+    "cuttingsMethod": "Take 5-10cm non-flowering shoots in late summer, root in moist compost.",
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": true,
+    "notes": "Crucial for continuous flowering. Pinch off spent flower spikes at the base."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Allow some flower spikes to go to seed at the end of the season. Collect the dry, papery seed pods once they start to split open.",
+    "seedPodDescription": "Small, capsule-like pods that develop along the flower stalk."
+  },
+  "companionPlants": ["cosmos", "marigold", "zinnia"],
+  "commonProblems": ["Rust (Puccinia antirrhini)", "Aphids", "Slugs and snails (especially young plants)"],
+  "funFact": "The common name 'snapdragon' comes from the flower's resemblance to a dragon's snout, which snaps open and shut when squeezed."
+}

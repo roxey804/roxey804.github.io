@@ -4,12 +4,12 @@
   "latinName": "Tropaeolum majus",
   "family": "Tropaeolaceae",
   "category": "flower",
+  "variety": "Jewel Mix",
   "description": "Cheerful, trumpet-shaped flowers in fiery oranges, reds, and yellows that bloom all summer long. Nasturtiums are ridiculously easy to grow — just push the large seeds into compost and watch them go. Bonus: the flowers, leaves, and seed pods are all edible with a peppery, watercress-like flavour.",
   "images": {
     "plant": "images/nasturtium/plant.jpg",
     "seed": "images/nasturtium/seed.jpg",
     "flower": "images/nasturtium/flower.jpg",
-    "fruit": null,
     "seedling": "images/nasturtium/seedling.jpg"
   },
   "characteristics": {

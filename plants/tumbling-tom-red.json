@@ -1,0 +1,115 @@
+{
+  "id": "tumbling-tom-red",
+  "commonName": "Tumbling Tom Red",
+  "latinName": "Solanum lycopersicum",
+  "family": "Solanaceae",
+  "category": "vegetable",
+  "variety": "Tumbling Tom Red",
+  "description": "A prolific cascading cherry tomato that is perfect for hanging baskets and tall containers. It produces masses of sweet, red cherry tomatoes throughout the summer. No staking or side-shoot removal needed—just let it tumble!",
+  "images": {
+    "plant": "images/tumbling-tom-red/plant.jpg",
+    "seed": "images/tumbling-tom-red/seed.jpg",
+    "flower": "images/tumbling-tom-red/flower.jpg",
+    "fruit": "images/tumbling-tom-red/fruit.jpg",
+    "seedling": "images/tumbling-tom-red/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "Trailing (30cm height, trails to 50cm+)",
+    "matureSpread": "30–45cm",
+    "hardiness": "Half-hardy (killed by frost)",
+    "lifespan": "Annual",
+    "sunRequirement": "Full sun (6+ hours)",
+    "waterNeeds": "High — daily watering essential in baskets",
+    "soilType": "Rich potting compost with water-retaining gel",
+    "containerSize": "30cm+ hanging basket or tall pot"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sowOutdoorsWeeks": [],
+    "hardenOffWeeks": [
+      18,
+      19,
+      20
+    ],
+    "plantOutWeeks": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "harvestWeeks": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "floweringWeeks": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "bringInsideWeek": 40,
+    "successionSowWeeks": [],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Sow seeds 0.5cm deep in small pots on a warm windowsill (18–21°C). Keep moist. Seeds sprout in 7–14 days.",
+    "sowOutdoors": null,
+    "hardenOff": "From mid-May, gradually acclimatise plants to outdoor conditions over 7–10 days.",
+    "plantOut": "After the last frost (mid-May in London), plant 1 plant per 25cm basket or 3 in a 35cm basket. Hang in a sunny, sheltered spot.",
+    "watering": "Hanging baskets dry out very fast! Water daily in summer, twice daily during heatwaves. Inconsistent watering causes split fruit.",
+    "feeding": "Feed weekly with a high-potash tomato fertiliser once the first fruits set.",
+    "harvest": "Pick red fruits regularly to encourage new flowers. The more you pick, the more you get.",
+    "overwintering": "Annual plant — compost at the end of the season."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Small, flat, pale yellow seeds. Easy to handle.",
+    "germinationDays": "7–14 days at 18–21°C",
+    "fromCuttings": true,
+    "cuttingsMethod": "Side shoots can be rooted in water, but it's rarely done for basket varieties as you want the bushy growth.",
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "No deadheading or pinching out needed. Just remove any yellowing leaves to improve airflow."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Squeeze seeds from a ripe fruit into a jar of water. Ferment for 3 days, rinse well, and dry on paper.",
+    "seedPodDescription": "Seeds are inside the juicy red fruit."
+  },
+  "companionPlants": [
+    "basil",
+    "nasturtium",
+    "marigold"
+  ],
+  "commonProblems": [
+    "Drying out — the #1 issue with baskets. Water, water, water!",
+    "Blossom end rot — caused by erratic watering.",
+    "Aphids — wipe off or spray with soapy water."
+  ],
+  "funFact": "Tumbling Tom was specifically bred to have a cascading habit, making it one of the most popular basket tomatoes in the UK."
+}

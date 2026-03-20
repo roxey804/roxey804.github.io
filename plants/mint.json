@@ -4,12 +4,12 @@
   "latinName": "Mentha spicata",
   "family": "Lamiaceae",
   "category": "herb",
+  "variety": "Garden Mint",
   "description": "Almost impossible to kill! Mint is incredibly vigorous and perfect for beginners. Keep it in its own pot — it spreads aggressively and will take over anything it's planted with. Great for tea, cocktails, and cooking.",
   "images": {
     "plant": "images/mint/plant.jpg",
     "seed": "images/mint/seed.jpg",
     "flower": "images/mint/flower.jpg",
-    "fruit": null,
     "seedling": null
   },
   "characteristics": {

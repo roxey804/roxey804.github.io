@@ -3,13 +3,13 @@
   "commonName": "English Lavender",
   "latinName": "Lavandula angustifolia",
   "family": "Lamiaceae",
-  "category": "flower",
+  "category": "herb",
+  "variety": "Hidcote",
   "description": "A beautiful, fragrant, evergreen perennial that thrives in pots and loves the well-drained conditions that containers provide. The purple flower spikes appear in summer and are absolute magnets for bees. Low maintenance once established.",
   "images": {
     "plant": "images/lavender/plant.jpg",
     "seed": "images/lavender/seed.jpg",
     "flower": "images/lavender/flower.jpg",
-    "fruit": null,
     "seedling": null
   },
   "characteristics": {
@@ -96,7 +96,7 @@
     "plantOut": "Buy a plant and pot it into a well-drained container. Mix 30% perlite or horticultural grit into the compost. Ensure the pot has drainage holes.",
     "watering": "Water sparingly once established — lavender hates wet roots. Water only when compost is dry. In winter, barely water at all.",
     "feeding": "Very light feeder. A single spring application of slow-release fertiliser is plenty. Don't overfeed — it makes growth leggy.",
-    "harvest": "Cut flower stems when the buds are just starting to open for the strongest fragrance. Dry by hanging upside down in bunches.",
+    "harvest": "Cut flower stems when the buds are just starting to open for the strongest fragrance. Dry by hanging upside down in batches.",
     "overwintering": "Hardy — leave outdoors. Protect from waterlogging in winter by raising pot on feet and moving to a sheltered spot if very wet."
   },
   "propagation": {

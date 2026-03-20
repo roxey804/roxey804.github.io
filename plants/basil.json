@@ -4,12 +4,12 @@
   "latinName": "Ocimum basilicum",
   "family": "Lamiaceae",
   "category": "herb",
+  "variety": "Genovese",
   "description": "The classic Italian herb with bright green, aromatic leaves. Basil loves warmth and sun, making a south-facing balcony ideal. Pinch off the growing tips regularly to keep it bushy and productive.",
   "images": {
     "plant": "images/basil/plant.jpg",
     "seed": "images/basil/seed.jpg",
     "flower": "images/basil/flower.jpg",
-    "fruit": null,
     "seedling": "images/basil/seedling.jpg"
   },
   "characteristics": {

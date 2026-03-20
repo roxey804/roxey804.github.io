@@ -1,0 +1,159 @@
+{
+  "id": "coriander",
+  "commonName": "Coriander (Cilantro)",
+  "latinName": "Coriandrum sativum",
+  "family": "Apiaceae",
+  "category": "herb",
+  "variety": "Calypso",
+  "description": "A dual-purpose herb grown for its fresh citrusy leaves (cilantro) and aromatic seeds (coriander). It grows fast but is prone to bolting in hot weather. Sow little and often for a constant supply.",
+  "images": {
+    "plant": "images/coriander/plant.jpg",
+    "seed": "images/coriander/seed.jpg",
+    "flower": "images/coriander/flower.jpg",
+    "seedling": "images/coriander/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "30–60cm",
+    "matureSpread": "20–30cm",
+    "hardiness": "Half-hardy (survives light frosts)",
+    "lifespan": "Annual",
+    "sunRequirement": "Partial shade (summer) to full sun (spring/autumn)",
+    "waterNeeds": "Regular — keep soil moist to delay bolting",
+    "soilType": "Light, well-drained potting compost",
+    "containerSize": "2L+ pot (deep pot preferred for taproot)"
+  },
+  "schedule": {
+    "sowIndoorsWeeks": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sowOutdoorsWeeks": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "hardenOffWeeks": [
+      12,
+      13,
+      14
+    ],
+    "plantOutWeeks": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "harvestWeeks": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "floweringWeeks": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "bringInsideWeek": null,
+    "successionSowWeeks": [
+      13,
+      16,
+      19,
+      22,
+      25,
+      28,
+      31,
+      34
+    ],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Sow in cell trays in Feb/March. Coriander hates root disturbance, so module trays are best. Plant out when risk of hard frost passes.",
+    "sowOutdoors": "Sow directly into pots from late March. Crack the round husks gently before sowing to speed up germination.",
+    "hardenOff": "Gradually acclimatise indoor plants before planting out.",
+    "plantOut": "Plant out in blocks. Don't separate individual seedlings too much as they dislike root disturbance.",
+    "watering": "Keep moist but not waterlogged. Dryness causes immediate bolting.",
+    "feeding": "Feed occasionally with a balanced liquid feed.",
+    "harvest": "Pick leaves as needed. Harvest the whole plant if it starts to bolt (or let it flower for seeds).",
+    "overwintering": "Annual — dies in winter. Autumn sowings can survive in a greenhouse."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Round, beige husks containing two seeds each. Crush gently before sowing.",
+    "germinationDays": "7–14 days at 15–20°C",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "Bolting is natural. If you want leaves, harvest the whole plant when it bolts. If you want seeds (coriander spice), let it flower and set seed."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Let the plant flower and turn brown. Harvest the seed heads, dry them, and rub to release the round coriander seeds.",
+    "seedPodDescription": "Round, beige seeds that are the spice 'coriander'."
+  },
+  "companionPlants": [
+    "dill",
+    "chervil",
+    "potatoes"
+  ],
+  "commonProblems": [
+    "Bolting — flowers prematurely in heat/drought. Sow successional crops and keep watered.",
+    "Aphids — can attack soft shoot tips.",
+    "Root rot — if overwatered in winter."
+  ],
+  "funFact": "Coriander is one of the world's oldest spices, found in seeds in the tomb of Tutankhamun!"
+}

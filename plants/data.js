@@ -6,12 +6,12 @@ window.PLANT_DATA = [
     "latinName": "Ocimum basilicum",
     "family": "Lamiaceae",
     "category": "herb",
+    "variety": "Genovese",
     "description": "The classic Italian herb with bright green, aromatic leaves. Basil loves warmth and sun, making a south-facing balcony ideal. Pinch off the growing tips regularly to keep it bushy and productive.",
     "images": {
       "plant": "images/basil/plant.jpg",
       "seed": "images/basil/seed.jpg",
       "flower": "images/basil/flower.jpg",
-      "fruit": null,
       "seedling": "images/basil/seedling.jpg"
     },
     "characteristics": {
@@ -134,130 +134,18 @@ window.PLANT_DATA = [
     "funFact": "In Italy, placing a pot of basil on your balcony was traditionally a signal that you were ready for a suitor to come courting!"
   },
   {
-    "id": "bush-tomato",
-    "commonName": "Bush Tomato",
-    "latinName": "Solanum lycopersicum",
-    "family": "Solanaceae",
-    "category": "vegetable",
-    "description": "Compact bush tomatoes are perfect for pots on a balcony. Unlike tall cordon types, bush varieties stay small and don't need staking or side-shoot removal. You'll get handfuls of sweet cherry-sized tomatoes from mid-summer.",
-    "images": {
-      "plant": "images/bush-tomato/plant.jpg",
-      "seed": "images/bush-tomato/seed.jpg",
-      "flower": "images/bush-tomato/flower.jpg",
-      "fruit": "images/bush-tomato/fruit.jpg",
-      "seedling": "images/bush-tomato/seedling.jpg"
-    },
-    "characteristics": {
-      "matureHeight": "30–60cm",
-      "matureSpread": "30–45cm",
-      "hardiness": "Half-hardy (killed by frost)",
-      "lifespan": "Annual",
-      "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "Regular — daily in hot weather",
-      "soilType": "Rich, well-drained potting compost",
-      "containerSize": "10L+ pot minimum"
-    },
-    "schedule": {
-      "sowIndoorsWeeks": [
-        8,
-        9,
-        10,
-        11,
-        12
-      ],
-      "sowOutdoorsWeeks": [],
-      "hardenOffWeeks": [
-        18,
-        19,
-        20
-      ],
-      "plantOutWeeks": [
-        20,
-        21,
-        22,
-        23
-      ],
-      "harvestWeeks": [
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38
-      ],
-      "floweringWeeks": [
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30
-      ],
-      "bringInsideWeek": 40,
-      "successionSowWeeks": [],
-      "frostSensitive": true
-    },
-    "care": {
-      "sowIndoors": "Sow seeds 1cm deep in small pots on a warm windowsill (18–21°C). Keep the compost moist but not soggy. Seeds should sprout in 7–14 days.",
-      "sowOutdoors": null,
-      "hardenOff": "From mid-May, put pots outside during the day and bring them in at night. Do this for 7–10 days so the plants adjust to outdoor temperatures.",
-      "plantOut": "After the last frost (mid-April in London), move to a final large pot — at least 10 litres. Place in the sunniest spot on your balcony.",
-      "watering": "Water daily in hot weather — containers dry out fast. Water at the base, not the leaves, to avoid disease.",
-      "feeding": "Once flowers appear, feed weekly with a tomato fertiliser (high in potassium).",
-      "harvest": "Pick tomatoes when they're fully coloured and come away easily. Regular picking encourages more fruit.",
-      "overwintering": "Annual plant — pull up and compost after the last harvest in autumn."
-    },
-    "propagation": {
-      "fromSeed": true,
-      "seedDescription": "Small, flat, pale yellow seeds about 3mm across. Store cool and dry — they stay viable for 4–5 years.",
-      "germinationDays": "7–14 days at 18–21°C",
-      "fromCuttings": true,
-      "cuttingsMethod": "Side shoots (suckers) can be snipped off and rooted in water or moist compost. However, bush types produce fewer suckers than cordon types.",
-      "fromDivision": false,
-      "divisionMethod": null
-    },
-    "deadheading": {
-      "required": false,
-      "notes": "No deadheading needed for bush tomatoes. Just remove any yellow or diseased leaves. Unlike cordon types, you don't need to pinch out side shoots."
-    },
-    "seedSaving": {
-      "canSaveSeeds": true,
-      "method": "Let a fruit ripen fully on the vine. Scoop out the seeds, put them in a jar of water for 2–3 days (this ferments off the gel coating), then rinse and dry on kitchen paper.",
-      "seedPodDescription": "Seeds are inside the fruit itself — each tomato contains dozens of seeds."
-    },
-    "companionPlants": [
-      "basil",
-      "chives",
-      "nasturtium"
-    ],
-    "commonProblems": [
-      "Blight — brown patches on leaves in wet weather. Keep leaves dry and remove affected parts.",
-      "Blossom end rot — black patch on bottom of fruit, caused by irregular watering. Water consistently.",
-      "Aphids — clusters of tiny green/black insects. Spray with diluted washing-up liquid."
-    ],
-    "funFact": "Tomatoes were considered poisonous in Europe for over 200 years and were grown purely as ornamental plants. It wasn't until the 18th century that Italians started eating them."
-  },
-  {
     "id": "chives",
     "commonName": "Chives",
     "latinName": "Allium schoenoprasum",
     "family": "Amaryllidaceae",
     "category": "herb",
+    "variety": "Common",
     "description": "A hardy perennial herb that comes back year after year with zero fuss. The mild onion-flavoured leaves are brilliant snipped over eggs, salads, and potatoes. Pretty purple pom-pom flowers in summer are edible too.",
     "images": {
       "plant": "images/chives/plant.jpg",
       "seed": "images/chives/seed.jpg",
       "flower": "images/chives/flower.jpg",
-      "fruit": null,
-      "seedling": null
+      "seedling": "images/chives/seedling.jpg"
     },
     "characteristics": {
       "matureHeight": "20–30cm",
@@ -384,11 +272,171 @@ window.PLANT_DATA = [
     "funFact": "Bunches of chives were hung in doorways in medieval Europe to ward off evil spirits and disease. They're also one of the 'fines herbes' of French cuisine."
   },
   {
+    "id": "coriander",
+    "commonName": "Coriander (Cilantro)",
+    "latinName": "Coriandrum sativum",
+    "family": "Apiaceae",
+    "category": "herb",
+    "variety": "Calypso",
+    "description": "A dual-purpose herb grown for its fresh citrusy leaves (cilantro) and aromatic seeds (coriander). It grows fast but is prone to bolting in hot weather. Sow little and often for a constant supply.",
+    "images": {
+      "plant": "images/coriander/plant.jpg",
+      "seed": "images/coriander/seed.jpg",
+      "flower": "images/coriander/flower.jpg",
+      "seedling": "images/coriander/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "30–60cm",
+      "matureSpread": "20–30cm",
+      "hardiness": "Half-hardy (survives light frosts)",
+      "lifespan": "Annual",
+      "sunRequirement": "Partial shade (summer) to full sun (spring/autumn)",
+      "waterNeeds": "Regular — keep soil moist to delay bolting",
+      "soilType": "Light, well-drained potting compost",
+      "containerSize": "2L+ pot (deep pot preferred for taproot)"
+    },
+    "schedule": {
+      "sowIndoorsWeeks": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sowOutdoorsWeeks": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "hardenOffWeeks": [
+        12,
+        13,
+        14
+      ],
+      "plantOutWeeks": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "harvestWeeks": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "floweringWeeks": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "bringInsideWeek": null,
+      "successionSowWeeks": [
+        13,
+        16,
+        19,
+        22,
+        25,
+        28,
+        31,
+        34
+      ],
+      "frostSensitive": true
+    },
+    "care": {
+      "sowIndoors": "Sow in cell trays in Feb/March. Coriander hates root disturbance, so module trays are best. Plant out when risk of hard frost passes.",
+      "sowOutdoors": "Sow directly into pots from late March. Crack the round husks gently before sowing to speed up germination.",
+      "hardenOff": "Gradually acclimatise indoor plants before planting out.",
+      "plantOut": "Plant out in blocks. Don't separate individual seedlings too much as they dislike root disturbance.",
+      "watering": "Keep moist but not waterlogged. Dryness causes immediate bolting.",
+      "feeding": "Feed occasionally with a balanced liquid feed.",
+      "harvest": "Pick leaves as needed. Harvest the whole plant if it starts to bolt (or let it flower for seeds).",
+      "overwintering": "Annual — dies in winter. Autumn sowings can survive in a greenhouse."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Round, beige husks containing two seeds each. Crush gently before sowing.",
+      "germinationDays": "7–14 days at 15–20°C",
+      "fromCuttings": false,
+      "cuttingsMethod": null,
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": false,
+      "notes": "Bolting is natural. If you want leaves, harvest the whole plant when it bolts. If you want seeds (coriander spice), let it flower and set seed."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Let the plant flower and turn brown. Harvest the seed heads, dry them, and rub to release the round coriander seeds.",
+      "seedPodDescription": "Round, beige seeds that are the spice 'coriander'."
+    },
+    "companionPlants": [
+      "dill",
+      "chervil",
+      "potatoes"
+    ],
+    "commonProblems": [
+      "Bolting — flowers prematurely in heat/drought. Sow successional crops and keep watered.",
+      "Aphids — can attack soft shoot tips.",
+      "Root rot — if overwatered in winter."
+    ],
+    "funFact": "Coriander is one of the world's oldest spices, found in seeds in the tomb of Tutankhamun!"
+  },
+  {
     "id": "courgette",
     "commonName": "Courgette",
     "latinName": "Cucurbita pepo",
     "family": "Cucurbitaceae",
     "category": "vegetable",
+    "variety": "Defender",
     "description": "Courgettes are incredibly productive and satisfying to grow. A single plant can produce dozens of fruits throughout the summer. They love the warmth and will thrive in a large pot on a sunny balcony.",
     "images": {
       "plant": "images/courgette/plant.jpg",
@@ -508,13 +556,13 @@ window.PLANT_DATA = [
     "commonName": "English Lavender",
     "latinName": "Lavandula angustifolia",
     "family": "Lamiaceae",
-    "category": "flower",
+    "category": "herb",
+    "variety": "Hidcote",
     "description": "A beautiful, fragrant, evergreen perennial that thrives in pots and loves the well-drained conditions that containers provide. The purple flower spikes appear in summer and are absolute magnets for bees. Low maintenance once established.",
     "images": {
       "plant": "images/lavender/plant.jpg",
       "seed": "images/lavender/seed.jpg",
       "flower": "images/lavender/flower.jpg",
-      "fruit": null,
       "seedling": null
     },
     "characteristics": {
@@ -601,7 +649,7 @@ window.PLANT_DATA = [
       "plantOut": "Buy a plant and pot it into a well-drained container. Mix 30% perlite or horticultural grit into the compost. Ensure the pot has drainage holes.",
       "watering": "Water sparingly once established — lavender hates wet roots. Water only when compost is dry. In winter, barely water at all.",
       "feeding": "Very light feeder. A single spring application of slow-release fertiliser is plenty. Don't overfeed — it makes growth leggy.",
-      "harvest": "Cut flower stems when the buds are just starting to open for the strongest fragrance. Dry by hanging upside down in bunches.",
+      "harvest": "Cut flower stems when the buds are just starting to open for the strongest fragrance. Dry by hanging upside down in batches.",
       "overwintering": "Hardy — leave outdoors. Protect from waterlogging in winter by raising pot on feet and moving to a sheltered spot if very wet."
     },
     "propagation": {
@@ -639,6 +687,7 @@ window.PLANT_DATA = [
     "latinName": "Lactuca sativa",
     "family": "Asteraceae",
     "category": "vegetable",
+    "variety": "Little Gem",
     "description": "The easiest edible to grow on a balcony. Salad leaves grow fast, tolerate partial shade, and can be harvested in as little as 3–4 weeks. Sow small amounts every 2 weeks for a continuous supply all summer.",
     "images": {
       "plant": "images/lettuce/plant.jpg",
@@ -785,6 +834,7 @@ window.PLANT_DATA = [
     "latinName": "Tagetes patula",
     "family": "Asteraceae",
     "category": "flower",
+    "variety": "French",
     "description": "French marigolds are one of the easiest and most rewarding flowers for balcony containers. They bloom non-stop from early summer until the first frost, producing cheerful orange, yellow, and mahogany flowers. Their strong scent naturally deters many common garden pests, making them brilliant companion plants for your tomatoes and herbs.",
     "images": {
       "plant": "images/marigold/plant.jpg",
@@ -901,12 +951,12 @@ window.PLANT_DATA = [
     "latinName": "Mentha spicata",
     "family": "Lamiaceae",
     "category": "herb",
+    "variety": "Garden Mint",
     "description": "Almost impossible to kill! Mint is incredibly vigorous and perfect for beginners. Keep it in its own pot — it spreads aggressively and will take over anything it's planted with. Great for tea, cocktails, and cooking.",
     "images": {
       "plant": "images/mint/plant.jpg",
       "seed": "images/mint/seed.jpg",
       "flower": "images/mint/flower.jpg",
-      "fruit": null,
       "seedling": null
     },
     "characteristics": {
@@ -1025,12 +1075,12 @@ window.PLANT_DATA = [
     "latinName": "Tropaeolum majus",
     "family": "Tropaeolaceae",
     "category": "flower",
+    "variety": "Jewel Mix",
     "description": "Cheerful, trumpet-shaped flowers in fiery oranges, reds, and yellows that bloom all summer long. Nasturtiums are ridiculously easy to grow — just push the large seeds into compost and watch them go. Bonus: the flowers, leaves, and seed pods are all edible with a peppery, watercress-like flavour.",
     "images": {
       "plant": "images/nasturtium/plant.jpg",
       "seed": "images/nasturtium/seed.jpg",
       "flower": "images/nasturtium/flower.jpg",
-      "fruit": null,
       "seedling": "images/nasturtium/seedling.jpg"
     },
     "characteristics": {
@@ -1152,13 +1202,13 @@ window.PLANT_DATA = [
     "commonName": "Radish",
     "latinName": "Raphanus sativus",
     "family": "Brassicaceae",
-    "category": "vegetable",
+    "category": "flower",
+    "variety": "French Breakfast",
     "description": "The fastest vegetable you can grow — ready to eat in just 4 weeks! Radishes are perfect for beginners and impatient gardeners. They need very little space and grow happily in shallow pots or window boxes.",
     "images": {
       "plant": "images/radish/plant.jpg",
       "seed": "images/radish/seed.jpg",
       "flower": null,
-      "fruit": "images/radish/fruit.jpg",
       "seedling": null
     },
     "characteristics": {
@@ -1285,5 +1335,530 @@ window.PLANT_DATA = [
       "Splitting — caused by uneven watering. Keep soil consistently moist."
     ],
     "funFact": "Radishes were so valued in ancient Greece that gold replicas were made of them as offerings to the god Apollo!"
+  },
+  {
+    "id": "rocket",
+    "commonName": "Rocket (Arugula)",
+    "latinName": "Eruca vesicaria",
+    "family": "Brassicaceae",
+    "category": "herb",
+    "variety": "Salad Rocket",
+    "description": "A fast-growing, peppery salad leaf that is incredibly easy to grow in pots. Regular picking keeps the leaves young and tender. Ideally grown in cooler weather (spring/autumn) as heat makes it bolt and turn spicy.",
+    "images": {
+      "plant": "images/rocket/plant.jpg",
+      "seed": "images/rocket/seed.jpg",
+      "flower": "images/rocket/flower.jpg",
+      "seedling": "images/rocket/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "20–50cm",
+      "matureSpread": "20–30cm",
+      "hardiness": "Hardy (tolerates frost)",
+      "lifespan": "Annual",
+      "sunRequirement": "Partial shade to full sun",
+      "waterNeeds": "Regular — keep moist to prevent bolting",
+      "soilType": "Any moisture-retentive potting compost",
+      "containerSize": "2L+ pot or window box"
+    },
+    "schedule": {
+      "sowIndoorsWeeks": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "sowOutdoorsWeeks": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "hardenOffWeeks": [],
+      "plantOutWeeks": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "harvestWeeks": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "floweringWeeks": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "bringInsideWeek": null,
+      "successionSowWeeks": [
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "frostSensitive": false
+    },
+    "care": {
+      "sowIndoors": "Sow thinly in trays or modules in March. Plant out when large enough to handle. Useful for an early crop.",
+      "sowOutdoors": "Sow thinly directly into pots from April. Cover lightly with soil. Keep moist.",
+      "hardenOff": "If started indoors, harden off for a few days before planting out.",
+      "plantOut": "Plant out seedlings or sow direct. Rocket doesn't mind crowding.",
+      "watering": "Critical! Keep soil consistently moist. Dry soil triggers bolting (flowering) and makes leaves tough and bitter.",
+      "feeding": "Feed with a general liquid fertiliser every 3-4 weeks.",
+      "harvest": "Pick leaves when young (10cm long). Pick often to encourage regrowth.",
+      "overwintering": "Hardy annual. Late sowings can be harvested into winter if protected from severe cold."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Small, round, brownish seeds. Very fast to germinate.",
+      "germinationDays": "3–7 days at 10–20°C",
+      "fromCuttings": false,
+      "cuttingsMethod": null,
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": false,
+      "notes": "If it flowers, the leaves become bitter. You can eat the flowers though! Remove flower spikes to extend leaf harvest slightly."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Let a few plants flower and produce long pods. When pods are dry and brown, harvest and shell the seeds.",
+      "seedPodDescription": "Long, thin pods containing many small round seeds."
+    },
+    "companionPlants": [
+      "lettuce",
+      "mint",
+      "beetroot"
+    ],
+    "commonProblems": [
+      "Flea beetle — tiny holes in leaves. Cover with fleece to prevent.",
+      "Bolting — flowering prematurely due to heat or dryness. Keep watered and shaded in summer.",
+      "Bitter taste — usually due to heat or old leaves."
+    ],
+    "funFact": "Rocket has been grown in the Mediterranean since Roman times and was once considered an aphrodisiac!"
+  },
+  {
+    "id": "snapdragon",
+    "commonName": "Snapdragon",
+    "latinName": "Antirrhinum majus",
+    "family": "Plantaginaceae",
+    "category": "flower",
+    "variety": "Common",
+    "description": "Vibrant, vertical flowers that bring height and drama to borders and containers. Known for their 'dragon-mouth' shape.",
+    "images": {
+      "plant": "images/snapdragon/plant.jpg",
+      "seed": "images/snapdragon/seed.jpg",
+      "flower": "images/snapdragon/flower.jpg",
+      "seedling": "images/snapdragon/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "20–90cm (depending on variety)",
+      "matureSpread": "25–45cm",
+      "hardiness": "Half-hardy annual",
+      "lifespan": "Annual / Short-lived perennial",
+      "sunRequirement": "Full sun (6+ hours)",
+      "waterNeeds": "Moderate — keep moist but not waterlogged",
+      "soilType": "Well-drained, fertile soil",
+      "containerSize": "1L+ pot (or larger for taller varieties)"
+    },
+    "schedule": {
+      "sowIndoorsWeeks": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "sowOutdoorsWeeks": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "hardenOffWeeks": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "plantOutWeeks": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "harvestWeeks": [],
+      "floweringWeeks": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "bringInsideWeek": null,
+      "successionSowWeeks": [
+        10,
+        14,
+        18
+      ],
+      "frostSensitive": true
+    },
+    "care": {
+      "sowIndoors": "Sow seeds thinly on surface of moist seed compost, do not cover as they need light to germinate. Keep at 18-21°C. Germination 7-14 days.",
+      "sowOutdoors": "Sow thinly in prepared seedbed in sunny, well-drained spot.",
+      "hardenOff": "Gradually acclimatize plants to outdoor conditions over 7-10 days before planting out.",
+      "plantOut": "Plant out after all danger of frost has passed.",
+      "watering": "Water regularly, especially during dry spells. Avoid overhead watering to reduce rust.",
+      "feeding": "Feed with a high-potash liquid feed every 2-4 weeks once flowering begins.",
+      "harvest": "Cut flower stems for indoor display when the first few florets are open.",
+      "overwintering": "In milder areas, established plants may overwinter, especially if protected."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Very tiny, dark seeds.",
+      "germinationDays": "7–14 days at 18–21°C (needs light)",
+      "fromCuttings": true,
+      "cuttingsMethod": "Take 5-10cm non-flowering shoots in late summer, root in moist compost.",
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": true,
+      "notes": "Crucial for continuous flowering. Pinch off spent flower spikes at the base."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Allow some flower spikes to go to seed at the end of the season. Collect the dry, papery seed pods once they start to split open.",
+      "seedPodDescription": "Small, capsule-like pods that develop along the flower stalk."
+    },
+    "companionPlants": [
+      "cosmos",
+      "marigold",
+      "zinnia"
+    ],
+    "commonProblems": [
+      "Rust (Puccinia antirrhini)",
+      "Aphids",
+      "Slugs and snails (especially young plants)"
+    ],
+    "funFact": "The common name 'snapdragon' comes from the flower's resemblance to a dragon's snout, which snaps open and shut when squeezed."
+  },
+  {
+    "id": "tumbling-tom-red",
+    "commonName": "Tumbling Tom Red",
+    "latinName": "Solanum lycopersicum",
+    "family": "Solanaceae",
+    "category": "vegetable",
+    "variety": "Tumbling Tom Red",
+    "description": "A prolific cascading cherry tomato that is perfect for hanging baskets and tall containers. It produces masses of sweet, red cherry tomatoes throughout the summer. No staking or side-shoot removal needed—just let it tumble!",
+    "images": {
+      "plant": "images/tumbling-tom-red/plant.jpg",
+      "seed": "images/tumbling-tom-red/seed.jpg",
+      "flower": "images/tumbling-tom-red/flower.jpg",
+      "fruit": "images/tumbling-tom-red/fruit.jpg",
+      "seedling": "images/tumbling-tom-red/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "Trailing (30cm height, trails to 50cm+)",
+      "matureSpread": "30–45cm",
+      "hardiness": "Half-hardy (killed by frost)",
+      "lifespan": "Annual",
+      "sunRequirement": "Full sun (6+ hours)",
+      "waterNeeds": "High — daily watering essential in baskets",
+      "soilType": "Rich potting compost with water-retaining gel",
+      "containerSize": "30cm+ hanging basket or tall pot"
+    },
+    "schedule": {
+      "sowIndoorsWeeks": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sowOutdoorsWeeks": [],
+      "hardenOffWeeks": [
+        18,
+        19,
+        20
+      ],
+      "plantOutWeeks": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "harvestWeeks": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "floweringWeeks": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bringInsideWeek": 40,
+      "successionSowWeeks": [],
+      "frostSensitive": true
+    },
+    "care": {
+      "sowIndoors": "Sow seeds 0.5cm deep in small pots on a warm windowsill (18–21°C). Keep moist. Seeds sprout in 7–14 days.",
+      "sowOutdoors": null,
+      "hardenOff": "From mid-May, gradually acclimatise plants to outdoor conditions over 7–10 days.",
+      "plantOut": "After the last frost (mid-May in London), plant 1 plant per 25cm basket or 3 in a 35cm basket. Hang in a sunny, sheltered spot.",
+      "watering": "Hanging baskets dry out very fast! Water daily in summer, twice daily during heatwaves. Inconsistent watering causes split fruit.",
+      "feeding": "Feed weekly with a high-potash tomato fertiliser once the first fruits set.",
+      "harvest": "Pick red fruits regularly to encourage new flowers. The more you pick, the more you get.",
+      "overwintering": "Annual plant — compost at the end of the season."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Small, flat, pale yellow seeds. Easy to handle.",
+      "germinationDays": "7–14 days at 18–21°C",
+      "fromCuttings": true,
+      "cuttingsMethod": "Side shoots can be rooted in water, but it's rarely done for basket varieties as you want the bushy growth.",
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": false,
+      "notes": "No deadheading or pinching out needed. Just remove any yellowing leaves to improve airflow."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Squeeze seeds from a ripe fruit into a jar of water. Ferment for 3 days, rinse well, and dry on paper.",
+      "seedPodDescription": "Seeds are inside the juicy red fruit."
+    },
+    "companionPlants": [
+      "basil",
+      "nasturtium",
+      "marigold"
+    ],
+    "commonProblems": [
+      "Drying out — the #1 issue with baskets. Water, water, water!",
+      "Blossom end rot — caused by erratic watering.",
+      "Aphids — wipe off or spray with soapy water."
+    ],
+    "funFact": "Tumbling Tom was specifically bred to have a cascading habit, making it one of the most popular basket tomatoes in the UK."
+  },
+  {
+    "id": "tumbling-tom-yellow",
+    "commonName": "Tumbling Tom Yellow",
+    "latinName": "Solanum lycopersicum",
+    "family": "Solanaceae",
+    "category": "vegetable",
+    "variety": "Tumbling Tom Yellow",
+    "description": "The golden cousin of the classic red tumbler. This variety produces masses of bright yellow cherry tomatoes with a slightly zestier, citrusy flavour. Looks spectacular mixed with red varieties in a hanging basket.",
+    "images": {
+      "plant": "images/tumbling-tom-yellow/plant.jpg",
+      "seed": "images/tumbling-tom-yellow/seed.jpg",
+      "flower": "images/tumbling-tom-yellow/flower.jpg",
+      "fruit": "images/tumbling-tom-yellow/fruit.jpg",
+      "seedling": "images/tumbling-tom-yellow/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "Trailing (30cm height, trails to 50cm+)",
+      "matureSpread": "30–45cm",
+      "hardiness": "Half-hardy (killed by frost)",
+      "lifespan": "Annual",
+      "sunRequirement": "Full sun (6+ hours)",
+      "waterNeeds": "High — daily watering essential in baskets",
+      "soilType": "Rich potting compost with water-retaining gel",
+      "containerSize": "30cm+ hanging basket or tall pot"
+    },
+    "schedule": {
+      "sowIndoorsWeeks": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "sowOutdoorsWeeks": [],
+      "hardenOffWeeks": [
+        18,
+        19,
+        20
+      ],
+      "plantOutWeeks": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "harvestWeeks": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "floweringWeeks": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bringInsideWeek": 40,
+      "successionSowWeeks": [],
+      "frostSensitive": true
+    },
+    "care": {
+      "sowIndoors": "Sow seeds 0.5cm deep in small pots on a warm windowsill (18–21°C). Keep moist. Can be slower to germinate than red varieties, so start a week earlier if possible.",
+      "sowOutdoors": null,
+      "hardenOff": "From mid-May, gradually acclimatise plants to outdoor conditions over 7–10 days.",
+      "plantOut": "After the last frost (mid-May in London). Looks great planted alongside red varieties for colour contrast.",
+      "watering": "Water daily in summer. Baskets dry out rapidly in the wind and sun.",
+      "feeding": "Feed weekly with a high-potash tomato fertiliser once flowers appear.",
+      "harvest": "Pick when fruits are a rich golden yellow. They have a tangier flavour than the red ones.",
+      "overwintering": "Annual plant — compost at the end of the season."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Small, flat, pale yellow seeds. Indistinguishable from red tomato seeds.",
+      "germinationDays": "7–14 days at 18–21°C",
+      "fromCuttings": true,
+      "cuttingsMethod": "Side shoots can be rooted, but seed is the standard method.",
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": false,
+      "notes": "No deadheading needed. The plant is determinate (bushy) and will stop growing at a certain size naturally."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Squeeze seeds from a ripe yellow fruit into water. Ferment for 3 days to remove the gel, rinse, and dry.",
+      "seedPodDescription": "Seeds are inside the yellow fruit."
+    },
+    "companionPlants": [
+      "basil",
+      "nasturtium",
+      "lobelia"
+    ],
+    "commonProblems": [
+      "Drying out — hanging baskets are very prone to drought.",
+      "Sunscald — fruit can get bleached spots in intense sun if foliage is sparse.",
+      "Aphids — check the underside of leaves regularly."
+    ],
+    "funFact": "Yellow tomatoes are often lower in acid than red ones, making them gentler on the stomach for some people."
   }
 ];

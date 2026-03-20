@@ -4,13 +4,13 @@
   "latinName": "Allium schoenoprasum",
   "family": "Amaryllidaceae",
   "category": "herb",
+  "variety": "Common",
   "description": "A hardy perennial herb that comes back year after year with zero fuss. The mild onion-flavoured leaves are brilliant snipped over eggs, salads, and potatoes. Pretty purple pom-pom flowers in summer are edible too.",
   "images": {
     "plant": "images/chives/plant.jpg",
     "seed": "images/chives/seed.jpg",
     "flower": "images/chives/flower.jpg",
-    "fruit": null,
-    "seedling": null
+    "seedling": "images/chives/seedling.jpg"
   },
   "characteristics": {
     "matureHeight": "20–30cm",
