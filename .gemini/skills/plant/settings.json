@@ -2,6 +2,9 @@
     "tools.shell.autoApprove": [
         "node",
         "npm test",
-        "curl"
+        "curl",
+        "curl -L",
+        "curl -I",
+        "head"
     ]
 }

@@ -135,7 +135,7 @@ window.PLANT_DATA = [
   },
   {
     "id": "carnation-pinks",
-    "commonName": "Carnation (Pinks)",
+    "commonName": "Carnations (Pinks)",
     "latinName": "Dianthus caryophyllus",
     "family": "Caryophyllaceae",
     "category": "flower",
@@ -143,9 +143,9 @@ window.PLANT_DATA = [
     "description": "Fragrant, fringed-petal flowers that bring a classic, cottage-garden feel to any balcony. Their spicy, clove-like scent is delightful, and many varieties are surprisingly hardy. The petals are edible and make a beautiful garnish.",
     "images": {
       "plant": "images/carnation-pinks/plant.jpg",
+      "seed": "images/carnation-pinks/seed.jpg",
       "flower": "images/carnation-pinks/flower.jpg",
-      "seedling": "images/carnation-pinks/seedling.jpg",
-      "seed": "images/carnation-pinks/seed.jpg"
+      "seedling": "images/carnation-pinks/seedling.jpg"
     },
     "characteristics": {
       "matureHeight": "30–60cm",
@@ -562,6 +562,122 @@ window.PLANT_DATA = [
       "Root rot — if overwatered in winter."
     ],
     "funFact": "Coriander is one of the world's oldest spices, found in seeds in the tomb of Tutankhamun!"
+  },
+  {
+    "id": "cosmos-bipinnatus",
+    "commonName": "Garden Cosmos",
+    "latinName": "Cosmos bipinnatus",
+    "family": "Asteraceae",
+    "category": "flower",
+    "variety": "",
+    "description": "A graceful, tall annual with feathery foliage and large, daisy-like flowers in shades of pink, white, and crimson. Loved by pollinators and perfect for cutting.",
+    "images": {
+      "plant": "images/cosmos-bipinnatus/plant.jpg",
+      "flower": "images/cosmos-bipinnatus/flower.jpg",
+      "seedling": "images/cosmos-bipinnatus/seedling.jpg",
+      "seed": "images/cosmos-bipinnatus/seed.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "90cm–1.2m",
+      "matureSpread": "45–60cm",
+      "hardiness": "Half-hardy annual",
+      "lifespan": "Annual",
+      "sunRequirement": "Full sun",
+      "waterNeeds": "Moderate — drought tolerant once established",
+      "soilType": "Poor to moderately fertile, well-drained soil",
+      "containerSize": "Large pot (30cm+) or open ground"
+    },
+    "schedule": {
+      "sowIndoorsWeeks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "sowOutdoorsWeeks": [
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "hardenOffWeeks": [
+        20,
+        21
+      ],
+      "plantOutWeeks": [
+        21,
+        22,
+        23
+      ],
+      "harvestWeeks": [],
+      "floweringWeeks": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "bringInsideWeek": null,
+      "successionSowWeeks": [],
+      "frostSensitive": true
+    },
+    "care": {
+      "sowIndoors": "Sow thinly in trays or modules of seed compost. Cover lightly with vermiculite or compost. Keep at 15–25°C. Germination takes 7–14 days.",
+      "sowOutdoors": "Sow directly into prepared soil once the risk of frost has passed (late May). Thin seedlings to 30–45cm apart.",
+      "hardenOff": "Acclimatise young plants to outdoor conditions for 7–10 days before planting out after the last frost.",
+      "plantOut": "Plant into their final positions in full sun. Space 30–45cm apart. Stake tall varieties if in a windy spot.",
+      "watering": "Water regularly until established. Once growing well, they are fairly drought tolerant but appreciate water during dry spells.",
+      "feeding": "Generally not required. Too much fertiliser produces lush foliage at the expense of flowers.",
+      "harvest": "Cut flowers regularly for indoor vases. Pick when the petals are just opening.",
+      "overwintering": "Annual — discard plants on the compost heap after the first hard frost."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Long, thin, dark brown seeds resembling small sticks.",
+      "germinationDays": "7–14 days at 15–25°C",
+      "fromCuttings": false,
+      "cuttingsMethod": null,
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": true,
+      "notes": "Deadhead spent blooms regularly to encourage continuous flowering until the first frosts."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Allow some flower heads to turn brown and dry on the plant. Collect the seeds on a dry day and store in a cool, dry place.",
+      "seedPodDescription": "Seeds form in a cluster at the center of the old flower head."
+    },
+    "companionPlants": [
+      "marigold",
+      "zinnia",
+      "tomato"
+    ],
+    "commonProblems": [
+      "Slugs and snails — especially on young seedlings.",
+      "Aphids on soft shoot tips.",
+      "Powdery mildew in late summer if crowded or dry at the roots."
+    ],
+    "funFact": "The name Cosmos comes from the Greek word for 'order' or 'harmony', referring to the plant's evenly placed petals."
   },
   {
     "id": "courgette",

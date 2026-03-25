@@ -20,11 +20,13 @@ This skill guides the process of adding a new plant to the UK Plant diary. It in
     *   A fun fact.
     *   *Note*: Calibrate all dates for London/South England (Last frost: Week 15, First frost: Week 44).
 
-2.  **Image Sourcing**:
+<!-- 
+2.  **Image Sourcing (DISABLED)**:
     *   Search for high-quality images of: the plant, seed, flower, fruit/pod (if applicable), and seedling.
     *   Use `run_shell_command` with `curl` to download images to `images/<plant-id>/`.
     *   Aim for `.jpg` format.
     *   *Important*: Only `fruit` and `vegetable` categories should have an `images.fruit` subcategory; others should omit it.
+-->
 
 3.  **Data Generation**:
     *   Create a JSON file at `plants/<plant-id>.json` following the schema in `AIrequirements.md`.
