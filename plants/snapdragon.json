@@ -10,7 +10,8 @@
     "plant": "images/snapdragon/plant.jpg",
     "flower": "images/snapdragon/flower.jpg",
     "seedling": "images/snapdragon/seedling.jpg",
-    "seed": "images/snapdragon/seed.jpg"
+    "seed": "images/snapdragon/seed.jpg",
+    "seedPod": "images/snapdragon/seed-pod.jpg"
   },
   "characteristics": {
     "matureHeight": "20–90cm (depending on variety)",

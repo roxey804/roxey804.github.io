@@ -565,7 +565,7 @@ window.PLANT_DATA = [
   },
   {
     "id": "cosmos-bipinnatus",
-    "commonName": "Garden Cosmos",
+    "commonName": "Cosmos",
     "latinName": "Cosmos bipinnatus",
     "family": "Asteraceae",
     "category": "flower",
@@ -1772,7 +1772,8 @@ window.PLANT_DATA = [
       "plant": "images/snapdragon/plant.jpg",
       "flower": "images/snapdragon/flower.jpg",
       "seedling": "images/snapdragon/seedling.jpg",
-      "seed": "images/snapdragon/seed.jpg"
+      "seed": "images/snapdragon/seed.jpg",
+      "seedPod": "images/snapdragon/seed-pod.jpg"
     },
     "characteristics": {
       "matureHeight": "20–90cm (depending on variety)",
@@ -2115,11 +2116,11 @@ window.PLANT_DATA = [
   },
   {
     "id": "tumbling-tom-red",
-    "commonName": "Tumbling Tom Red",
+    "commonName": "Tumbling Tom (red)",
     "latinName": "Solanum lycopersicum",
     "family": "Solanaceae",
     "category": "vegetable",
-    "variety": "Tumbling Tom Red",
+    "variety": "Tumbling Tomato",
     "description": "A prolific cascading cherry tomato that is perfect for hanging baskets and tall containers. It produces masses of sweet, red cherry tomatoes throughout the summer. No staking or side-shoot removal needed—just let it tumble!",
     "images": {
       "plant": "images/tumbling-tom-red/plant.jpg",
@@ -2230,11 +2231,11 @@ window.PLANT_DATA = [
   },
   {
     "id": "tumbling-tom-yellow",
-    "commonName": "Tumbling Tom Yellow",
+    "commonName": "Tumbling Tom (yellow)",
     "latinName": "Solanum lycopersicum",
     "family": "Solanaceae",
     "category": "vegetable",
-    "variety": "Tumbling Tom Yellow",
+    "variety": "Tumbling Tomato",
     "description": "The golden cousin of the classic red tumbler. This variety produces masses of bright yellow cherry tomatoes with a slightly zestier, citrusy flavour. Looks spectacular mixed with red varieties in a hanging basket.",
     "images": {
       "plant": "images/tumbling-tom-yellow/plant.jpg",
