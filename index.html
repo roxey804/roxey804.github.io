@@ -526,7 +526,6 @@ function renderPlants() {
       <div class="p-3">
         <h3 class="font-semibold text-gray-800 text-sm cursor-pointer hover:text-forest" onclick="showProfile('${p.id}')">${p.commonName}</h3>
         ${p.latinName ? `<p class="text-xs italic text-gray-400 mt-0.5">${p.latinName}</p>` : ''}
-        ${p.characteristics?.containerSize ? `<p class="text-[10px] text-gray-400 mt-1">🪴 ${p.characteristics.containerSize}</p>` : ''}
         <button onclick="event.stopPropagation();togglePlant('${p.id}')" class="mt-2 w-full py-1.5 rounded-lg text-xs font-medium transition-colors ${isGrowing ? 'bg-leafPale text-forest' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}">
           ${isGrowing ? '✓ Growing' : '+ Add'}
         </button>
