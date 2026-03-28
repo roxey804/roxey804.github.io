@@ -1,0 +1,101 @@
+{
+  "id": "hollyhock",
+  "commonName": "Hollyhock",
+  "latinName": "Alcea rosea",
+  "family": "Malvaceae",
+  "category": "flower",
+  "variety": "Spring Celebrities",
+  "description": "A wonderful dwarf series of hollyhocks that grow to a manageable 60-80cm, making them perfect for large pots on a balcony. Unlike traditional biennials, 'Spring Celebrities' often flowers in its first year if sown early. They produce beautiful, large, double blooms in a range of colours.",
+  "images": {
+    "plant": "images/hollyhock/plant.jpg",
+    "seed": "images/hollyhock/seed.jpg",
+    "flower": "images/hollyhock/flower.jpg",
+    "seedling": "images/hollyhock/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "60–80cm",
+    "matureSpread": "30–45cm",
+    "hardiness": "Fully hardy",
+    "lifespan": "Short-lived perennial (often grown as biennial)",
+    "sunRequirement": "Full sun (6+ hours)",
+    "waterNeeds": "Regular — pots dry out fast in summer",
+    "soilType": "Rich, well-drained potting compost",
+    "containerSize": "15L+ deep pot (at least 40cm deep)"
+  },
+  "schedule": {
+    "january": [],
+    "february": [
+      "🌱 Sow seeds indoors with heat for first-year flowering"
+    ],
+    "march": [
+      "🌱 Sow seeds indoors"
+    ],
+    "april": [
+      "🌱 Sow seeds indoors",
+      "🌤️ Harden off established seedlings"
+    ],
+    "may": [
+      "🌿 Sow seeds outdoors",
+      "🪴 Plant out into final containers",
+      "🌤️ Harden off seedlings"
+    ],
+    "june": [
+      "🌿 Sow seeds outdoors",
+      "🪴 Plant out into final containers",
+      "🧹 Pick off any leaves showing rust spots"
+    ],
+    "july": [
+      "🌸 Flowering begins",
+      "🧹 Monitor for rust and pick off affected leaves"
+    ],
+    "august": [
+      "🌸 Flowering continues",
+      "✂️ Deadhead spent blooms to encourage more flowers"
+    ],
+    "september": [
+      "🌸 Final flowers",
+      "✂️ Collect seeds from dried pods"
+    ],
+    "october": [
+      "🧹 Clear away dead foliage",
+      "🧣 Protect base of plant with mulch"
+    ],
+    "november": [],
+    "december": [],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": "Sow 1cm deep in individual modules. Use a heated propagator or warm windowsill (18–21°C). They have a deep taproot, so don't leave them in small pots for too long.",
+    "sowOutdoors": "Sow seeds 1cm deep directly into large, deep containers. Thin seedlings to 30cm apart.",
+    "hardenOff": "Gradually acclimatise to outdoor conditions over 7–10 days before final planting in May/June.",
+    "plantOut": "Move to a deep container (at least 40cm). Place against a sheltered wall or railing to protect the tall stems from wind.",
+    "watering": "Water at the base of the plant daily during hot weather. Avoid wetting the leaves, as this encourages hollyhock rust.",
+    "feeding": "Feed every 2–4 weeks with a high-potash liquid fertiliser (like tomato feed) during the flowering season.",
+    "harvest": "Cut flower spikes for tall indoor arrangements, or simply enjoy them on the plant.",
+    "overwintering": "Cut back dead stems in autumn. They are hardy but short-lived; many gardeners replace them every 2 years to avoid built-up rust spores."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Large, flat, disc-shaped seeds. Very easy to handle and germinate.",
+    "germinationDays": "10–14 days at 18–21°C",
+    "fromCuttings": false,
+    "fromDivision": false
+  },
+  "deadheading": {
+    "required": true,
+    "notes": "Removing spent flowers can extend the blooming period. However, if you want the plant to self-seed or if you want to save seeds, leave the last spikes of the season."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Allow the seed pods to turn brown and paper-dry on the stem. Open the pods to reveal the flat, circular seeds. Store in a cool, dry place.",
+    "seedPodDescription": "Large, round, flattened pods that split open when ripe."
+  },
+  "varieties": ["Spring Celebrities (Dwarf)", "Queeny Purple (Dwarf)", "Chater's Double", "Halo Series", "Nigra (near black)"],
+  "companionPlants": ["marigolds", "nasturtiums", "lavender"],
+  "commonProblems": [
+    "Hollyhock Rust — orange pustules on leaves. Pick off affected leaves early and keep foliage dry.",
+    "Slugs and Snails — love young seedlings. Use beer traps or copper tape.",
+    "Caterpillars — can shred leaves. Pick off by hand."
+  ],
+  "funFact": "In the Victorian language of flowers, hollyhocks symbolise ambition and fecundity. They were often planted near outhouses in the past to hide them from view!"
+}

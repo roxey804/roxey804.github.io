@@ -5,8 +5,7 @@ window.GENERAL_TASKS = {
     "📦 Audit seed collection and plan for spring"
   ],
   "february": [
-    "Plant tomatoes",
-    "Plant broad beans",
+    "Collect soil for seed trays",
     "Pruning"
   ],
   "march": [

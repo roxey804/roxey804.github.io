@@ -1,0 +1,95 @@
+{
+  "id": "broad-beans",
+  "commonName": "Broad Beans",
+  "latinName": "Vicia faba",
+  "family": "Fabaceae",
+  "category": "vegetable",
+  "variety": "The Sutton",
+  "description": "A fantastic dwarf variety perfect for balconies and containers. 'The Sutton' only grows to about 45cm, so it doesn't need the elaborate staking that taller varieties require. It produces heavy crops of tender, delicious beans and is very hardy.",
+  "images": {
+    "plant": "images/broad-beans/plant.jpg",
+    "seed": "images/broad-beans/seed.jpg",
+    "flower": "images/broad-beans/flower.jpg",
+    "fruit": "images/broad-beans/fruit.jpg",
+    "seedling": "images/broad-beans/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "45cm",
+    "matureSpread": "25cm",
+    "hardiness": "Fully hardy",
+    "lifespan": "Annual",
+    "sunRequirement": "Full sun or partial shade",
+    "waterNeeds": "Regular, especially during flowering and pod development",
+    "soilType": "Rich, well-drained compost",
+    "containerSize": "10L+ pot (at least 20cm deep)"
+  },
+  "schedule": {
+    "january": [],
+    "february": [
+      "🌱 Sow seeds indoors"
+    ],
+    "march": [
+      "🌱 Sow seeds indoors",
+      "🌤️ Harden off seedlings"
+
+    ],
+    "april": [
+      "🌿 Sow seeds outdoors"
+    ],
+    "may": [
+    ],
+    "june": [
+      "✂️ Harvest regularly",
+      "🧹 Pinch out growing tips once pods form"
+    ],
+    "july": [
+      "✂️ Harvest regularly"
+    ],
+    "august": [
+      "✂️ Harvest regularly"
+    ],
+    "september": [],
+    "october": [
+      "🌱 Sow seeds for overwintering"
+    ],
+    "november": [
+      "🌱 Sow seeds for overwintering"
+    ],
+    "december": [],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": "Sow 5cm deep in individual modules or small pots. Broad beans have long roots, so 'root trainers' or deep pots are best. Keep at 10–15°C.",
+    "sowOutdoors": "Sow directly into final containers 5cm deep and 20cm apart.",
+    "hardenOff": "Move modules outside during the day and bring back in at night for 7–10 days before final planting.",
+    "plantOut": "Transplant modules into final containers, spacing them 20cm apart. Firm the soil around them well.",
+    "watering": "Keep soil consistently moist. It is critical to water well once the flowers appear to ensure pods develop.",
+    "feeding": "Generally not needed if using good compost, as they fix their own nitrogen. A high-potash feed can help once flowering.",
+    "harvest": "Pick pods when they are 6-10cm long for the most tender beans. Regular picking encourages more pods.",
+    "overwintering": "Autumn-sown plants will stay small through winter and start growing fast in spring."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Large, flat, kidney-shaped seeds, usually pale green or beige.",
+    "germinationDays": "10–14 days at 10–15°C",
+    "fromCuttings": false,
+    "fromDivision": false
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "Not needed. However, pinching out the top 5-10cm of the plant once pods start to form is vital to prevent blackfly."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Leave a few healthy pods on the plant until they turn brown and brittle. Remove seeds and dry thoroughly indoors.",
+    "seedPodDescription": "Large green pods with a soft, downy lining containing 3-5 beans."
+  },
+  "varieties": ["The Sutton (Dwarf)", "Aquadulce Claudia (Autumn)", "Witkiem Manita", "Red Epicure"],
+  "companionPlants": ["potatoes", "spinach", "lettuce"],
+  "commonProblems": [
+    "Blackfly (aphids) — pinch out growing tips to prevent.",
+    "Chocolate Spot — brown spots on leaves in damp weather; improve airflow.",
+    "Mice — can dig up seeds; protect with wire mesh or start indoors."
+  ],
+  "funFact": "Broad beans are nitrogen fixers! They take nitrogen from the air and store it in nodules on their roots, fertilizing the soil for future plants."
+}

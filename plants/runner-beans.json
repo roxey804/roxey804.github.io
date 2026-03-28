@@ -1,0 +1,94 @@
+{
+  "id": "runner-beans",
+  "commonName": "Runner Beans",
+  "latinName": "Phaseolus coccineus",
+  "family": "Fabaceae",
+  "category": "vegetable",
+  "variety": "Hestia (Dwarf)",
+  "description": "While most runner beans are tall climbers, 'Hestia' is a fantastic dwarf variety that grows into a bushy plant about 45cm tall. This makes it absolutely perfect for containers and window boxes on a balcony. It produces beautiful red and white bi-coloured flowers and heavy crops of stringless pods.",
+  "images": {
+    "plant": "images/runner-beans/plant.jpg",
+    "seed": "images/runner-beans/seed.jpg",
+    "flower": "images/runner-beans/flower.jpg",
+    "fruit": "images/runner-beans/fruit.jpg",
+    "seedling": "images/runner-beans/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "45cm (Dwarf) / 2m+ (Climbing)",
+    "matureSpread": "30cm",
+    "hardiness": "Tender (not frost tolerant)",
+    "lifespan": "Annual (grown as)",
+    "sunRequirement": "Full sun (6+ hours)",
+    "waterNeeds": "Very high — containers must stay moist",
+    "soilType": "Rich, moisture-retentive compost",
+    "containerSize": "10L+ pot per plant"
+  },
+  "schedule": {
+    "january": [],
+    "february": [],
+    "march": [],
+    "april": [
+      "🌱 Sow seeds indoors"
+    ],
+    "may": [
+      "🌱 Sow seeds indoors",
+      "🌿 Sow seeds outdoors (late May)",
+      "🌤️ Harden off established seedlings"
+    ],
+    "june": [
+      "🌿 Sow seeds outdoors",
+      "🪴 Plant out into final containers",
+      "🌤️ Harden off seedlings"
+    ],
+    "july": [
+      "✂️ Harvest regularly"
+    ],
+    "august": [
+      "✂️ Harvest regularly"
+    ],
+    "september": [
+      "✂️ Harvest regularly"
+    ],
+    "october": [
+      "✂️ Final harvests",
+      "🧹 Clear away plants after first frost"
+    ],
+    "november": [],
+    "december": [],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Sow 5cm deep in deep pots or recycled toilet roll tubes. They have long roots and dislike being moved. Keep at 18–21°C.",
+    "sowOutdoors": "After last frost (late May), sow directly into final pots 5cm deep. Space 20cm apart.",
+    "hardenOff": "Move indoor plants outside during the day and bring back in at night for 7–10 days before final planting.",
+    "plantOut": "Plant out once risk of frost has passed. If growing climbing varieties, ensure supports (wigwam) are in place first.",
+    "watering": "Thirsty plants! Water daily in summer. Dry soil causes 'flower drop' where pods fail to form.",
+    "feeding": "Feed with a high-potash liquid fertiliser once flowers appear to encourage more pods.",
+    "harvest": "Pick pods when 15–20cm long. Regular picking every 2–3 days is essential to keep the plant producing.",
+    "overwintering": "Annual — they will die at the first frost. Compost the plant but leave the roots in the soil if possible (they add nitrogen)."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Large, beautiful kidney-shaped seeds, often purple with black speckles.",
+    "germinationDays": "7–14 days at 18–21°C",
+    "fromCuttings": false,
+    "fromDivision": false
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "Not needed, but regular harvesting of pods acts in the same way to keep the plant productive."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Leave a few healthy pods on the plant at the end of the season until they turn brown and the seeds rattle inside. Dry thoroughly indoors.",
+    "seedPodDescription": "Long, green, slightly rough-textured pods containing large, speckled seeds."
+  },
+  "varieties": ["Hestia (Dwarf)", "Polestar (Stringless)", "Scarlet Emperor", "White Lady", "Painted Lady"],
+  "companionPlants": ["nasturtiums", "sweet peas", "calendula"],
+  "commonProblems": [
+    "Flower Drop — caused by dry soil or lack of bees. Water well and plant flowers to attract pollinators.",
+    "Blackfly — aphids love new growth. Spray with water or soapy mix.",
+    "Slugs — protect young seedlings with copper tape or grit."
+  ],
+  "funFact": "Runner beans are actually perennials in their native Central America, where they grow from tuberous roots. In the UK, we grow them as annuals because they can't survive our winters."
+}

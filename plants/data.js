@@ -105,6 +105,108 @@ window.PLANT_DATA = [
     "funFact": "In Italy, placing a pot of basil on your balcony was traditionally a signal that you were ready for a suitor to come courting!"
   },
   {
+    "id": "broad-beans",
+    "commonName": "Broad Beans",
+    "latinName": "Vicia faba",
+    "family": "Fabaceae",
+    "category": "vegetable",
+    "variety": "The Sutton",
+    "description": "A fantastic dwarf variety perfect for balconies and containers. 'The Sutton' only grows to about 45cm, so it doesn't need the elaborate staking that taller varieties require. It produces heavy crops of tender, delicious beans and is very hardy.",
+    "images": {
+      "plant": "images/broad-beans/plant.jpg",
+      "seed": "images/broad-beans/seed.jpg",
+      "flower": "images/broad-beans/flower.jpg",
+      "fruit": "images/broad-beans/fruit.jpg",
+      "seedling": "images/broad-beans/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "45cm",
+      "matureSpread": "25cm",
+      "hardiness": "Fully hardy",
+      "lifespan": "Annual",
+      "sunRequirement": "Full sun or partial shade",
+      "waterNeeds": "Regular, especially during flowering and pod development",
+      "soilType": "Rich, well-drained compost",
+      "containerSize": "10L+ pot (at least 20cm deep)"
+    },
+    "schedule": {
+      "january": [],
+      "february": [
+        "🌱 Sow seeds indoors"
+      ],
+      "march": [
+        "🌱 Sow seeds indoors",
+        "🌤️ Harden off seedlings"
+      ],
+      "april": [
+        "🌿 Sow seeds outdoors"
+      ],
+      "may": [],
+      "june": [
+        "✂️ Harvest regularly",
+        "🧹 Pinch out growing tips once pods form"
+      ],
+      "july": [
+        "✂️ Harvest regularly"
+      ],
+      "august": [
+        "✂️ Harvest regularly"
+      ],
+      "september": [],
+      "october": [
+        "🌱 Sow seeds for overwintering"
+      ],
+      "november": [
+        "🌱 Sow seeds for overwintering"
+      ],
+      "december": [],
+      "frostSensitive": false
+    },
+    "care": {
+      "sowIndoors": "Sow 5cm deep in individual modules or small pots. Broad beans have long roots, so 'root trainers' or deep pots are best. Keep at 10–15°C.",
+      "sowOutdoors": "Sow directly into final containers 5cm deep and 20cm apart.",
+      "hardenOff": "Move modules outside during the day and bring back in at night for 7–10 days before final planting.",
+      "plantOut": "Transplant modules into final containers, spacing them 20cm apart. Firm the soil around them well.",
+      "watering": "Keep soil consistently moist. It is critical to water well once the flowers appear to ensure pods develop.",
+      "feeding": "Generally not needed if using good compost, as they fix their own nitrogen. A high-potash feed can help once flowering.",
+      "harvest": "Pick pods when they are 6-10cm long for the most tender beans. Regular picking encourages more pods.",
+      "overwintering": "Autumn-sown plants will stay small through winter and start growing fast in spring."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Large, flat, kidney-shaped seeds, usually pale green or beige.",
+      "germinationDays": "10–14 days at 10–15°C",
+      "fromCuttings": false,
+      "fromDivision": false
+    },
+    "deadheading": {
+      "required": false,
+      "notes": "Not needed. However, pinching out the top 5-10cm of the plant once pods start to form is vital to prevent blackfly."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Leave a few healthy pods on the plant until they turn brown and brittle. Remove seeds and dry thoroughly indoors.",
+      "seedPodDescription": "Large green pods with a soft, downy lining containing 3-5 beans."
+    },
+    "varieties": [
+      "The Sutton (Dwarf)",
+      "Aquadulce Claudia (Autumn)",
+      "Witkiem Manita",
+      "Red Epicure"
+    ],
+    "companionPlants": [
+      "potatoes",
+      "spinach",
+      "lettuce"
+    ],
+    "commonProblems": [
+      "Blackfly (aphids) — pinch out growing tips to prevent.",
+      "Chocolate Spot — brown spots on leaves in damp weather; improve airflow.",
+      "Mice — can dig up seeds; protect with wire mesh or start indoors."
+    ],
+    "funFact": "Broad beans are nitrogen fixers! They take nitrogen from the air and store it in nodules on their roots, fertilizing the soil for future plants."
+  },
+  {
     "id": "carnation-pinks",
     "commonName": "Carnations (Pinks)",
     "latinName": "Dianthus caryophyllus",
@@ -605,6 +707,117 @@ window.PLANT_DATA = [
       "Poor Pollination — if fruits shrivel, try hand-pollination."
     ],
     "funFact": "If you don't harvest courgettes, they can grow into giant marrows over a metre long in just a few weeks!"
+  },
+  {
+    "id": "hollyhock",
+    "commonName": "Hollyhock",
+    "latinName": "Alcea rosea",
+    "family": "Malvaceae",
+    "category": "flower",
+    "variety": "Spring Celebrities",
+    "description": "A wonderful dwarf series of hollyhocks that grow to a manageable 60-80cm, making them perfect for large pots on a balcony. Unlike traditional biennials, 'Spring Celebrities' often flowers in its first year if sown early. They produce beautiful, large, double blooms in a range of colours.",
+    "images": {
+      "plant": "images/hollyhock/plant.jpg",
+      "seed": "images/hollyhock/seed.jpg",
+      "flower": "images/hollyhock/flower.jpg",
+      "seedling": "images/hollyhock/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "60–80cm",
+      "matureSpread": "30–45cm",
+      "hardiness": "Fully hardy",
+      "lifespan": "Short-lived perennial (often grown as biennial)",
+      "sunRequirement": "Full sun (6+ hours)",
+      "waterNeeds": "Regular — pots dry out fast in summer",
+      "soilType": "Rich, well-drained potting compost",
+      "containerSize": "15L+ deep pot (at least 40cm deep)"
+    },
+    "schedule": {
+      "january": [],
+      "february": [
+        "🌱 Sow seeds indoors with heat for first-year flowering"
+      ],
+      "march": [
+        "🌱 Sow seeds indoors"
+      ],
+      "april": [
+        "🌱 Sow seeds indoors",
+        "🌤️ Harden off established seedlings"
+      ],
+      "may": [
+        "🌿 Sow seeds outdoors",
+        "🪴 Plant out into final containers",
+        "🌤️ Harden off seedlings"
+      ],
+      "june": [
+        "🌿 Sow seeds outdoors",
+        "🪴 Plant out into final containers",
+        "🧹 Pick off any leaves showing rust spots"
+      ],
+      "july": [
+        "🌸 Flowering begins",
+        "🧹 Monitor for rust and pick off affected leaves"
+      ],
+      "august": [
+        "🌸 Flowering continues",
+        "✂️ Deadhead spent blooms to encourage more flowers"
+      ],
+      "september": [
+        "🌸 Final flowers",
+        "✂️ Collect seeds from dried pods"
+      ],
+      "october": [
+        "🧹 Clear away dead foliage",
+        "🧣 Protect base of plant with mulch"
+      ],
+      "november": [],
+      "december": [],
+      "frostSensitive": false
+    },
+    "care": {
+      "sowIndoors": "Sow 1cm deep in individual modules. Use a heated propagator or warm windowsill (18–21°C). They have a deep taproot, so don't leave them in small pots for too long.",
+      "sowOutdoors": "Sow seeds 1cm deep directly into large, deep containers. Thin seedlings to 30cm apart.",
+      "hardenOff": "Gradually acclimatise to outdoor conditions over 7–10 days before final planting in May/June.",
+      "plantOut": "Move to a deep container (at least 40cm). Place against a sheltered wall or railing to protect the tall stems from wind.",
+      "watering": "Water at the base of the plant daily during hot weather. Avoid wetting the leaves, as this encourages hollyhock rust.",
+      "feeding": "Feed every 2–4 weeks with a high-potash liquid fertiliser (like tomato feed) during the flowering season.",
+      "harvest": "Cut flower spikes for tall indoor arrangements, or simply enjoy them on the plant.",
+      "overwintering": "Cut back dead stems in autumn. They are hardy but short-lived; many gardeners replace them every 2 years to avoid built-up rust spores."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Large, flat, disc-shaped seeds. Very easy to handle and germinate.",
+      "germinationDays": "10–14 days at 18–21°C",
+      "fromCuttings": false,
+      "fromDivision": false
+    },
+    "deadheading": {
+      "required": true,
+      "notes": "Removing spent flowers can extend the blooming period. However, if you want the plant to self-seed or if you want to save seeds, leave the last spikes of the season."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Allow the seed pods to turn brown and paper-dry on the stem. Open the pods to reveal the flat, circular seeds. Store in a cool, dry place.",
+      "seedPodDescription": "Large, round, flattened pods that split open when ripe."
+    },
+    "varieties": [
+      "Spring Celebrities (Dwarf)",
+      "Queeny Purple (Dwarf)",
+      "Chater's Double",
+      "Halo Series",
+      "Nigra (near black)"
+    ],
+    "companionPlants": [
+      "marigolds",
+      "nasturtiums",
+      "lavender"
+    ],
+    "commonProblems": [
+      "Hollyhock Rust — orange pustules on leaves. Pick off affected leaves early and keep foliage dry.",
+      "Slugs and Snails — love young seedlings. Use beer traps or copper tape.",
+      "Caterpillars — can shred leaves. Pick off by hand."
+    ],
+    "funFact": "In the Victorian language of flowers, hollyhocks symbolise ambition and fecundity. They were often planted near outhouses in the past to hide them from view!"
   },
   {
     "id": "lavender",
@@ -1321,6 +1534,110 @@ window.PLANT_DATA = [
       "Bitter taste — usually due to heat or old leaves."
     ],
     "funFact": "Rocket has been grown in the Mediterranean since Roman times and was once considered an aphrodisiac!"
+  },
+  {
+    "id": "runner-beans",
+    "commonName": "Runner Beans",
+    "latinName": "Phaseolus coccineus",
+    "family": "Fabaceae",
+    "category": "vegetable",
+    "variety": "Hestia (Dwarf)",
+    "description": "While most runner beans are tall climbers, 'Hestia' is a fantastic dwarf variety that grows into a bushy plant about 45cm tall. This makes it absolutely perfect for containers and window boxes on a balcony. It produces beautiful red and white bi-coloured flowers and heavy crops of stringless pods.",
+    "images": {
+      "plant": "images/runner-beans/plant.jpg",
+      "seed": "images/runner-beans/seed.jpg",
+      "flower": "images/runner-beans/flower.jpg",
+      "fruit": "images/runner-beans/fruit.jpg",
+      "seedling": "images/runner-beans/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "45cm (Dwarf) / 2m+ (Climbing)",
+      "matureSpread": "30cm",
+      "hardiness": "Tender (not frost tolerant)",
+      "lifespan": "Annual (grown as)",
+      "sunRequirement": "Full sun (6+ hours)",
+      "waterNeeds": "Very high — containers must stay moist",
+      "soilType": "Rich, moisture-retentive compost",
+      "containerSize": "10L+ pot per plant"
+    },
+    "schedule": {
+      "january": [],
+      "february": [],
+      "march": [],
+      "april": [
+        "🌱 Sow seeds indoors"
+      ],
+      "may": [
+        "🌱 Sow seeds indoors",
+        "🌿 Sow seeds outdoors (late May)",
+        "🌤️ Harden off established seedlings"
+      ],
+      "june": [
+        "🌿 Sow seeds outdoors",
+        "🪴 Plant out into final containers",
+        "🌤️ Harden off seedlings"
+      ],
+      "july": [
+        "✂️ Harvest regularly"
+      ],
+      "august": [
+        "✂️ Harvest regularly"
+      ],
+      "september": [
+        "✂️ Harvest regularly"
+      ],
+      "october": [
+        "✂️ Final harvests",
+        "🧹 Clear away plants after first frost"
+      ],
+      "november": [],
+      "december": [],
+      "frostSensitive": true
+    },
+    "care": {
+      "sowIndoors": "Sow 5cm deep in deep pots or recycled toilet roll tubes. They have long roots and dislike being moved. Keep at 18–21°C.",
+      "sowOutdoors": "After last frost (late May), sow directly into final pots 5cm deep. Space 20cm apart.",
+      "hardenOff": "Move indoor plants outside during the day and bring back in at night for 7–10 days before final planting.",
+      "plantOut": "Plant out once risk of frost has passed. If growing climbing varieties, ensure supports (wigwam) are in place first.",
+      "watering": "Thirsty plants! Water daily in summer. Dry soil causes 'flower drop' where pods fail to form.",
+      "feeding": "Feed with a high-potash liquid fertiliser once flowers appear to encourage more pods.",
+      "harvest": "Pick pods when 15–20cm long. Regular picking every 2–3 days is essential to keep the plant producing.",
+      "overwintering": "Annual — they will die at the first frost. Compost the plant but leave the roots in the soil if possible (they add nitrogen)."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Large, beautiful kidney-shaped seeds, often purple with black speckles.",
+      "germinationDays": "7–14 days at 18–21°C",
+      "fromCuttings": false,
+      "fromDivision": false
+    },
+    "deadheading": {
+      "required": false,
+      "notes": "Not needed, but regular harvesting of pods acts in the same way to keep the plant productive."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Leave a few healthy pods on the plant at the end of the season until they turn brown and the seeds rattle inside. Dry thoroughly indoors.",
+      "seedPodDescription": "Long, green, slightly rough-textured pods containing large, speckled seeds."
+    },
+    "varieties": [
+      "Hestia (Dwarf)",
+      "Polestar (Stringless)",
+      "Scarlet Emperor",
+      "White Lady",
+      "Painted Lady"
+    ],
+    "companionPlants": [
+      "nasturtiums",
+      "sweet peas",
+      "calendula"
+    ],
+    "commonProblems": [
+      "Flower Drop — caused by dry soil or lack of bees. Water well and plant flowers to attract pollinators.",
+      "Blackfly — aphids love new growth. Spray with water or soapy mix.",
+      "Slugs — protect young seedlings with copper tape or grit."
+    ],
+    "funFact": "Runner beans are actually perennials in their native Central America, where they grow from tuberous roots. In the UK, we grow them as annuals because they can't survive our winters."
   },
   {
     "id": "snapdragon",
