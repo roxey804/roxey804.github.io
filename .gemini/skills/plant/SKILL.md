@@ -4,7 +4,7 @@ description: Researches a new plant and adds it to the project. Use when the use
 ---
 # Plant Skill
 
-This skill guides the process of adding a new plant to the UK Plant diary. It involves thorough research, image sourcing, and data integration.
+This skill guides the process of adding a new plant to the UK Plant diary. It involves thorough research and data integration.
 
 ## Workflow
 
@@ -31,12 +31,12 @@ This skill guides the process of adding a new plant to the UK Plant diary. It in
     *   *Important*: Only `fruit` and `vegetable` categories should have an `images.fruit` subcategory; others should omit it.
 -->
 
-3.  **Data Generation**:
+2.  **Data Generation**:
     *   Create a JSON file at `plants/<plant-id>.json` following the schema in `AIrequirements.md`.
     *   Update `plants/index.json` with the new ID.
     *   Regenerate `plants/data.js` by combining all plant JSON files into a single `window.PLANT_DATA` array.
 
-4.  **Verification**:
+3.  **Verification**:
     *   Check that the new plant appears in the "My Plants" view of the app.
     *   Verify the schedule bars in the "Timeline" view.
 

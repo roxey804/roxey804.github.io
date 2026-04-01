@@ -153,10 +153,9 @@ A rich, scroll-friendly profile for each plant with sections:
 A Claude Code command at `.claude/commands/plant.md` that lets you say `/plant lavender` (or any plant name) and it:
 
 1. **Researches the plant** — uses web search to find UK-specific growing details: Latin name, family, hardiness, schedule, care, propagation, deadheading, seed saving, varieties, companion plants, common problems
-2. **Finds images** — searches for high-quality Creative Commons / Unsplash images of: the plant in bloom, the seed, the flower close-up, the fruit/pod (if applicable), a seedling. Downloads them to `images/<plant-id>/`
-3. **Generates the plant JSON** — creates `plants/<plant-id>.json` with the full profile schema (see Data Model above)
-4. **Updates the app** — the `index.html` auto-discovers all JSON files in `plants/` at load time, so no code changes needed
-5. **Shows a summary** — confirms what was added with a preview of the key details
+2. **Generates the plant JSON** — creates `plants/<plant-id>.json` with the full profile schema (see Data Model above). Note: Images must be added manually by the user to `images/<plant-id>/`.
+3. **Updates the app** — the `index.html` auto-discovers all JSON files in `plants/` at load time, so no code changes needed
+4. **Shows a summary** — confirms what was added with a preview of the key details
 
 **Usage:** `/plant rosemary`, `/plant sunflower`, `/plant strawberry alpine`
 
@@ -165,7 +164,6 @@ A Claude Code command at `.claude/commands/plant.md` that lets you say `/plant l
 - Research each plant thoroughly via web search (RHS, BBC Gardeners' World, etc.)
 - Determine if it's suitable for UK balcony containers (warn if not, suggest alternatives)
 - Generate all schedule week numbers for UK growing
-- Download and save images locally
 - Write the complete JSON profile
 - This builds up the plant index incrementally — the app grows with each `/plant` invocation
 
