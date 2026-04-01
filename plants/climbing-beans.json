@@ -1,17 +1,17 @@
 {
-  "id": "runner-beans",
+  "id": "climbing-beans",
   "commonName": "Climbing Beans",
   "latinName": "Phaseolus coccineus",
   "family": "Fabaceae",
   "category": "vegetable",
-  "variety": "Hestia (Dwarf)",
-  "description": "While most runner beans are tall climbers, 'Hestia' is a fantastic dwarf variety that grows into a bushy plant about 45cm tall. This makes it absolutely perfect for containers and window boxes on a balcony. It produces beautiful red and white bi-coloured flowers and heavy crops of stringless pods.",
+  "variety": "Borlotti",
+  "description": "Climbing beans are versatile and productive. The 'Borlotti' variety is prized for its beautiful speckled pods and seeds, which can be eaten fresh or dried. They are excellent climbers that provide both a visual screen and a heavy crop of beans.",
   "images": {
-    "plant": "images/runner-beans/plant.jpg",
-    "seed": "images/runner-beans/seed.jpg",
-    "flower": "images/runner-beans/flower.jpg",
-    "fruit": "images/runner-beans/fruit.jpg",
-    "seedling": "images/runner-beans/seedling.jpg"
+    "plant": "images/climbing-beans/plant.jpg",
+    "seed": "images/climbing-beans/seed.jpg",
+    "flower": "images/climbing-beans/flower.jpg",
+    "fruit": "images/climbing-beans/fruit.jpg",
+    "seedling": "images/climbing-beans/seedling.jpg"
   },
   "characteristics": {
     "matureHeight": "45cm (Dwarf) / 2m+ (Climbing)",
@@ -90,5 +90,5 @@
     "Blackfly — aphids love new growth. Spray with water or soapy mix.",
     "Slugs — protect young seedlings with copper tape or grit."
   ],
-  "funFact": "Runner beans are actually perennials in their native Central America, where they grow from tuberous roots. In the UK, we grow them as annuals because they can't survive our winters."
+  "funFact": "Climbing beans are actually perennials in their native Central America, where they grow from tuberous roots. In the UK, we grow them as annuals because they can't survive our winters."
 }

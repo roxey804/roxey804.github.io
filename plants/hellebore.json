@@ -1,0 +1,101 @@
+{
+  "id": "hellebore",
+  "commonName": "Hellebore",
+  "latinName": "Helleborus",
+  "family": "Ranunculaceae",
+  "category": "flower",
+  "variety": "Orientalis Hybrids (Lenten Rose)",
+  "description": "Hellebores are the stars of the winter garden. These incredibly hardy perennials provide elegant, nodding flowers from mid-winter through early spring. They are perfect for shaded balcony corners where few other plants thrive. Their leathery, evergreen foliage provides year-round structure.",
+  "images": {
+    "plant": null,
+    "flower": "images/hellebore/flower.jpg",
+    "seedling": "images/hellebore/seedling.jpg",
+    "seed": "images/hellebore/seed.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "30-45cm",
+    "matureSpread": "30-45cm",
+    "hardiness": "Fully hardy (thrives in UK winters)",
+    "lifespan": "Perennial",
+    "sunRequirement": "Dappled shade to partial shade",
+    "waterNeeds": "Moderate — prefers consistently moist but well-drained soil",
+    "soilType": "Rich, moisture-retentive but well-drained alkaline soil",
+    "containerSize": "5L+ deep pot"
+  },
+  "schedule": {
+    "january": [
+      "🧹 Prune old leaves to reveal flowers",
+      "✂️ Cut flowers for vases"
+    ],
+    "february": [
+      "🧹 Prune old leaves to reveal flowers",
+      "✂️ Cut flowers for vases"
+    ],
+    "march": [
+      "✂️ Cut flowers for vases"
+    ],
+    "april": [
+      "🧹 Deadhead faded blooms",
+      "🧹 Apply balanced fertiliser"
+    ],
+    "may": [
+      "🧹 Deadhead faded blooms"
+    ],
+    "june": [],
+    "july": [],
+    "august": [],
+    "september": [
+      "🪴 Plant out new hellebores",
+      "🔄 Divide established clumps"
+    ],
+    "october": [
+      "🪴 Plant out new hellebores"
+    ],
+    "november": [
+      "🧹 Mulch around the base"
+    ],
+    "december": [
+      "🧹 Mulch around the base"
+    ],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": "Hellebore seeds need a period of warmth followed by cold to germinate. They are best sown fresh in summer and left outdoors. For beginners, buying established plants is recommended.",
+    "sowOutdoors": "Sow fresh seeds in late summer directly into pots and leave in a shaded spot over winter. Germination occurs in spring.",
+    "hardenOff": "Established plants are fully hardy and do not need hardening off.",
+    "plantOut": "September and October are ideal for planting. Choose a shaded spot. Incorporate well-rotted organic matter into the compost.",
+    "watering": "Keep soil moist, especially in summer. Do not allow containers to dry out completely, as this stresses the plant.",
+    "feeding": "Apply a balanced slow-release fertiliser in early spring after the first flowers fade.",
+    "harvest": "Cut flower stems when the first bloom on the stem is open. Dip the ends in boiling water for 20 seconds to help them last in a vase.",
+    "overwintering": "Fully hardy. Move pots to a sheltered spot to prevent the root ball from freezing solid in extremely severe weather."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Small, shiny black seeds. They lose viability quickly, so sow as soon as harvested in summer.",
+    "germinationDays": "90-180 days (needs winter chill)",
+    "fromCuttings": false,
+    "fromDivision": true,
+    "divisionMethod": "Divide large clumps in early autumn (Sept/Oct). Each division should have at least one or two healthy buds and a good root system."
+  },
+  "deadheading": {
+    "required": true,
+    "notes": "Remove faded flower stems to the base unless you want them to self-seed. This helps the plant focus energy on root and leaf growth."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Wait for the seed pods to swell and turn brown. Place a small mesh bag over the head to catch seeds as they drop.",
+    "seedPodDescription": "Large, upright follicles that split open when ripe to reveal rows of black seeds."
+  },
+  "companionPlants": [
+    "snowdrops",
+    "cyclamen",
+    "ferns",
+    "hostas"
+  ],
+  "commonProblems": [
+    "Hellebore Leaf Spot (black spots on leaves) — prune affected leaves promptly",
+    "Aphids in spring — wash off with water",
+    "Slugs on young growth — use grit or copper tape"
+  ],
+  "funFact": "The 'Hellebore Haircut' is a traditional gardening task where all old foliage is cut back in late winter to let the new flowers shine without being hidden by tattered leaves."
+}

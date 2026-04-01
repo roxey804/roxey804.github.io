@@ -136,7 +136,8 @@ window.PLANT_DATA = [
       ],
       "march": [
         "🌱 Sow seeds indoors",
-        "🌤️ Harden off seedlings"
+        "🌤️ Harden off seedlings",
+        "🪴 Plant out broad bean plants"
       ],
       "april": [
         "🌿 Sow seeds outdoors"
@@ -410,6 +411,110 @@ window.PLANT_DATA = [
     "funFact": "Bunches of chives were hung in doorways in medieval Europe to ward off evil spirits and disease. They're also one of the 'fines herbes' of French cuisine."
   },
   {
+    "id": "climbing-beans",
+    "commonName": "Climbing Beans",
+    "latinName": "Phaseolus coccineus",
+    "family": "Fabaceae",
+    "category": "vegetable",
+    "variety": "Borlotti",
+    "description": "Climbing beans are versatile and productive. The 'Borlotti' variety is prized for its beautiful speckled pods and seeds, which can be eaten fresh or dried. They are excellent climbers that provide both a visual screen and a heavy crop of beans.",
+    "images": {
+      "plant": "images/climbing-beans/plant.jpg",
+      "seed": "images/climbing-beans/seed.jpg",
+      "flower": "images/climbing-beans/flower.jpg",
+      "fruit": "images/climbing-beans/fruit.jpg",
+      "seedling": "images/climbing-beans/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "45cm (Dwarf) / 2m+ (Climbing)",
+      "matureSpread": "30cm",
+      "hardiness": "Tender (not frost tolerant)",
+      "lifespan": "Annual (grown as)",
+      "sunRequirement": "Full sun (6+ hours)",
+      "waterNeeds": "Very high — containers must stay moist",
+      "soilType": "Rich, moisture-retentive compost",
+      "containerSize": "10L+ pot per plant"
+    },
+    "schedule": {
+      "january": [],
+      "february": [],
+      "march": [],
+      "april": [
+        "🌱 Sow seeds indoors"
+      ],
+      "may": [
+        "🌱 Sow seeds indoors",
+        "🌿 Sow seeds outdoors (late May)",
+        "🌤️ Harden off established seedlings"
+      ],
+      "june": [
+        "🌿 Sow seeds outdoors",
+        "🪴 Plant out into final containers",
+        "🌤️ Harden off seedlings"
+      ],
+      "july": [
+        "✂️ Harvest regularly"
+      ],
+      "august": [
+        "✂️ Harvest regularly"
+      ],
+      "september": [
+        "✂️ Harvest regularly"
+      ],
+      "october": [
+        "✂️ Final harvests",
+        "🧹 Clear away plants after first frost"
+      ],
+      "november": [],
+      "december": [],
+      "frostSensitive": true
+    },
+    "care": {
+      "sowIndoors": "Sow 5cm deep in deep pots or recycled toilet roll tubes. They have long roots and dislike being moved. Keep at 18–21°C.",
+      "sowOutdoors": "After last frost (late May), sow directly into final pots 5cm deep. Space 20cm apart.",
+      "hardenOff": "Move indoor plants outside during the day and bring back in at night for 7–10 days before final planting.",
+      "plantOut": "Plant out once risk of frost has passed. If growing climbing varieties, ensure supports (wigwam) are in place first.",
+      "watering": "Thirsty plants! Water daily in summer. Dry soil causes 'flower drop' where pods fail to form.",
+      "feeding": "Feed with a high-potash liquid fertiliser once flowers appear to encourage more pods.",
+      "harvest": "Pick pods when 15–20cm long. Regular picking every 2–3 days is essential to keep the plant producing.",
+      "overwintering": "Annual — they will die at the first frost. Compost the plant but leave the roots in the soil if possible (they add nitrogen)."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Large, beautiful kidney-shaped seeds, often purple with black speckles.",
+      "germinationDays": "7–14 days at 18–21°C",
+      "fromCuttings": false,
+      "fromDivision": false
+    },
+    "deadheading": {
+      "required": false,
+      "notes": "Not needed, but regular harvesting of pods acts in the same way to keep the plant productive."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Leave a few healthy pods on the plant at the end of the season until they turn brown and the seeds rattle inside. Dry thoroughly indoors.",
+      "seedPodDescription": "Long, green, slightly rough-textured pods containing large, speckled seeds."
+    },
+    "varieties": [
+      "Hestia (Dwarf)",
+      "Polestar (Stringless)",
+      "Scarlet Emperor",
+      "White Lady",
+      "Painted Lady"
+    ],
+    "companionPlants": [
+      "nasturtiums",
+      "sweet peas",
+      "calendula"
+    ],
+    "commonProblems": [
+      "Flower Drop — caused by dry soil or lack of bees. Water well and plant flowers to attract pollinators.",
+      "Blackfly — aphids love new growth. Spray with water or soapy mix.",
+      "Slugs — protect young seedlings with copper tape or grit."
+    ],
+    "funFact": "Climbing beans are actually perennials in their native Central America, where they grow from tuberous roots. In the UK, we grow them as annuals because they can't survive our winters."
+  },
+  {
     "id": "coriander",
     "commonName": "Coriander (Cilantro)",
     "latinName": "Coriandrum sativum",
@@ -638,13 +743,16 @@ window.PLANT_DATA = [
     },
     "schedule": {
       "january": [],
-      "february": [],
+      "february": [
+        "🌱 Sow seeds indoors (plant near sunny windowsill to avoid leggy seedlings)"
+      ],
       "march": [],
       "april": [
-        "🌱 Sow seeds indoors"
+        "🌱 Sow seeds indoors (plant near sunny windowsill to avoid leggy seedlings)",
+        "🪴 Plant out into final containers (if protected)"
       ],
       "may": [
-        "🌱 Sow seeds indoors",
+        "🌱 Sow seeds indoors (plant near sunny windowsill to avoid leggy seedlings)",
         "🌿 Sow seeds outdoors",
         "🌤️ Harden off seedlings",
         "🪴 Plant out into final containers"
@@ -668,7 +776,7 @@ window.PLANT_DATA = [
       "frostSensitive": true
     },
     "care": {
-      "sowIndoors": "Sow seeds 1.5cm deep on their sides in 7.5cm pots. Keep at 20°C on a warm windowsill. Seeds sprout in 7–10 days.",
+      "sowIndoors": "Sow seeds 1.5cm deep on their sides in 7.5cm pots. Keep at 20°C on a warm, sunny windowsill to avoid leggy seedlings. Seeds sprout in 7–10 days.",
       "sowOutdoors": "Sow directly in large pots from late May. Sow 2 seeds 1.5cm deep and keep the strongest seedling.",
       "hardenOff": "Gradually acclimatise to the outdoors over 7–10 days in late May. Move outside during the day, bring in at night.",
       "plantOut": "Move to a final large container (at least 45cm wide) after the last frost (mid-May in London).",
@@ -707,6 +815,107 @@ window.PLANT_DATA = [
       "Poor Pollination — if fruits shrivel, try hand-pollination."
     ],
     "funFact": "If you don't harvest courgettes, they can grow into giant marrows over a metre long in just a few weeks!"
+  },
+  {
+    "id": "hellebore",
+    "commonName": "Hellebore",
+    "latinName": "Helleborus",
+    "family": "Ranunculaceae",
+    "category": "flower",
+    "variety": "Orientalis Hybrids (Lenten Rose)",
+    "description": "Hellebores are the stars of the winter garden. These incredibly hardy perennials provide elegant, nodding flowers from mid-winter through early spring. They are perfect for shaded balcony corners where few other plants thrive. Their leathery, evergreen foliage provides year-round structure.",
+    "images": {
+      "plant": null,
+      "flower": "images/hellebore/flower.jpg",
+      "seedling": "images/hellebore/seedling.jpg",
+      "seed": "images/hellebore/seed.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "30-45cm",
+      "matureSpread": "30-45cm",
+      "hardiness": "Fully hardy (thrives in UK winters)",
+      "lifespan": "Perennial",
+      "sunRequirement": "Dappled shade to partial shade",
+      "waterNeeds": "Moderate — prefers consistently moist but well-drained soil",
+      "soilType": "Rich, moisture-retentive but well-drained alkaline soil",
+      "containerSize": "5L+ deep pot"
+    },
+    "schedule": {
+      "january": [
+        "🧹 Prune old leaves to reveal flowers",
+        "✂️ Cut flowers for vases"
+      ],
+      "february": [
+        "🧹 Prune old leaves to reveal flowers",
+        "✂️ Cut flowers for vases"
+      ],
+      "march": [
+        "✂️ Cut flowers for vases"
+      ],
+      "april": [
+        "🧹 Deadhead faded blooms",
+        "🧹 Apply balanced fertiliser"
+      ],
+      "may": [
+        "🧹 Deadhead faded blooms"
+      ],
+      "june": [],
+      "july": [],
+      "august": [],
+      "september": [
+        "🪴 Plant out new hellebores",
+        "🔄 Divide established clumps"
+      ],
+      "october": [
+        "🪴 Plant out new hellebores"
+      ],
+      "november": [
+        "🧹 Mulch around the base"
+      ],
+      "december": [
+        "🧹 Mulch around the base"
+      ],
+      "frostSensitive": false
+    },
+    "care": {
+      "sowIndoors": "Hellebore seeds need a period of warmth followed by cold to germinate. They are best sown fresh in summer and left outdoors. For beginners, buying established plants is recommended.",
+      "sowOutdoors": "Sow fresh seeds in late summer directly into pots and leave in a shaded spot over winter. Germination occurs in spring.",
+      "hardenOff": "Established plants are fully hardy and do not need hardening off.",
+      "plantOut": "September and October are ideal for planting. Choose a shaded spot. Incorporate well-rotted organic matter into the compost.",
+      "watering": "Keep soil moist, especially in summer. Do not allow containers to dry out completely, as this stresses the plant.",
+      "feeding": "Apply a balanced slow-release fertiliser in early spring after the first flowers fade.",
+      "harvest": "Cut flower stems when the first bloom on the stem is open. Dip the ends in boiling water for 20 seconds to help them last in a vase.",
+      "overwintering": "Fully hardy. Move pots to a sheltered spot to prevent the root ball from freezing solid in extremely severe weather."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Small, shiny black seeds. They lose viability quickly, so sow as soon as harvested in summer.",
+      "germinationDays": "90-180 days (needs winter chill)",
+      "fromCuttings": false,
+      "fromDivision": true,
+      "divisionMethod": "Divide large clumps in early autumn (Sept/Oct). Each division should have at least one or two healthy buds and a good root system."
+    },
+    "deadheading": {
+      "required": true,
+      "notes": "Remove faded flower stems to the base unless you want them to self-seed. This helps the plant focus energy on root and leaf growth."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Wait for the seed pods to swell and turn brown. Place a small mesh bag over the head to catch seeds as they drop.",
+      "seedPodDescription": "Large, upright follicles that split open when ripe to reveal rows of black seeds."
+    },
+    "companionPlants": [
+      "snowdrops",
+      "cyclamen",
+      "ferns",
+      "hostas"
+    ],
+    "commonProblems": [
+      "Hellebore Leaf Spot (black spots on leaves) — prune affected leaves promptly",
+      "Aphids in spring — wash off with water",
+      "Slugs on young growth — use grit or copper tape"
+    ],
+    "funFact": "The 'Hellebore Haircut' is a traditional gardening task where all old foliage is cut back in late winter to let the new flowers shine without being hidden by tattered leaves."
   },
   {
     "id": "hollyhock",
@@ -1320,6 +1529,120 @@ window.PLANT_DATA = [
     "funFact": "Nasturtium seed pods were widely used as a caper substitute during WWII rationing in Britain. They're still pickled today — search for 'poor man's capers' recipes!"
   },
   {
+    "id": "pansy",
+    "commonName": "Pansy",
+    "latinName": "Viola × wittrockiana",
+    "family": "Violaceae",
+    "category": "flower",
+    "variety": "Matrix",
+    "description": "Pansies are iconic garden flowers known for their large, overlapping petals and distinctive 'faces'. They are incredibly versatile, offering bright colours in both spring and winter when many other plants are dormant.",
+    "images": {
+      "plant": "images/pansy/plant.jpg",
+      "flower": "images/pansy/flower.jpg",
+      "seedling": "images/pansy/seedling.jpg",
+      "seed": "images/pansy/seed.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "15–25cm",
+      "matureSpread": "15–20cm",
+      "hardiness": "Fully hardy",
+      "lifespan": "Short-lived perennial (usually grown as annual)",
+      "sunRequirement": "Full sun or partial shade",
+      "waterNeeds": "Moderate — keep soil moist but not waterlogged",
+      "soilType": "Well-drained, fertile multi-purpose compost",
+      "containerSize": "1–2L pot or window box"
+    },
+    "schedule": {
+      "january": [
+        "✂️ Deadhead any winter blooms"
+      ],
+      "february": [
+        "🌱 Sow seeds indoors (for spring/summer display)",
+        "✂️ Deadhead regularly"
+      ],
+      "march": [
+        "🌱 Sow seeds indoors",
+        "🌤️ Harden off autumn-sown seedlings",
+        "🪴 Plant out autumn-sown plants"
+      ],
+      "april": [
+        "🌱 Sow seeds indoors",
+        "🌤️ Harden off spring seedlings",
+        "🪴 Plant out into containers"
+      ],
+      "may": [
+        "🌱 Sow seeds indoors (for autumn display)",
+        "🪴 Plant out into final containers",
+        "✂️ Deadhead to extend flowering"
+      ],
+      "june": [
+        "🌱 Sow seeds indoors",
+        "✂️ Deadhead faded blooms"
+      ],
+      "july": [
+        "🌿 Sow seeds outdoors",
+        "✂️ Deadhead regularly"
+      ],
+      "august": [
+        "🪴 Plant out for autumn display",
+        "✂️ Deadhead spring-sown plants"
+      ],
+      "september": [
+        "🪴 Plant out for winter/spring display",
+        "✂️ Deadhead regularly"
+      ],
+      "october": [
+        "🪴 Plant out winter-hardy varieties",
+        "✂️ Deadhead to keep plant tidy"
+      ],
+      "november": [
+        "🧣 Protect pots from freezing solid in severe cold"
+      ],
+      "december": [
+        "🧣 Ensure pots are in a sheltered spot"
+      ],
+      "frostSensitive": false
+    },
+    "care": {
+      "sowIndoors": "Sow thinly in seed trays. Cover seeds with a thin layer of compost as they need darkness to germinate. Keep at 18–24°C.",
+      "sowOutdoors": "Sow directly in pots in July for autumn colour, ensuring the soil stays cool and moist.",
+      "hardenOff": "Acclimatize indoor seedlings to the outdoors over 7–10 days before final planting.",
+      "plantOut": "Space plants 15–20cm apart in pots or window boxes. Ensure they are planted at the same depth they were in their trays.",
+      "watering": "Water regularly, especially in dry weather. In winter, only water when the soil surface is dry to avoid root rot.",
+      "feeding": "Apply a balanced liquid fertilizer every 2 weeks during the main flowering periods (spring and autumn).",
+      "harvest": null,
+      "overwintering": "Winter-flowering pansies are very hardy but benefit from being moved to a sheltered spot to prevent the root ball from freezing solid."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Small, round, brownish-black seeds. Require darkness for germination.",
+      "germinationDays": "10–21 days at 18–24°C",
+      "fromCuttings": false,
+      "fromDivision": false
+    },
+    "deadheading": {
+      "required": true,
+      "notes": "Pinch off faded flowers including the green seed pod at the base. This prevents the plant from putting energy into seeds and encourages more flowers."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Allow a few pods to turn brown and brittle. Open them over a paper bag to collect the small seeds.",
+      "seedPodDescription": "Small green oval pods that turn brown and split into three sections when ripe."
+    },
+    "companionPlants": [
+      "tulips",
+      "daffodils",
+      "primrose",
+      "viola"
+    ],
+    "commonProblems": [
+      "Slugs and Snails — particularly problematic in damp autumn weather.",
+      "Aphids — common in spring; rinse off with water.",
+      "Powdery Mildew — greyish-white coating on leaves; improve airflow."
+    ],
+    "funFact": "The name 'pansy' comes from the French word 'pensée', meaning 'thought' or 'remembrance'."
+  },
+  {
     "id": "radish",
     "commonName": "Radish",
     "latinName": "Raphanus sativus",
@@ -1534,110 +1857,6 @@ window.PLANT_DATA = [
       "Bitter taste — usually due to heat or old leaves."
     ],
     "funFact": "Rocket has been grown in the Mediterranean since Roman times and was once considered an aphrodisiac!"
-  },
-  {
-    "id": "runner-beans",
-    "commonName": "Climbing Beans",
-    "latinName": "Phaseolus coccineus",
-    "family": "Fabaceae",
-    "category": "vegetable",
-    "variety": "Hestia (Dwarf)",
-    "description": "While most runner beans are tall climbers, 'Hestia' is a fantastic dwarf variety that grows into a bushy plant about 45cm tall. This makes it absolutely perfect for containers and window boxes on a balcony. It produces beautiful red and white bi-coloured flowers and heavy crops of stringless pods.",
-    "images": {
-      "plant": "images/runner-beans/plant.jpg",
-      "seed": "images/runner-beans/seed.jpg",
-      "flower": "images/runner-beans/flower.jpg",
-      "fruit": "images/runner-beans/fruit.jpg",
-      "seedling": "images/runner-beans/seedling.jpg"
-    },
-    "characteristics": {
-      "matureHeight": "45cm (Dwarf) / 2m+ (Climbing)",
-      "matureSpread": "30cm",
-      "hardiness": "Tender (not frost tolerant)",
-      "lifespan": "Annual (grown as)",
-      "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "Very high — containers must stay moist",
-      "soilType": "Rich, moisture-retentive compost",
-      "containerSize": "10L+ pot per plant"
-    },
-    "schedule": {
-      "january": [],
-      "february": [],
-      "march": [],
-      "april": [
-        "🌱 Sow seeds indoors"
-      ],
-      "may": [
-        "🌱 Sow seeds indoors",
-        "🌿 Sow seeds outdoors (late May)",
-        "🌤️ Harden off established seedlings"
-      ],
-      "june": [
-        "🌿 Sow seeds outdoors",
-        "🪴 Plant out into final containers",
-        "🌤️ Harden off seedlings"
-      ],
-      "july": [
-        "✂️ Harvest regularly"
-      ],
-      "august": [
-        "✂️ Harvest regularly"
-      ],
-      "september": [
-        "✂️ Harvest regularly"
-      ],
-      "october": [
-        "✂️ Final harvests",
-        "🧹 Clear away plants after first frost"
-      ],
-      "november": [],
-      "december": [],
-      "frostSensitive": true
-    },
-    "care": {
-      "sowIndoors": "Sow 5cm deep in deep pots or recycled toilet roll tubes. They have long roots and dislike being moved. Keep at 18–21°C.",
-      "sowOutdoors": "After last frost (late May), sow directly into final pots 5cm deep. Space 20cm apart.",
-      "hardenOff": "Move indoor plants outside during the day and bring back in at night for 7–10 days before final planting.",
-      "plantOut": "Plant out once risk of frost has passed. If growing climbing varieties, ensure supports (wigwam) are in place first.",
-      "watering": "Thirsty plants! Water daily in summer. Dry soil causes 'flower drop' where pods fail to form.",
-      "feeding": "Feed with a high-potash liquid fertiliser once flowers appear to encourage more pods.",
-      "harvest": "Pick pods when 15–20cm long. Regular picking every 2–3 days is essential to keep the plant producing.",
-      "overwintering": "Annual — they will die at the first frost. Compost the plant but leave the roots in the soil if possible (they add nitrogen)."
-    },
-    "propagation": {
-      "fromSeed": true,
-      "seedDescription": "Large, beautiful kidney-shaped seeds, often purple with black speckles.",
-      "germinationDays": "7–14 days at 18–21°C",
-      "fromCuttings": false,
-      "fromDivision": false
-    },
-    "deadheading": {
-      "required": false,
-      "notes": "Not needed, but regular harvesting of pods acts in the same way to keep the plant productive."
-    },
-    "seedSaving": {
-      "canSaveSeeds": true,
-      "method": "Leave a few healthy pods on the plant at the end of the season until they turn brown and the seeds rattle inside. Dry thoroughly indoors.",
-      "seedPodDescription": "Long, green, slightly rough-textured pods containing large, speckled seeds."
-    },
-    "varieties": [
-      "Hestia (Dwarf)",
-      "Polestar (Stringless)",
-      "Scarlet Emperor",
-      "White Lady",
-      "Painted Lady"
-    ],
-    "companionPlants": [
-      "nasturtiums",
-      "sweet peas",
-      "calendula"
-    ],
-    "commonProblems": [
-      "Flower Drop — caused by dry soil or lack of bees. Water well and plant flowers to attract pollinators.",
-      "Blackfly — aphids love new growth. Spray with water or soapy mix.",
-      "Slugs — protect young seedlings with copper tape or grit."
-    ],
-    "funFact": "Runner beans are actually perennials in their native Central America, where they grow from tuberous roots. In the UK, we grow them as annuals because they can't survive our winters."
   },
   {
     "id": "snapdragon",
@@ -1959,12 +2178,14 @@ window.PLANT_DATA = [
     "schedule": {
       "january": [],
       "february": [
-        "🌱 Sow seeds indoors"
+        "🌱 Sow seeds indoors (plant near sunny windowsill to avoid leggy seedlings)"
       ],
       "march": [
-        "🌱 Sow seeds indoors"
+        "🌱 Sow seeds indoors (plant near sunny windowsill to avoid leggy seedlings)"
       ],
-      "april": [],
+      "april": [
+        "🪴 Plant out into final containers (if protected)"
+      ],
       "may": [
         "🌤️ Harden off seedlings",
         "🪴 Plant out into final containers"
@@ -1990,7 +2211,7 @@ window.PLANT_DATA = [
       "frostSensitive": true
     },
     "care": {
-      "sowIndoors": "Sow seeds 0.5cm deep in small pots on a warm windowsill (18–21°C). Keep moist. Seeds sprout in 7–14 days.",
+      "sowIndoors": "Sow seeds 0.5cm deep in small pots on a warm, sunny windowsill (18–21°C) to avoid leggy seedlings. Keep moist. Seeds sprout in 7–14 days.",
       "sowOutdoors": null,
       "hardenOff": "From mid-May, gradually acclimatise plants to outdoor conditions over 7–10 days.",
       "plantOut": "After the last frost (mid-May in London), plant 1 plant per 25cm basket or 3 in a 35cm basket. Hang in a sunny, sheltered spot.",
@@ -2057,12 +2278,14 @@ window.PLANT_DATA = [
     "schedule": {
       "january": [],
       "february": [
-        "🌱 Sow seeds indoors"
+        "🌱 Sow seeds indoors (plant near sunny windowsill to avoid leggy seedlings)"
       ],
       "march": [
-        "🌱 Sow seeds indoors"
+        "🌱 Sow seeds indoors (plant near sunny windowsill to avoid leggy seedlings)"
       ],
-      "april": [],
+      "april": [
+        "🪴 Plant out into final containers (if protected)"
+      ],
       "may": [
         "🌤️ Harden off seedlings",
         "🪴 Plant out into final containers"
@@ -2088,7 +2311,7 @@ window.PLANT_DATA = [
       "frostSensitive": true
     },
     "care": {
-      "sowIndoors": "Sow seeds 0.5cm deep in small pots on a warm windowsill (18–21°C). Keep moist. Can be slower to germinate than red varieties, so start a week earlier if possible.",
+      "sowIndoors": "Sow seeds 0.5cm deep in small pots on a warm, sunny windowsill (18–21°C) to avoid leggy seedlings. Keep moist. Can be slower to germinate than red varieties, so start a week earlier if possible.",
       "sowOutdoors": null,
       "hardenOff": "From mid-May, gradually acclimatise plants to outdoor conditions over 7–10 days.",
       "plantOut": "After the last frost (mid-May in London). Looks great planted alongside red varieties for colour contrast.",
