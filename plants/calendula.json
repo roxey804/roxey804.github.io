@@ -1,0 +1,109 @@
+{
+  "id": "calendula",
+  "commonName": "Calendula",
+  "latinName": "Calendula officinalis",
+  "family": "Asteraceae",
+  "category": "flower",
+  "variety": "Orange King",
+  "description": "Calendula is a cheerful, hardy annual with vibrant orange or yellow blooms. It's incredibly easy to grow and highly beneficial in the garden, attracting pollinators and acting as a 'trap crop' for pests. The petals are edible and have many traditional medicinal uses.",
+  "images": {
+    "plant": "images/calendula/plant.jpg",
+    "flower": "images/calendula/flower.jpg",
+    "seedling": "images/calendula/seedling.jpg",
+    "seed": "images/calendula/seed.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "30–60cm",
+    "matureSpread": "30–45cm",
+    "hardiness": "Hardy annual (tolerates light frost)",
+    "lifespan": "Annual",
+    "sunRequirement": "Full sun to partial shade",
+    "waterNeeds": "Moderate — water during dry spells",
+    "soilType": "Well-drained, average fertility",
+    "containerSize": "5L+ pot"
+  },
+  "schedule": {
+    "january": [],
+    "february": [],
+    "march": [
+      "🌱 Sow seeds indoors"
+    ],
+    "april": [
+      "🌱 Sow seeds indoors",
+      "🌿 Sow seeds outdoors"
+    ],
+    "may": [
+      "🌿 Sow seeds outdoors",
+      "🌤️ Harden off seedlings",
+      "🪴 Plant out into final position",
+      "✂️ Deadhead for more blooms"
+    ],
+    "june": [
+      "🪴 Plant out into final position",
+      "✂️ Deadhead for more blooms",
+      "🌼 Harvest petals"
+    ],
+    "july": [
+      "✂️ Deadhead for more blooms",
+      "🌼 Harvest petals"
+    ],
+    "august": [
+      "✂️ Deadhead for more blooms",
+      "🌼 Harvest petals"
+    ],
+    "september": [
+      "🌱 Sow seeds outdoors (for early spring flowers)",
+      "✂️ Deadhead for more blooms",
+      "🌼 Harvest petals"
+    ],
+    "october": [
+      "✂️ Deadhead for more blooms",
+      "🌼 Harvest petals"
+    ],
+    "november": [
+      "🍂 Clear dead plants or let self-seed"
+    ],
+    "december": [],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": "Sow in modules in March or April. Cover with 1cm of compost. Keep at 15–20°C. Seeds sprout in 7–14 days.",
+    "sowOutdoors": "Sow directly into flowering position from April to May, or in September for earlier blooms next year. Sow 1cm deep in drills 20cm apart.",
+    "hardenOff": "Gradually acclimatise indoor-sown seedlings to the outdoors over a week in May before planting out.",
+    "plantOut": "Space plants 20–30cm apart in a sunny spot. They are unfussy about soil but prefer good drainage.",
+    "watering": "Water regularly when first planted and during dry summer spells. Avoid wetting the foliage to prevent mildew.",
+    "feeding": "Generally doesn't need much feed. A light balanced fertiliser in early summer is sufficient.",
+    "harvest": "Pick flower heads regularly to encourage continuous blooming. Petals can be dried for tea or used fresh in salads.",
+    "overwintering": "Hardy annual. Will survive light frosts. Pull up at the end of the season or let it self-seed for next year."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Curved, bumpy, C-shaped seeds that look like dried caterpillars. Easy to handle and sow.",
+    "germinationDays": "7–14 days at 15–20°C",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": true,
+    "notes": "Essential to keep the plant blooming. Remove the entire flower stalk once the bloom has faded."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Allow a few flower heads to dry on the plant. The seeds will turn brown and detach easily when ready. Store in a paper envelope.",
+    "seedPodDescription": "The center of the flower dries into a cluster of curved, brown seeds."
+  },
+  "companionPlants": [
+    "tomato",
+    "climbing-beans",
+    "carrot",
+    "nasturtium"
+  ],
+  "commonProblems": [
+    "Powdery Mildew — white coating on leaves in late summer. Improve spacing and water at base.",
+    "Aphids — common on stems. Can be hosed off or left as a trap crop for beneficial insects.",
+    "Slugs and Snails — protect young seedlings in spring."
+  ],
+  "funFact": "Known as 'Poor Man's Saffron' because its petals can be used to add a golden yellow color to rice, butter, and cheese!"
+}

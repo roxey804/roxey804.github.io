@@ -7,7 +7,7 @@
   "variety": "Orientalis Hybrids (Lenten Rose)",
   "description": "Hellebores are the stars of the winter garden. These incredibly hardy perennials provide elegant, nodding flowers from mid-winter through early spring. They are perfect for shaded balcony corners where few other plants thrive. Their leathery, evergreen foliage provides year-round structure.",
   "images": {
-    "plant": null,
+    "plant": "images/hellebore/plant.jpg",
     "flower": "images/hellebore/flower.jpg",
     "seedling": "images/hellebore/seedling.jpg",
     "seed": "images/hellebore/seed.jpg"

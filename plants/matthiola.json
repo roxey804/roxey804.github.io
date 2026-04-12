@@ -1,0 +1,109 @@
+{
+  "id": "matthiola",
+  "commonName": "Stock (Matthiola)",
+  "latinName": "Matthiola incana",
+  "family": "Brassicaceae",
+  "category": "flower",
+  "variety": "Dwarf Ten Week",
+  "description": "Stocks are much-loved for their wonderful, spicy clove-like fragrance and beautiful spikes of flowers in soft pastel shades. The 'Dwarf Ten Week' variety is perfect for containers, as it stays compact and bushy, reaching full bloom just 10 weeks after sowing. They are excellent for cutting and bringing the scent indoors.",
+  "images": {
+    "plant": "images/matthiola/plant.jpg",
+    "flower": "images/matthiola/flower.jpg",
+    "seedling": "images/matthiola/seedling.jpg",
+    "seed": "images/matthiola/seed.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "30cm",
+    "matureSpread": "25cm",
+    "hardiness": "Half-hardy annual",
+    "lifespan": "Annual",
+    "sunRequirement": "Full sun (6+ hours)",
+    "waterNeeds": "Moderate — keep soil moist but not waterlogged",
+    "soilType": "Fertile, well-drained, neutral to slightly alkaline",
+    "containerSize": "3-5L pot (or 15cm deep)"
+  },
+  "schedule": {
+    "january": [],
+    "february": [
+      "🌱 Sow seeds indoors (late Feb)"
+    ],
+    "march": [
+      "🌱 Sow seeds indoors"
+    ],
+    "april": [
+      "🌱 Sow seeds indoors",
+      "🌿 Sow seeds outdoors (late April)",
+      "🌤️ Harden off established seedlings"
+    ],
+    "may": [
+      "🌿 Sow seeds outdoors",
+      "🪴 Plant out into final position",
+      "🌤️ Harden off seedlings",
+      "🔄 Succession sow for later blooms"
+    ],
+    "june": [
+      "🪴 Plant out into final position",
+      "🌸 Flowering begins",
+      "✂️ Deadhead spent spikes",
+      "🧪 Feed every 2 weeks"
+    ],
+    "july": [
+      "🌸 Flowering peak",
+      "✂️ Deadhead spent spikes",
+      "🧪 Feed every 2 weeks"
+    ],
+    "august": [
+      "🌸 Flowering continues",
+      "✂️ Deadhead spent spikes",
+      "🧪 Feed every 2 weeks"
+    ],
+    "september": [
+      "🌸 Final flowers",
+      "🍂 Clear away finished plants"
+    ],
+    "october": [],
+    "november": [],
+    "december": [],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Sow in modules from February to April. Cover seeds with a very fine layer of vermiculite or compost (they need some light to germinate). Keep at 15–20°C. Move to a cooler, bright spot once sprouted.",
+    "sowOutdoors": "Direct sow from late April once the soil has warmed up. Sow 0.5cm deep in drills and thin seedlings to 15–20cm apart.",
+    "hardenOff": "Gradually acclimatise indoor-sown plants to the outdoors over 7–10 days in May, after the last frost risk (London: Week 15).",
+    "plantOut": "Plant out in late May or June in a sunny, sheltered spot. Space 20cm apart.",
+    "watering": "Water regularly at the base of the plant to keep the soil moist. Avoid wetting the fuzzy leaves to prevent mildew.",
+    "feeding": "Use a balanced liquid fertiliser every 2 weeks once the first flower buds appear.",
+    "harvest": "Cut flower spikes when about one-third of the flowers on the stem are open for the best vase life.",
+    "overwintering": "Not applicable as they are grown as annuals. Remove plants after they have finished flowering."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Small, flat, brownish seeds. Mix of single and double flowering seeds in most packets.",
+    "germinationDays": "7–14 days at 15–20°C",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": true,
+    "notes": "Removing the main flower spike once it fades will encourage the plant to produce smaller side-shoots and extend the flowering season."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Allow seed pods (siliques) to turn brown and dry on the plant. Harvest the pods and shake out the seeds. Note: double-flowered plants are usually sterile; seeds from singles may produce a mix.",
+    "seedPodDescription": "Long, narrow green pods that turn brown and brittle when ripe."
+  },
+  "companionPlants": [
+    "pansy",
+    "snapdragon",
+    "calendula",
+    "alyssum"
+  ],
+  "commonProblems": [
+    "Downy Mildew — avoid overhead watering and ensure good air circulation.",
+    "Aphids — can cluster on new growth. Wash off or use organic soap spray.",
+    "Flea Beetle — can pepper leaves with small holes. Keep plants well-watered."
+  ],
+  "funFact": "In the Victorian 'Language of Flowers', Stocks symbolised 'lasting beauty' and a 'happy life' — likely due to their enduring, sweet scent!"
+}

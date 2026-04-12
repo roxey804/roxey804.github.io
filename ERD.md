@@ -1,8 +1,80 @@
-# Plant Categories and Subcategories ERD
+# Plant Database ERD & Hierarchy
 
-This diagram illustrates the structure of plant categories, families, and individual plants within the project.
+This document illustrates the structure of the project, including the botanical classification and the hierarchical user model.
 
-## Mermaid Flowchart
+## User & Garden Hierarchy
+
+This diagram shows the relationship between users, their gardens, and the shared plant database.
+
+```mermaid
+erDiagram
+    PLANTS ||--o{ USER_PLANTS : "referenced by"
+    USER ||--|| PROFILE : "has"
+    USER ||--o{ GARDENS : "owns"
+    GARDENS ||--o{ USER_PLANTS : "contains"
+    USER_PLANTS ||--o{ PLANTING_TRACKER : "logged in"
+    USER ||--o{ WISHLIST : "wants"
+
+    USER {
+        uuid id PK
+        string email
+    }
+
+    PROFILE {
+        uuid id PK, FK
+        string display_name
+        string location_name
+        boolean welcome_shown
+    }
+
+    GARDENS {
+        uuid id PK
+        uuid user_id FK
+        string name "e.g., Back Garden, Front Balcony"
+        string description
+    }
+
+    USER_PLANTS {
+        uuid id PK
+        uuid garden_id FK
+        string plant_id FK "References master plants.id"
+        boolean is_growing
+        jsonb custom_notes
+    }
+
+    PLANTS {
+        string id PK "e.g., basil, tomato"
+        string common_name
+        string category "herb, vegetable, flower, fruit"
+    }
+
+    PLANTING_TRACKER {
+        uuid id PK
+        uuid user_plant_id FK
+        integer batch_no
+        string date_planted
+    }
+
+    WISHLIST {
+        uuid id PK
+        uuid user_id FK
+        string common_name
+    }
+```
+
+## Hierarchy Levels
+
+1.  **System Level (Shared)**: The `plants` table contains the master encyclopedic data. It is read-only for users.
+2.  **User Level (Identity)**: Managed by Supabase Auth (`USER`) and extended via the `PROFILE` table for app-specific settings.
+3.  **Garden Level (Container)**: The `GARDENS` table allows a single user to manage multiple independent physical spaces.
+4.  **Instance Level (Specifics)**: `USER_PLANTS` links a master plant to a specific garden. This is where per-garden state (like "is currently growing") lives.
+5.  **Log Level (Activity)**: `PLANTING_TRACKER` stores historical and active growth data for a specific plant instance.
+
+---
+
+## Plant Classification (Botanical Structure)
+
+This diagram illustrates the structure of plant categories and families.
 
 ```mermaid
 graph TD

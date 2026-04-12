@@ -208,6 +208,115 @@ window.PLANT_DATA = [
     "funFact": "Broad beans are nitrogen fixers! They take nitrogen from the air and store it in nodules on their roots, fertilizing the soil for future plants."
   },
   {
+    "id": "calendula",
+    "commonName": "Calendula",
+    "latinName": "Calendula officinalis",
+    "family": "Asteraceae",
+    "category": "flower",
+    "variety": "Orange King",
+    "description": "Calendula is a cheerful, hardy annual with vibrant orange or yellow blooms. It's incredibly easy to grow and highly beneficial in the garden, attracting pollinators and acting as a 'trap crop' for pests. The petals are edible and have many traditional medicinal uses.",
+    "images": {
+      "plant": "images/calendula/plant.jpg",
+      "flower": "images/calendula/flower.jpg",
+      "seedling": "images/calendula/seedling.jpg",
+      "seed": "images/calendula/seed.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "30–60cm",
+      "matureSpread": "30–45cm",
+      "hardiness": "Hardy annual (tolerates light frost)",
+      "lifespan": "Annual",
+      "sunRequirement": "Full sun to partial shade",
+      "waterNeeds": "Moderate — water during dry spells",
+      "soilType": "Well-drained, average fertility",
+      "containerSize": "5L+ pot"
+    },
+    "schedule": {
+      "january": [],
+      "february": [],
+      "march": [
+        "🌱 Sow seeds indoors"
+      ],
+      "april": [
+        "🌱 Sow seeds indoors",
+        "🌿 Sow seeds outdoors"
+      ],
+      "may": [
+        "🌿 Sow seeds outdoors",
+        "🌤️ Harden off seedlings",
+        "🪴 Plant out into final position",
+        "✂️ Deadhead for more blooms"
+      ],
+      "june": [
+        "🪴 Plant out into final position",
+        "✂️ Deadhead for more blooms",
+        "🌼 Harvest petals"
+      ],
+      "july": [
+        "✂️ Deadhead for more blooms",
+        "🌼 Harvest petals"
+      ],
+      "august": [
+        "✂️ Deadhead for more blooms",
+        "🌼 Harvest petals"
+      ],
+      "september": [
+        "🌱 Sow seeds outdoors (for early spring flowers)",
+        "✂️ Deadhead for more blooms",
+        "🌼 Harvest petals"
+      ],
+      "october": [
+        "✂️ Deadhead for more blooms",
+        "🌼 Harvest petals"
+      ],
+      "november": [
+        "🍂 Clear dead plants or let self-seed"
+      ],
+      "december": [],
+      "frostSensitive": false
+    },
+    "care": {
+      "sowIndoors": "Sow in modules in March or April. Cover with 1cm of compost. Keep at 15–20°C. Seeds sprout in 7–14 days.",
+      "sowOutdoors": "Sow directly into flowering position from April to May, or in September for earlier blooms next year. Sow 1cm deep in drills 20cm apart.",
+      "hardenOff": "Gradually acclimatise indoor-sown seedlings to the outdoors over a week in May before planting out.",
+      "plantOut": "Space plants 20–30cm apart in a sunny spot. They are unfussy about soil but prefer good drainage.",
+      "watering": "Water regularly when first planted and during dry summer spells. Avoid wetting the foliage to prevent mildew.",
+      "feeding": "Generally doesn't need much feed. A light balanced fertiliser in early summer is sufficient.",
+      "harvest": "Pick flower heads regularly to encourage continuous blooming. Petals can be dried for tea or used fresh in salads.",
+      "overwintering": "Hardy annual. Will survive light frosts. Pull up at the end of the season or let it self-seed for next year."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Curved, bumpy, C-shaped seeds that look like dried caterpillars. Easy to handle and sow.",
+      "germinationDays": "7–14 days at 15–20°C",
+      "fromCuttings": false,
+      "cuttingsMethod": null,
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": true,
+      "notes": "Essential to keep the plant blooming. Remove the entire flower stalk once the bloom has faded."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Allow a few flower heads to dry on the plant. The seeds will turn brown and detach easily when ready. Store in a paper envelope.",
+      "seedPodDescription": "The center of the flower dries into a cluster of curved, brown seeds."
+    },
+    "companionPlants": [
+      "tomato",
+      "climbing-beans",
+      "carrot",
+      "nasturtium"
+    ],
+    "commonProblems": [
+      "Powdery Mildew — white coating on leaves in late summer. Improve spacing and water at base.",
+      "Aphids — common on stems. Can be hosed off or left as a trap crop for beneficial insects.",
+      "Slugs and Snails — protect young seedlings in spring."
+    ],
+    "funFact": "Known as 'Poor Man's Saffron' because its petals can be used to add a golden yellow color to rice, butter, and cheese!"
+  },
+  {
     "id": "carnation-pinks",
     "commonName": "Carnations (Pinks)",
     "latinName": "Dianthus caryophyllus",
@@ -825,7 +934,7 @@ window.PLANT_DATA = [
     "variety": "Orientalis Hybrids (Lenten Rose)",
     "description": "Hellebores are the stars of the winter garden. These incredibly hardy perennials provide elegant, nodding flowers from mid-winter through early spring. They are perfect for shaded balcony corners where few other plants thrive. Their leathery, evergreen foliage provides year-round structure.",
     "images": {
-      "plant": null,
+      "plant": "images/hellebore/plant.jpg",
       "flower": "images/hellebore/flower.jpg",
       "seedling": "images/hellebore/seedling.jpg",
       "seed": "images/hellebore/seed.jpg"
@@ -1332,6 +1441,115 @@ window.PLANT_DATA = [
       "Grey mould (botrytis) in wet weather — remove affected flowers promptly, improve airflow"
     ],
     "funFact": "Despite their names, French marigolds and African marigolds are both from Mexico — the names come from 16th-century trade routes. In Mexico, marigolds (cempasuchil) are the iconic flower of Dia de los Muertos, believed to guide spirits of the dead back to the living with their bright colour and strong scent."
+  },
+  {
+    "id": "matthiola",
+    "commonName": "Stock (Matthiola)",
+    "latinName": "Matthiola incana",
+    "family": "Brassicaceae",
+    "category": "flower",
+    "variety": "Dwarf Ten Week",
+    "description": "Stocks are much-loved for their wonderful, spicy clove-like fragrance and beautiful spikes of flowers in soft pastel shades. The 'Dwarf Ten Week' variety is perfect for containers, as it stays compact and bushy, reaching full bloom just 10 weeks after sowing. They are excellent for cutting and bringing the scent indoors.",
+    "images": {
+      "plant": "images/matthiola/plant.jpg",
+      "flower": "images/matthiola/flower.jpg",
+      "seedling": "images/matthiola/seedling.jpg",
+      "seed": "images/matthiola/seed.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "30cm",
+      "matureSpread": "25cm",
+      "hardiness": "Half-hardy annual",
+      "lifespan": "Annual",
+      "sunRequirement": "Full sun (6+ hours)",
+      "waterNeeds": "Moderate — keep soil moist but not waterlogged",
+      "soilType": "Fertile, well-drained, neutral to slightly alkaline",
+      "containerSize": "3-5L pot (or 15cm deep)"
+    },
+    "schedule": {
+      "january": [],
+      "february": [
+        "🌱 Sow seeds indoors (late Feb)"
+      ],
+      "march": [
+        "🌱 Sow seeds indoors"
+      ],
+      "april": [
+        "🌱 Sow seeds indoors",
+        "🌿 Sow seeds outdoors (late April)",
+        "🌤️ Harden off established seedlings"
+      ],
+      "may": [
+        "🌿 Sow seeds outdoors",
+        "🪴 Plant out into final position",
+        "🌤️ Harden off seedlings",
+        "🔄 Succession sow for later blooms"
+      ],
+      "june": [
+        "🪴 Plant out into final position",
+        "🌸 Flowering begins",
+        "✂️ Deadhead spent spikes",
+        "🧪 Feed every 2 weeks"
+      ],
+      "july": [
+        "🌸 Flowering peak",
+        "✂️ Deadhead spent spikes",
+        "🧪 Feed every 2 weeks"
+      ],
+      "august": [
+        "🌸 Flowering continues",
+        "✂️ Deadhead spent spikes",
+        "🧪 Feed every 2 weeks"
+      ],
+      "september": [
+        "🌸 Final flowers",
+        "🍂 Clear away finished plants"
+      ],
+      "october": [],
+      "november": [],
+      "december": [],
+      "frostSensitive": true
+    },
+    "care": {
+      "sowIndoors": "Sow in modules from February to April. Cover seeds with a very fine layer of vermiculite or compost (they need some light to germinate). Keep at 15–20°C. Move to a cooler, bright spot once sprouted.",
+      "sowOutdoors": "Direct sow from late April once the soil has warmed up. Sow 0.5cm deep in drills and thin seedlings to 15–20cm apart.",
+      "hardenOff": "Gradually acclimatise indoor-sown plants to the outdoors over 7–10 days in May, after the last frost risk (London: Week 15).",
+      "plantOut": "Plant out in late May or June in a sunny, sheltered spot. Space 20cm apart.",
+      "watering": "Water regularly at the base of the plant to keep the soil moist. Avoid wetting the fuzzy leaves to prevent mildew.",
+      "feeding": "Use a balanced liquid fertiliser every 2 weeks once the first flower buds appear.",
+      "harvest": "Cut flower spikes when about one-third of the flowers on the stem are open for the best vase life.",
+      "overwintering": "Not applicable as they are grown as annuals. Remove plants after they have finished flowering."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Small, flat, brownish seeds. Mix of single and double flowering seeds in most packets.",
+      "germinationDays": "7–14 days at 15–20°C",
+      "fromCuttings": false,
+      "cuttingsMethod": null,
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": true,
+      "notes": "Removing the main flower spike once it fades will encourage the plant to produce smaller side-shoots and extend the flowering season."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Allow seed pods (siliques) to turn brown and dry on the plant. Harvest the pods and shake out the seeds. Note: double-flowered plants are usually sterile; seeds from singles may produce a mix.",
+      "seedPodDescription": "Long, narrow green pods that turn brown and brittle when ripe."
+    },
+    "companionPlants": [
+      "pansy",
+      "snapdragon",
+      "calendula",
+      "alyssum"
+    ],
+    "commonProblems": [
+      "Downy Mildew — avoid overhead watering and ensure good air circulation.",
+      "Aphids — can cluster on new growth. Wash off or use organic soap spray.",
+      "Flea Beetle — can pepper leaves with small holes. Keep plants well-watered."
+    ],
+    "funFact": "In the Victorian 'Language of Flowers', Stocks symbolised 'lasting beauty' and a 'happy life' — likely due to their enduring, sweet scent!"
   },
   {
     "id": "mint",
@@ -2149,6 +2367,105 @@ window.PLANT_DATA = [
       "Wind damage (needs staking)"
     ],
     "funFact": "Sunflowers are 'phytoremediators'—they were planted at Chernobyl to help extract radioactive toxins from the soil!"
+  },
+  {
+    "id": "sweetcorn",
+    "commonName": "Sweetcorn",
+    "latinName": "Zea mays",
+    "family": "Poaceae",
+    "category": "vegetable",
+    "variety": "Lark (Tendersweet)",
+    "description": "Sweetcorn is a tall, architectural plant that produces incredibly sweet, tender cobs. Homegrown corn is far superior to shop-bought because the sugars begin to turn into starch immediately after harvest. They are wind-pollinated and must be planted in blocks for success.",
+    "images": {
+      "plant": "images/sweetcorn/plant.jpg",
+      "flower": "images/sweetcorn/flower.jpg",
+      "seedling": "images/sweetcorn/seedling.jpg",
+      "seed": "images/sweetcorn/seed.jpg",
+      "fruit": "images/sweetcorn/fruit.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "1.5–2m",
+      "matureSpread": "45cm",
+      "hardiness": "Tender (not frost tolerant)",
+      "lifespan": "Annual",
+      "sunRequirement": "Full sun (6+ hours)",
+      "waterNeeds": "High — requires regular watering as cobs develop",
+      "soilType": "Rich, well-manured, well-drained soil",
+      "containerSize": "Large (30L+) — needs 15-20 plants in a block for pollination"
+    },
+    "schedule": {
+      "january": [],
+      "february": [],
+      "march": [],
+      "april": [
+        "🌱 Sow seeds indoors (late April)"
+      ],
+      "may": [
+        "🌱 Sow seeds indoors",
+        "🌿 Sow seeds outdoors (late May)",
+        "🌤️ Harden off seedlings",
+        "🪴 Plant out into blocks"
+      ],
+      "june": [
+        "🌿 Sow seeds outdoors",
+        "🪴 Plant out into blocks"
+      ],
+      "july": [
+        "💧 Water heavily and mulch",
+        "🐝 Shake plants to aid pollination"
+      ],
+      "august": [
+        "✂️ Harvest when silks turn brown"
+      ],
+      "september": [
+        "✂️ Harvest when silks turn brown"
+      ],
+      "october": [],
+      "november": [],
+      "december": [],
+      "frostSensitive": true
+    },
+    "care": {
+      "sowIndoors": "Sow in late April or early May, 2.5cm deep in deep pots or root trainers to avoid root disturbance. Keep at 18–21°C. Seeds sprout in 7–10 days.",
+      "sowOutdoors": "Sow directly into warm soil in late May or June. Sow in blocks, 2 seeds per station, 45cm apart. Thin to the strongest seedling.",
+      "hardenOff": "Gradually acclimatise to the outdoors over 7–10 days in late May after the risk of frost has passed.",
+      "plantOut": "Plant out in early June in a square block (e.g. 4x4) to ensure good wind pollination. Space 45cm apart.",
+      "watering": "Water regularly, especially when flowering and as the cobs begin to swell. Never let the soil dry out completely.",
+      "feeding": "Apply a high-nitrogen fertiliser or mulch with well-rotted manure before planting. Feed with a balanced fertiliser once established.",
+      "harvest": "Harvest when the silks turn dark brown. Pierce a kernel with your thumbnail; if it releases a milky liquid, it's ready. Twist and snap off the plant.",
+      "overwintering": "Annual — pull up and compost after harvest or the first frost."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Large, shrivelled, golden-yellow seeds. Each kernel on a cob is a potential seed.",
+      "germinationDays": "7–12 days at 18–21°C",
+      "fromCuttings": false,
+      "cuttingsMethod": null,
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": false,
+      "notes": "Not applicable. Do not remove the male tassels at the top, as they are needed for pollination."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Difficult in small gardens due to cross-pollination. Let cobs dry completely on the plant until kernels are hard and shrivelled. Remove and store in a cool, dry place.",
+      "seedPodDescription": "Seeds (kernels) are found on the cob inside the husk."
+    },
+    "companionPlants": [
+      "climbing-beans",
+      "courgette",
+      "sunflower",
+      "nasturtium"
+    ],
+    "commonProblems": [
+      "Poor Pollination — results in missing kernels. Plant in blocks and shake plants daily.",
+      "Birds and Mice — can pull up seeds or peck at ripening cobs. Net young plants.",
+      "Slugs — can decimate young seedlings. Use beer traps or barriers.",
+      "Wind Damage — tall plants can blow over. Stake if necessary or earth up the base."
+    ],
+    "funFact": "An ear of corn almost always has an even number of rows — usually 16! Each silk on a cob is attached to one individual kernel."
   },
   {
     "id": "tumbling-tom-red",
