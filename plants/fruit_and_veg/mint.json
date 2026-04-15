@@ -18,9 +18,13 @@
     "hardiness": "Fully hardy",
     "lifespan": "Perennial",
     "sunRequirement": "Partial shade to full sun (3+ hours)",
-    "waterNeeds": "Regular — likes moist soil",
+    "waterNeeds": "high and THEN info: Regular — likes moist soil",
     "soilType": "Any potting compost",
-    "containerSize": "5L+ pot (keep it contained!)"
+    "containerSize": "5L+ pot (keep it contained!)",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],

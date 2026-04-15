@@ -19,9 +19,13 @@
     "hardiness": "Half-hardy (killed by frost)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "High — daily watering essential in baskets",
+    "waterNeeds": "high and THEN info: High — daily watering essential in baskets",
     "soilType": "Rich potting compost with water-retaining gel",
-    "containerSize": "30cm+ hanging basket or tall pot"
+    "containerSize": "30cm+ hanging basket or tall pot",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],

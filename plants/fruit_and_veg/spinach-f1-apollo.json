@@ -1,0 +1,108 @@
+{
+  "id": "spinach-f1-apollo",
+  "commonName": "Spinach 'Apollo' F1",
+  "latinName": "Spinacia oleracea",
+  "family": "Amaranthaceae",
+  "category": "vegetable",
+  "variety": "Apollo F1",
+  "description": "A high-yielding, RHS Award of Garden Merit variety specifically bred for its resistance to bolting and downy mildew. Excellent for both baby leaf salads and mature cooking greens. Its compact growth makes it perfect for pots and window boxes.",
+  "images": {
+    "plant": "images/spinach-f1-apollo/plant.jpg",
+    "seedling": "images/spinach-f1-apollo/seedling.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "15-30cm",
+    "matureSpread": "15-30cm",
+    "hardiness": "Hardy",
+    "lifespan": "Annual",
+    "sunRequirement": "Partial shade to full sun",
+    "waterNeeds": "high and THEN info: Regular — never let soil dry out",
+    "soilType": "Fertile, moisture-retentive soil",
+    "containerSize": "5L+ pot or window box",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
+  },
+  "schedule": {
+    "january": [],
+    "february": [],
+    "march": [
+      "🌿 Sow seeds outdoors"
+    ],
+    "april": [
+      "🌿 Sow seeds outdoors",
+      "✂️ Harvest leaves",
+      "🔄 Sow again for continuous harvests"
+    ],
+    "may": [
+      "🌿 Sow seeds outdoors",
+      "✂️ Harvest leaves",
+      "🔄 Sow again for continuous harvests"
+    ],
+    "june": [
+      "🌿 Sow seeds outdoors",
+      "✂️ Harvest leaves",
+      "🔄 Sow again for continuous harvests"
+    ],
+    "july": [
+      "🌿 Sow seeds outdoors",
+      "✂️ Harvest leaves",
+      "🔄 Sow again for continuous harvests"
+    ],
+    "august": [
+      "🌿 Sow seeds outdoors",
+      "✂️ Harvest leaves",
+      "🔄 Sow again for continuous harvests"
+    ],
+    "september": [
+      "✂️ Harvest leaves"
+    ],
+    "october": [
+      "✂️ Harvest leaves"
+    ],
+    "november": [],
+    "december": [],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": null,
+    "sowOutdoors": "Sow seeds 1.5cm deep in rows 15-30cm apart. Water well after sowing. Spinach prefers cooler soil for germination.",
+    "hardenOff": null,
+    "plantOut": "If grown in modules, transplant when large enough to handle, being careful not to disturb the roots.",
+    "watering": "Crucial. Keep soil consistently moist. Dry soil triggers bolting (running to seed), which makes leaves bitter.",
+    "feeding": "Feed with a high-nitrogen liquid fertiliser every 2 weeks to encourage lush leaf growth.",
+    "harvest": "Pick individual outer leaves as needed once they reach 5-8cm. The plant will regrow for multiple cuts. For mature plants, harvest the whole rosette.",
+    "overwintering": "Annual — compost the plant after the final harvest or if it starts to flower."
+  },
+  "propagation": {
+    "fromSeed": true,
+    "seedDescription": "Medium-sized, angular, beige to light brown seeds.",
+    "germinationDays": "7-14 days",
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": false,
+    "divisionMethod": null
+  },
+  "deadheading": {
+    "required": false,
+    "notes": "No deadheading needed. However, pinch out any flower stalks immediately to prevent bolting."
+  },
+  "seedSaving": {
+    "canSaveSeeds": true,
+    "method": "Allow a few plants to flower and set seed. Seeds are ready when the stalks turn brown and dry. Note that F1 hybrids may not grow true to the parent plant.",
+    "seedPodDescription": "Seeds form in clusters along the flower stalk."
+  },
+  "companionPlants": [
+    "strawberry",
+    "radish",
+    "lettuce",
+    "chives"
+  ],
+  "commonProblems": [
+    "Bolting — caused by heat or dry soil. Keep well-watered and provide shade in mid-summer.",
+    "Downy mildew — Apollo F1 is resistant, but ensure good air circulation.",
+    "Slugs and snails — protect young seedlings."
+  ],
+  "funFact": "Spinach 'Apollo' F1 holds the RHS Award of Garden Merit, confirming its status as an outstanding variety for home gardeners."
+}

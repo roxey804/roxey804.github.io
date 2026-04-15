@@ -18,9 +18,13 @@
     "hardiness": "Half-hardy (survives light frosts)",
     "lifespan": "Annual",
     "sunRequirement": "Partial shade (summer) to full sun (spring/autumn)",
-    "waterNeeds": "Regular — keep soil moist to delay bolting",
+    "waterNeeds": "high and THEN info: Regular — keep soil moist to delay bolting",
     "soilType": "Light, well-drained potting compost",
-    "containerSize": "2L+ pot (deep pot preferred for taproot)"
+    "containerSize": "2L+ pot (deep pot preferred for taproot)",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],

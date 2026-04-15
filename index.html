@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My plant db</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
-  <script src="plants/data.js"></script>
-  <script src="wishlist/data.js"></script>
-  <script src="weeds/data.js"></script>
-  <script src="general_tasks.js"></script>
+  <script>
+    // Cache buster for data files
+    const cb = Date.now();
+    document.write(`<script src="plants/data.js?v=${cb}"><\/script>`);
+    document.write(`<script src="wishlist/data.js?v=${cb}"><\/script>`);
+    document.write(`<script src="weeds/data.js?v=${cb}"><\/script>`);
+    document.write(`<script src="general_tasks.js?v=${cb}"><\/script>`);
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -48,6 +52,7 @@
       <div class="flex items-center gap-2">
         <span class="text-2xl">🌿</span>
         <h1 class="text-lg font-bold tracking-tight">My plant db</h1>
+        <span class="px-1.5 py-0.5 rounded bg-terra text-[10px] font-bold uppercase tracking-wider">WIP (Work In Progress)</span>
       </div>
       <div class="text-right text-sm">
         <div id="currentDate" class="font-medium"></div>
@@ -60,10 +65,17 @@
       <button onclick="switchTab('timeline')" id="tab-timeline" class="tab-btn px-4 py-2 rounded-t-lg text-sm font-medium transition-colors text-leafLight hover:text-white">Timeline</button>
       <button onclick="switchTab('wishlist')" id="tab-wishlist" class="tab-btn px-4 py-2 rounded-t-lg text-sm font-medium transition-colors text-leafLight hover:text-white">Wishlist</button>
       <button onclick="switchTab('weeds')" id="tab-weeds" class="tab-btn px-4 py-2 rounded-t-lg text-sm font-medium transition-colors text-leafLight hover:text-white">Weeds</button>
+      <button onclick="switchTab('composting')" id="tab-composting" class="tab-btn px-4 py-2 rounded-t-lg text-sm font-medium transition-colors text-leafLight hover:text-white">Composting</button>
     </nav>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 py-6">
+    <!-- WIP Banner -->
+    <div class="bg-terra/10 border border-terra/30 rounded-xl p-3 mb-6 flex items-center gap-3 no-print">
+      <span class="text-xl">🛠️</span>
+      <p class="text-sm text-bark font-medium">This database is a <strong>Work in Progress</strong>. New plants and features are being added regularly!</p>
+    </div>
+
     <!-- Loading -->
     <div id="loading" class="text-center py-20">
       <div class="text-4xl mb-4 animate-bounce">🌱</div>
@@ -158,6 +170,33 @@
         <h2 class="text-xl font-bold text-forest">Weed DB</h2>
       </div>
       <div id="weedGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    </div>
+
+    <!-- COMPOSTING VIEW -->
+    <div id="view-composting" class="hidden fade-in">
+      <h2 class="text-xl font-bold text-forest mb-6">Composting & Fertilising</h2>
+      
+      <div class="space-y-8">
+        <section>
+          <h3 class="text-lg font-bold text-terra mb-4 flex items-center gap-2">
+            <span>🧪</span> Fertilising
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+              <h4 class="font-bold text-forest mb-2">Nettle tea</h4>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                To make nitrogen-rich nettle feed, cut or crush nettles into small pieces and cram into a large container. Weigh the nettles down with bricks, and submerge with water (store away from the house, to avoid the smell). Leave for three or four weeks then dilute for direct use (one part concentrate to 10 parts water)
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+              <h4 class="font-bold text-forest mb-2">Comfrey feed</h4>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Harvest comfrey leaves from the base of established plants. The hairy leaves can irritate the skin, so wear gloves if necessary. Remove flowers and tough stems, then chop up the leaves and pack them tightly into a water-tight container. If possible, choose a container with a lid, as the solution can smell as the leaves break down. Use a brick to weigh down the leaves. Check on the progress every few weeks. The leaves will break down gradually, releasing a smelly brown liquid. Collect any liquid, storing it in a cool, dark place. Top up with fresh leaves. Dilute the collected liquid at a rate of one part comfrey to 10 parts water - the darker it is, the more you'll need to dilute it. Use the solution as a potassium-rich liquid fertiliser to encourage flowers and fruit set.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
     <!-- PLANT PROFILE VIEW -->
@@ -880,7 +919,9 @@ function renderWeeds() {
       </div>
       <div class="p-3">
         <h3 class="font-semibold text-gray-800 text-sm">${item.commonName}</h3>
-        <p class="text-[10px] text-terra font-medium mt-0.5 uppercase tracking-wider">WEED</p>
+        <div class="flex items-center gap-2 mt-0.5">
+          <p class="text-[10px] text-terra font-medium uppercase tracking-wider">WEED</p>
+        </div>
         ${item.latinName ? `<p class="text-xs italic text-gray-400 mt-1">${item.latinName}</p>` : ''}
       </div>
     </div>
@@ -1070,11 +1111,12 @@ function showProfile(id) {
             <span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-leafPale text-forest border border-leafLight/30">
               ${isWeed ? '🌿 WEED' : `${catEmoji(p.category)} ${p.category}`}
             </span>
+            ${((p.edible === true) || (p.edible && p.edible.isEdible)) && !isWeed ? `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-700 border border-amber-200">😋 Edible</span>` : ''}
           </div>
           ${p.latinName ? `<p class="text-sm italic text-gray-400 mt-1">${p.latinName}</p>` : ''}
           ${p.family ? `<p class="text-xs text-gray-400">Family: ${p.family}</p>` : ''}
         </div>
-        <span class="px-3 py-1 rounded-full text-xs font-medium ${diffCol[p.difficulty] || diffCol.easy}">${p.difficulty || 'easy'}</span>
+        ${!isWeed ? `<span class="px-3 py-1 rounded-full text-xs font-medium ${diffCol[p.difficulty] || diffCol.easy}">${p.difficulty || 'easy'}</span>` : ''}
       </div>
       ${p.description ? `<p class="text-gray-600 mt-3 text-sm leading-relaxed">${p.description}</p>` : ''}
     </div>
@@ -1105,13 +1147,37 @@ function showProfile(id) {
     ch.hardiness && ['❄️ Hardiness', ch.hardiness],
     ch.habit && ['🌳 Habit', ch.habit],
     ch.soilType && ['🏺 Soil', ch.soilType],
+    ch.pinchOutTops && ['✂️ Pinch Out', `${ch.pinchOutTops.required ? 'Yes' : 'No'} — ${ch.pinchOutTops.info}`],
   ].filter(Boolean);
 
   if (glance.length) {
     h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
       <h2 class="font-bold text-forest mb-3">📋 At a Glance</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
-        ${glance.map(([lbl, val]) => `<div class="bg-gray-50 rounded-lg p-2.5"><span class="text-gray-400 text-xs block">${lbl}</span><span class="font-medium">${val}</span></div>`).join('')}
+        ${glance.map(([lbl, val]) => {
+          let displayVal = val;
+          if (lbl === '💧 Water') {
+            const lowMatch = val.toLowerCase().startsWith('low');
+            const medMatch = val.toLowerCase().startsWith('medium');
+            const highMatch = val.toLowerCase().startsWith('high');
+            
+            if (lowMatch || medMatch || highMatch) {
+              const label = lowMatch ? 'LOW' : (medMatch ? 'MED' : 'HIGH');
+              const bgColor = lowMatch ? 'bg-green-100' : (medMatch ? 'bg-amber-100' : 'bg-red-100');
+              const textColor = lowMatch ? 'text-green-700' : (medMatch ? 'text-amber-700' : 'text-red-700');
+              const borderColor = lowMatch ? 'border-green-200' : (medMatch ? 'border-amber-200' : 'border-red-200');
+              
+              const cleanVal = val.replace(/^(low|medium|high)\s+and\s+THEN\s+info:\s*/i, '');
+              displayVal = `<div class="flex flex-col gap-1.5">
+                <span class="inline-flex items-center justify-center w-fit px-2 py-0.5 rounded-md text-[10px] font-black leading-none ${bgColor} ${textColor} border ${borderColor} tracking-wider">
+                  ${label}
+                </span>
+                <span class="leading-snug">${cleanVal}</span>
+              </div>`;
+            }
+          }
+          return `<div class="bg-gray-50 rounded-lg p-2.5"><span class="text-gray-400 text-xs block">${lbl}</span><span class="font-medium">${displayVal}</span></div>`;
+        }).join('')}
       </div>
     </div>`;
   }
@@ -1243,6 +1309,13 @@ function showProfile(id) {
     h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
       <h2 class="font-bold text-forest mb-3">⚠️ Common Problems</h2>
       <ul class="space-y-2 text-sm text-gray-600">${p.commonProblems.map(x => `<li class="flex gap-2"><span class="text-amber-500 shrink-0">•</span>${x}</li>`).join('')}</ul>
+    </div>`;
+  }
+
+  if (p.usage) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
+      <h2 class="font-bold text-forest mb-3">🌿 Herbal Medicine</h2>
+      <p class="text-sm text-gray-600 leading-relaxed">${p.usage}</p>
     </div>`;
   }
 

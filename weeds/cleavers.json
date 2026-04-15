@@ -1,0 +1,12 @@
+{
+  "id": "cleavers",
+  "commonName": "Cleavers",
+  "latinName": "Galium aparine",
+  "category": "weed",
+  "edible": true,
+  "usage": "Cleavers is part of the coffee family (Rubiaceae) and its seed can be dried, roasted and ground to make a coffee-like drink with a similar, though milder, taste and aroma.",
+  "description": "A common climbing annual weed known for its sticky stems and leaves covered in tiny hooked hairs that cling to clothing and fur. It produces small white flowers and round, bristly seeds.",
+  "images": {
+    "plant": "https://assets.rhs.org.uk/05836e9f-2692-012f-b4fe-e3f22d127fa9/b7e7b0b0-3443-4f71-b0a7-c4bcdaa2c6f2/galium-aparine-flowering-stems.jpg?w=1920&h=1080&fit=crop&fm=jpg&auto=format"
+  }
+}

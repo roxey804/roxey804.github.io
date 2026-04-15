@@ -18,9 +18,13 @@
     "hardiness": "Hardy (tolerates frost)",
     "lifespan": "Annual",
     "sunRequirement": "Partial shade to full sun",
-    "waterNeeds": "Regular — keep moist to prevent bolting",
+    "waterNeeds": "high and THEN info: Regular — keep moist to prevent bolting",
     "soilType": "Any moisture-retentive potting compost",
-    "containerSize": "2L+ pot or window box"
+    "containerSize": "2L+ pot or window box",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],

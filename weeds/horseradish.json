@@ -1,0 +1,11 @@
+{
+  "id": "horseradish",
+  "commonName": "Horseradish",
+  "latinName": "Armoracia rusticana",
+  "category": "weed",
+  "edible": true,
+  "description": "A perennial plant known for its large, crinkled leaves and a thick, pungent white root. It can be extremely invasive in gardens if not contained. Horseradish can be confused with dock, which also has large leaves. However, horseradish leaves are larger than dock leaves, and are shiny, while dock leaves are matted. In winter, horseradish root may be confused with monkshood root, which is extremely toxic and should not be eaten. To avoid any confusion, harvest horseradish only when you have seen its leaves, either by harvesting earlier in the season or if you have planted it yourself.",
+  "images": {
+    "plant": "https://upload.wikimedia.org/wikipedia/commons/0/06/ArmoraciaRusticana.jpg"
+  }
+}

@@ -19,9 +19,13 @@
     "hardiness": "Fully hardy (perennial)",
     "lifespan": "Perennial (productive for 3-4 years)",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "High — keep well-watered when fruiting",
+    "waterNeeds": "high and THEN info: High — keep well-watered when fruiting",
     "soilType": "Fertile, well-drained potting compost",
-    "containerSize": "5L+ per plant (or a long trough)"
+    "containerSize": "5L+ per plant (or a long trough)",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],

@@ -3,6 +3,7 @@
   "commonName": "Chickweed",
   "latinName": "Stellaria media",
   "category": "weed",
+  "edible": true,
   "description": "A common annual weed that grows in lush mats. It has small white star-shaped flowers.",
   "images": {
     "plant": "images/chickweed/plant.jpg"

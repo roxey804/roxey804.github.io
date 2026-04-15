@@ -3,6 +3,7 @@
   "commonName": "Stinging Nettle",
   "latinName": "Urtica dioica",
   "category": "weed",
+  "edible": true,
   "description": "A common perennial weed known for its stinging hairs. It is also an important plant for wildlife.",
   "images": {
     "plant": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Urtica_dioica_003.JPG"

@@ -19,9 +19,13 @@
     "hardiness": "Tender (not frost tolerant)",
     "lifespan": "Annual (grown as)",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "Very high — containers must stay moist",
+    "waterNeeds": "high and THEN info: Very high — containers must stay moist",
     "soilType": "Rich, moisture-retentive compost",
-    "containerSize": "10L+ pot per plant"
+    "containerSize": "10L+ pot per plant",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],
@@ -83,8 +87,18 @@
     "method": "Leave a few healthy pods on the plant at the end of the season until they turn brown and the seeds rattle inside. Dry thoroughly indoors.",
     "seedPodDescription": "Long, green, slightly rough-textured pods containing large, speckled seeds."
   },
-  "varieties": ["Hestia (Dwarf)", "Polestar (Stringless)", "Scarlet Emperor", "White Lady", "Painted Lady"],
-  "companionPlants": ["nasturtiums", "sweet peas", "calendula"],
+  "varieties": [
+    "Hestia (Dwarf)",
+    "Polestar (Stringless)",
+    "Scarlet Emperor",
+    "White Lady",
+    "Painted Lady"
+  ],
+  "companionPlants": [
+    "nasturtiums",
+    "sweet peas",
+    "calendula"
+  ],
   "commonProblems": [
     "Flower Drop — caused by dry soil or lack of bees. Water well and plant flowers to attract pollinators.",
     "Blackfly — aphids love new growth. Spray with water or soapy mix.",

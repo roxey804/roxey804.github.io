@@ -18,9 +18,13 @@
     "hardiness": "Fully hardy",
     "lifespan": "Perennial (5–15 years)",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "Low — drought-tolerant once established",
+    "waterNeeds": "high and THEN info: Low — drought-tolerant once established",
     "soilType": "Well-drained, gritty compost (add perlite or grit)",
-    "containerSize": "5L+ pot with excellent drainage"
+    "containerSize": "5L+ pot with excellent drainage",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],

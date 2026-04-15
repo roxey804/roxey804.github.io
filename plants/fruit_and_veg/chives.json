@@ -18,9 +18,13 @@
     "hardiness": "Fully hardy (survives UK winters)",
     "lifespan": "Perennial",
     "sunRequirement": "Full sun to partial shade (4+ hours)",
-    "waterNeeds": "Moderate — tolerates some dryness",
+    "waterNeeds": "high and THEN info: Moderate — tolerates some dryness",
     "soilType": "Any reasonable potting compost",
-    "containerSize": "2L+ pot"
+    "containerSize": "2L+ pot",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],

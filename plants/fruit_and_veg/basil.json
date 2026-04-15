@@ -18,9 +18,13 @@
     "hardiness": "Tender (dislikes cold and frost)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "Moderate — keep moist but not waterlogged",
+    "waterNeeds": "high and THEN info: Moderate — keep moist but not waterlogged",
     "soilType": "Rich, well-drained potting compost",
-    "containerSize": "2L+ pot (or windowsill pot)"
+    "containerSize": "2L+ pot (or windowsill pot)",
+    "pinchOutTops": {
+      "required": true,
+      "info": "Pinch out the growing tips to encourage bushy growth and prevent early flowering."
+    }
   },
   "schedule": {
     "january": [],

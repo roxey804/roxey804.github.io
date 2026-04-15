@@ -19,9 +19,13 @@
     "hardiness": "Half-hardy (not frost tolerant)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "High — requires daily watering in summer",
+    "waterNeeds": "high and THEN info: High — requires daily watering in summer",
     "soilType": "Rich, well-drained potting compost with added manure",
-    "containerSize": "45cm+ (30-50L) pot"
+    "containerSize": "45cm+ (30-50L) pot",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],

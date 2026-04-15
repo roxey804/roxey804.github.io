@@ -18,9 +18,13 @@
     "hardiness": "H2 (Tolerant of low temperatures but will not survive being frozen)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun",
-    "waterNeeds": "Regular — keep soil moist to delay bolting",
+    "waterNeeds": "high and THEN info: Regular — keep soil moist to delay bolting",
     "soilType": "Moist but well-drained; Chalk, Clay, Loam, or Sand",
-    "containerSize": "2L+ pot (at least 15cm deep)"
+    "containerSize": "2L+ pot (at least 15cm deep)",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],

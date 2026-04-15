@@ -3,6 +3,7 @@
   "commonName": "Dandelion",
   "latinName": "Taraxacum officinale",
   "category": "weed",
+  "edible": true,
   "description": "Common perennial weed with bright yellow flowers and a deep taproot.",
   "images": {
     "plant": "images/dandelion/plant.jpg"

@@ -19,9 +19,13 @@
     "hardiness": "Fully hardy",
     "lifespan": "Annual",
     "sunRequirement": "Full sun or partial shade",
-    "waterNeeds": "Regular, especially during flowering and pod development",
+    "waterNeeds": "high and THEN info: Regular, especially during flowering and pod development",
     "soilType": "Rich, well-drained compost",
-    "containerSize": "10L+ pot (at least 20cm deep)"
+    "containerSize": "10L+ pot (at least 20cm deep)",
+    "pinchOutTops": {
+      "required": true,
+      "info": "Pinch out the tops when plants are 60cm tall to encourage a bushier plant and will reduce blackfly"
+    }
   },
   "schedule": {
     "january": [],
@@ -36,8 +40,7 @@
     "april": [
       "🌿 Sow seeds outdoors"
     ],
-    "may": [
-    ],
+    "may": [],
     "june": [
       "✂️ Harvest regularly",
       "🧹 Pinch out growing tips once pods form"
@@ -84,8 +87,17 @@
     "method": "Leave a few healthy pods on the plant until they turn brown and brittle. Remove seeds and dry thoroughly indoors.",
     "seedPodDescription": "Large green pods with a soft, downy lining containing 3-5 beans."
   },
-  "varieties": ["The Sutton (Dwarf)", "Aquadulce Claudia (Autumn)", "Witkiem Manita", "Red Epicure"],
-  "companionPlants": ["potatoes", "spinach", "lettuce"],
+  "varieties": [
+    "The Sutton (Dwarf)",
+    "Aquadulce Claudia (Autumn)",
+    "Witkiem Manita",
+    "Red Epicure"
+  ],
+  "companionPlants": [
+    "potatoes",
+    "spinach",
+    "lettuce"
+  ],
   "commonProblems": [
     "Blackfly (aphids) — pinch out growing tips to prevent.",
     "Chocolate Spot — brown spots on leaves in damp weather; improve airflow.",

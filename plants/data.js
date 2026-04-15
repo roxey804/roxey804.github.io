@@ -20,9 +20,13 @@ window.PLANT_DATA = [
       "hardiness": "Tender (dislikes cold and frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "Moderate — keep moist but not waterlogged",
+      "waterNeeds": "high and THEN info: Moderate — keep moist but not waterlogged",
       "soilType": "Rich, well-drained potting compost",
-      "containerSize": "2L+ pot (or windowsill pot)"
+      "containerSize": "2L+ pot (or windowsill pot)",
+      "pinchOutTops": {
+        "required": true,
+        "info": "Pinch out the growing tips to encourage bushy growth and prevent early flowering."
+      }
     },
     "schedule": {
       "january": [],
@@ -125,9 +129,13 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Annual",
       "sunRequirement": "Full sun or partial shade",
-      "waterNeeds": "Regular, especially during flowering and pod development",
+      "waterNeeds": "high and THEN info: Regular, especially during flowering and pod development",
       "soilType": "Rich, well-drained compost",
-      "containerSize": "10L+ pot (at least 20cm deep)"
+      "containerSize": "10L+ pot (at least 20cm deep)",
+      "pinchOutTops": {
+        "required": true,
+        "info": "Pinch out the tops when plants are 60cm tall to encourage a bushier plant and will reduce blackfly"
+      }
     },
     "schedule": {
       "january": [],
@@ -228,7 +236,7 @@ window.PLANT_DATA = [
       "hardiness": "Hardy annual (tolerates light frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun to partial shade",
-      "waterNeeds": "Moderate — water during dry spells",
+      "waterNeeds": "high and THEN info: Moderate — water during dry spells",
       "soilType": "Well-drained, average fertility",
       "containerSize": "5L+ pot"
     },
@@ -337,7 +345,7 @@ window.PLANT_DATA = [
       "hardiness": "Hardy perennial (London)",
       "lifespan": "Short-lived perennial",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "Moderate — well-drained soil is crucial",
+      "waterNeeds": "high and THEN info: Moderate — well-drained soil is crucial",
       "soilType": "Well-drained, slightly alkaline to neutral potting compost",
       "containerSize": "2L+ pot"
     },
@@ -440,9 +448,13 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy (survives UK winters)",
       "lifespan": "Perennial",
       "sunRequirement": "Full sun to partial shade (4+ hours)",
-      "waterNeeds": "Moderate — tolerates some dryness",
+      "waterNeeds": "high and THEN info: Moderate — tolerates some dryness",
       "soilType": "Any reasonable potting compost",
-      "containerSize": "2L+ pot"
+      "containerSize": "2L+ pot",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -541,9 +553,13 @@ window.PLANT_DATA = [
       "hardiness": "Tender (not frost tolerant)",
       "lifespan": "Annual (grown as)",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "Very high — containers must stay moist",
+      "waterNeeds": "high and THEN info: Very high — containers must stay moist",
       "soilType": "Rich, moisture-retentive compost",
-      "containerSize": "10L+ pot per plant"
+      "containerSize": "10L+ pot per plant",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -644,9 +660,13 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (survives light frosts)",
       "lifespan": "Annual",
       "sunRequirement": "Partial shade (summer) to full sun (spring/autumn)",
-      "waterNeeds": "Regular — keep soil moist to delay bolting",
+      "waterNeeds": "high and THEN info: Regular — keep soil moist to delay bolting",
       "soilType": "Light, well-drained potting compost",
-      "containerSize": "2L+ pot (deep pot preferred for taproot)"
+      "containerSize": "2L+ pot (deep pot preferred for taproot)",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -756,7 +776,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy annual",
       "lifespan": "Annual",
       "sunRequirement": "Full sun",
-      "waterNeeds": "Moderate — drought tolerant once established",
+      "waterNeeds": "high and THEN info: Moderate — drought tolerant once established",
       "soilType": "Poor to moderately fertile, well-drained soil",
       "containerSize": "Large pot (30cm+) or open ground"
     },
@@ -847,9 +867,13 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (not frost tolerant)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "High — requires daily watering in summer",
+      "waterNeeds": "high and THEN info: High — requires daily watering in summer",
       "soilType": "Rich, well-drained potting compost with added manure",
-      "containerSize": "45cm+ (30-50L) pot"
+      "containerSize": "45cm+ (30-50L) pot",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -946,7 +970,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy (thrives in UK winters)",
       "lifespan": "Perennial",
       "sunRequirement": "Dappled shade to partial shade",
-      "waterNeeds": "Moderate — prefers consistently moist but well-drained soil",
+      "waterNeeds": "high and THEN info: Moderate — prefers consistently moist but well-drained soil",
       "soilType": "Rich, moisture-retentive but well-drained alkaline soil",
       "containerSize": "5L+ deep pot"
     },
@@ -1047,7 +1071,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Short-lived perennial (often grown as biennial)",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "Regular — pots dry out fast in summer",
+      "waterNeeds": "high and THEN info: Regular — pots dry out fast in summer",
       "soilType": "Rich, well-drained potting compost",
       "containerSize": "15L+ deep pot (at least 40cm deep)"
     },
@@ -1158,9 +1182,13 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Perennial (5–15 years)",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "Low — drought-tolerant once established",
+      "waterNeeds": "high and THEN info: Low — drought-tolerant once established",
       "soilType": "Well-drained, gritty compost (add perlite or grit)",
-      "containerSize": "5L+ pot with excellent drainage"
+      "containerSize": "5L+ pot with excellent drainage",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -1255,9 +1283,13 @@ window.PLANT_DATA = [
       "hardiness": "Hardy (tolerates light frost)",
       "lifespan": "Annual",
       "sunRequirement": "Partial shade to full sun (3–6 hours)",
-      "waterNeeds": "Regular — keep soil consistently moist",
+      "waterNeeds": "high and THEN info: Regular — keep soil consistently moist",
       "soilType": "Any good potting compost",
-      "containerSize": "3L+ pot or window box"
+      "containerSize": "3L+ pot or window box",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -1365,7 +1397,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (killed by frost, but thrives outdoors May-October in London)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours direct sunlight)",
-      "waterNeeds": "Moderate — water when the top centimetre of compost feels dry, daily in hot spells",
+      "waterNeeds": "high and THEN info: Moderate — water when the top centimetre of compost feels dry, daily in hot spells",
       "soilType": "Any well-drained multipurpose compost; not fussy about soil",
       "containerSize": "15cm+ per plant, or several in a 30cm+ pot"
     },
@@ -1460,7 +1492,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy annual",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "Moderate — keep soil moist but not waterlogged",
+      "waterNeeds": "high and THEN info: Moderate — keep soil moist but not waterlogged",
       "soilType": "Fertile, well-drained, neutral to slightly alkaline",
       "containerSize": "3-5L pot (or 15cm deep)"
     },
@@ -1569,9 +1601,13 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Perennial",
       "sunRequirement": "Partial shade to full sun (3+ hours)",
-      "waterNeeds": "Regular — likes moist soil",
+      "waterNeeds": "high and THEN info: Regular — likes moist soil",
       "soilType": "Any potting compost",
-      "containerSize": "5L+ pot (keep it contained!)"
+      "containerSize": "5L+ pot (keep it contained!)",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -1665,7 +1701,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (killed by frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun to partial shade (4+ hours)",
-      "waterNeeds": "Low to moderate — actually flowers better in poor, dry soil",
+      "waterNeeds": "high and THEN info: Low to moderate — actually flowers better in poor, dry soil",
       "soilType": "Poor to average potting compost (don't enrich it!)",
       "containerSize": "5L+ pot or hanging basket"
     },
@@ -1765,7 +1801,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Short-lived perennial (usually grown as annual)",
       "sunRequirement": "Full sun or partial shade",
-      "waterNeeds": "Moderate — keep soil moist but not waterlogged",
+      "waterNeeds": "high and THEN info: Moderate — keep soil moist but not waterlogged",
       "soilType": "Well-drained, fertile multi-purpose compost",
       "containerSize": "1–2L pot or window box"
     },
@@ -1879,9 +1915,13 @@ window.PLANT_DATA = [
       "hardiness": "H2 (Tolerant of low temperatures but will not survive being frozen)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun",
-      "waterNeeds": "Regular — keep soil moist to delay bolting",
+      "waterNeeds": "high and THEN info: Regular — keep soil moist to delay bolting",
       "soilType": "Moist but well-drained; Chalk, Clay, Loam, or Sand",
-      "containerSize": "2L+ pot (at least 15cm deep)"
+      "containerSize": "2L+ pot (at least 15cm deep)",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -1985,9 +2025,13 @@ window.PLANT_DATA = [
       "hardiness": "Hardy (tolerates frost)",
       "lifespan": "Annual",
       "sunRequirement": "Partial shade to full sun",
-      "waterNeeds": "Regular — keep moist to prevent bolting",
+      "waterNeeds": "high and THEN info: Regular — keep moist to prevent bolting",
       "soilType": "Any moisture-retentive potting compost",
-      "containerSize": "2L+ pot or window box"
+      "containerSize": "2L+ pot or window box",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -2096,7 +2140,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy annual",
       "lifespan": "Annual / Short-lived perennial",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "Moderate — keep moist but not waterlogged",
+      "waterNeeds": "high and THEN info: Moderate — keep moist but not waterlogged",
       "soilType": "Well-drained, fertile soil",
       "containerSize": "1L+ pot (or larger for taller varieties)"
     },
@@ -2177,6 +2221,114 @@ window.PLANT_DATA = [
     "funFact": "The common name 'snapdragon' comes from the flower's resemblance to a dragon's snout, which snaps open and shut when squeezed."
   },
   {
+    "id": "spinach-f1-apollo",
+    "commonName": "Spinach 'Apollo' F1",
+    "latinName": "Spinacia oleracea",
+    "family": "Amaranthaceae",
+    "category": "vegetable",
+    "variety": "Apollo F1",
+    "description": "A high-yielding, RHS Award of Garden Merit variety specifically bred for its resistance to bolting and downy mildew. Excellent for both baby leaf salads and mature cooking greens. Its compact growth makes it perfect for pots and window boxes.",
+    "images": {
+      "plant": "images/spinach-f1-apollo/plant.jpg",
+      "seedling": "images/spinach-f1-apollo/seedling.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "15-30cm",
+      "matureSpread": "15-30cm",
+      "hardiness": "Hardy",
+      "lifespan": "Annual",
+      "sunRequirement": "Partial shade to full sun",
+      "waterNeeds": "high and THEN info: Regular — never let soil dry out",
+      "soilType": "Fertile, moisture-retentive soil",
+      "containerSize": "5L+ pot or window box",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
+    },
+    "schedule": {
+      "january": [],
+      "february": [],
+      "march": [
+        "🌿 Sow seeds outdoors"
+      ],
+      "april": [
+        "🌿 Sow seeds outdoors",
+        "✂️ Harvest leaves",
+        "🔄 Sow again for continuous harvests"
+      ],
+      "may": [
+        "🌿 Sow seeds outdoors",
+        "✂️ Harvest leaves",
+        "🔄 Sow again for continuous harvests"
+      ],
+      "june": [
+        "🌿 Sow seeds outdoors",
+        "✂️ Harvest leaves",
+        "🔄 Sow again for continuous harvests"
+      ],
+      "july": [
+        "🌿 Sow seeds outdoors",
+        "✂️ Harvest leaves",
+        "🔄 Sow again for continuous harvests"
+      ],
+      "august": [
+        "🌿 Sow seeds outdoors",
+        "✂️ Harvest leaves",
+        "🔄 Sow again for continuous harvests"
+      ],
+      "september": [
+        "✂️ Harvest leaves"
+      ],
+      "october": [
+        "✂️ Harvest leaves"
+      ],
+      "november": [],
+      "december": [],
+      "frostSensitive": false
+    },
+    "care": {
+      "sowIndoors": null,
+      "sowOutdoors": "Sow seeds 1.5cm deep in rows 15-30cm apart. Water well after sowing. Spinach prefers cooler soil for germination.",
+      "hardenOff": null,
+      "plantOut": "If grown in modules, transplant when large enough to handle, being careful not to disturb the roots.",
+      "watering": "Crucial. Keep soil consistently moist. Dry soil triggers bolting (running to seed), which makes leaves bitter.",
+      "feeding": "Feed with a high-nitrogen liquid fertiliser every 2 weeks to encourage lush leaf growth.",
+      "harvest": "Pick individual outer leaves as needed once they reach 5-8cm. The plant will regrow for multiple cuts. For mature plants, harvest the whole rosette.",
+      "overwintering": "Annual — compost the plant after the final harvest or if it starts to flower."
+    },
+    "propagation": {
+      "fromSeed": true,
+      "seedDescription": "Medium-sized, angular, beige to light brown seeds.",
+      "germinationDays": "7-14 days",
+      "fromCuttings": false,
+      "cuttingsMethod": null,
+      "fromDivision": false,
+      "divisionMethod": null
+    },
+    "deadheading": {
+      "required": false,
+      "notes": "No deadheading needed. However, pinch out any flower stalks immediately to prevent bolting."
+    },
+    "seedSaving": {
+      "canSaveSeeds": true,
+      "method": "Allow a few plants to flower and set seed. Seeds are ready when the stalks turn brown and dry. Note that F1 hybrids may not grow true to the parent plant.",
+      "seedPodDescription": "Seeds form in clusters along the flower stalk."
+    },
+    "companionPlants": [
+      "strawberry",
+      "radish",
+      "lettuce",
+      "chives"
+    ],
+    "commonProblems": [
+      "Bolting — caused by heat or dry soil. Keep well-watered and provide shade in mid-summer.",
+      "Downy mildew — Apollo F1 is resistant, but ensure good air circulation.",
+      "Slugs and snails — protect young seedlings."
+    ],
+    "funFact": "Spinach 'Apollo' F1 holds the RHS Award of Garden Merit, confirming its status as an outstanding variety for home gardeners."
+  },
+  {
     "id": "strawberry",
     "commonName": "Strawberry",
     "latinName": "Fragaria × ananassa",
@@ -2197,9 +2349,13 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy (perennial)",
       "lifespan": "Perennial (productive for 3-4 years)",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "High — keep well-watered when fruiting",
+      "waterNeeds": "high and THEN info: High — keep well-watered when fruiting",
       "soilType": "Fertile, well-drained potting compost",
-      "containerSize": "5L+ per plant (or a long trough)"
+      "containerSize": "5L+ per plant (or a long trough)",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -2291,7 +2447,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6-8+ hours)",
-      "waterNeeds": "High — 'water hogs' during peak growth",
+      "waterNeeds": "high and THEN info: High — 'water hogs' during peak growth",
       "soilType": "Rich, fertile, well-drained soil (heavy feeders)",
       "containerSize": "15L+ pot for giant varieties (or large troughs for dwarfs)"
     },
@@ -2388,9 +2544,13 @@ window.PLANT_DATA = [
       "hardiness": "Tender (not frost tolerant)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "High — requires regular watering as cobs develop",
+      "waterNeeds": "high and THEN info: High — requires regular watering as cobs develop",
       "soilType": "Rich, well-manured, well-drained soil",
-      "containerSize": "Large (30L+) — needs 15-20 plants in a block for pollination"
+      "containerSize": "Large (30L+) — needs 15-20 plants in a block for pollination",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -2487,9 +2647,13 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (killed by frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "High — daily watering essential in baskets",
+      "waterNeeds": "high and THEN info: High — daily watering essential in baskets",
       "soilType": "Rich potting compost with water-retaining gel",
-      "containerSize": "30cm+ hanging basket or tall pot"
+      "containerSize": "30cm+ hanging basket or tall pot",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],
@@ -2587,9 +2751,13 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (killed by frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "High — daily watering essential in baskets",
+      "waterNeeds": "high and THEN info: High — daily watering essential in baskets",
       "soilType": "Rich potting compost with water-retaining gel",
-      "containerSize": "30cm+ hanging basket or tall pot"
+      "containerSize": "30cm+ hanging basket or tall pot",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required for this plant."
+      }
     },
     "schedule": {
       "january": [],

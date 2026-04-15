@@ -3,6 +3,8 @@
   "commonName": "Herb Robert",
   "latinName": "Geranium robertianum",
   "category": "weed",
+  "edible": true,
+  "usage": "Herb Robert is not poisonous and has no toxic effects to people or wildlife. In fact it's actually edible – both the leaves and flowers can be used fresh and dried in salads and teas. Rubbing fresh leaves on the skin is thought to repel mosquitoes.",
   "description": "A low-growing British native cranesbill with small, five-petalled pink flowers and reddish stems. Its leaves are often tinged with red and emit a distinctive 'mousey' smell when crushed. It seeds prolifically in shady spots.",
   "funFact": "Once known as Saint Robert's Herb, was named after a French monk who used the herb to heal skin conditions, including wounds and herpes.",
   "images": {

@@ -19,9 +19,13 @@
     "hardiness": "Tender (not frost tolerant)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "High — requires regular watering as cobs develop",
+    "waterNeeds": "high and THEN info: High — requires regular watering as cobs develop",
     "soilType": "Rich, well-manured, well-drained soil",
-    "containerSize": "Large (30L+) — needs 15-20 plants in a block for pollination"
+    "containerSize": "Large (30L+) — needs 15-20 plants in a block for pollination",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required for this plant."
+    }
   },
   "schedule": {
     "january": [],
