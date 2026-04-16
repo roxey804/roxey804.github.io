@@ -18,7 +18,7 @@
     "hardiness": "Half-hardy annual",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "high and THEN info: Moderate — keep soil moist but not waterlogged",
+    "waterNeeds": "Moderate — keep soil moist but not waterlogged",
     "soilType": "Fertile, well-drained, neutral to slightly alkaline",
     "containerSize": "3-5L pot (or 15cm deep)"
   },
@@ -100,7 +100,7 @@
     "calendula",
     "alyssum"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Downy Mildew — avoid overhead watering and ensure good air circulation.",
     "Aphids — can cluster on new growth. Wash off or use organic soap spray.",
     "Flea Beetle — can pepper leaves with small holes. Keep plants well-watered."

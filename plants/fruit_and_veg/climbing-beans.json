@@ -19,7 +19,7 @@
     "hardiness": "Tender (not frost tolerant)",
     "lifespan": "Annual (grown as)",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "high and THEN info: Very high — containers must stay moist",
+    "waterNeeds": "High — containers must stay moist",
     "soilType": "Rich, moisture-retentive compost",
     "containerSize": "10L+ pot per plant",
     "pinchOutTops": {
@@ -99,7 +99,7 @@
     "sweet peas",
     "calendula"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Flower Drop — caused by dry soil or lack of bees. Water well and plant flowers to attract pollinators.",
     "Blackfly — aphids love new growth. Spray with water or soapy mix.",
     "Slugs — protect young seedlings with copper tape or grit."

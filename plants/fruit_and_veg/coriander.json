@@ -18,7 +18,7 @@
     "hardiness": "Half-hardy (survives light frosts)",
     "lifespan": "Annual",
     "sunRequirement": "Partial shade (summer) to full sun (spring/autumn)",
-    "waterNeeds": "high and THEN info: Regular — keep soil moist to delay bolting",
+    "waterNeeds": "Moderate — keep soil moist to delay bolting",
     "soilType": "Light, well-drained potting compost",
     "containerSize": "2L+ pot (deep pot preferred for taproot)",
     "pinchOutTops": {
@@ -107,7 +107,7 @@
     "chervil",
     "potatoes"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Bolting — flowers prematurely in heat/drought. Sow successional crops and keep watered.",
     "Aphids — can attack soft shoot tips.",
     "Root rot — if overwatered in winter."

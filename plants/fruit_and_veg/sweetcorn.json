@@ -19,7 +19,7 @@
     "hardiness": "Tender (not frost tolerant)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "high and THEN info: High — requires regular watering as cobs develop",
+    "waterNeeds": "High — requires regular watering as cobs develop",
     "soilType": "Rich, well-manured, well-drained soil",
     "containerSize": "Large (30L+) — needs 15-20 plants in a block for pollination",
     "pinchOutTops": {
@@ -93,7 +93,7 @@
     "sunflower",
     "nasturtium"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Poor Pollination — results in missing kernels. Plant in blocks and shake plants daily.",
     "Birds and Mice — can pull up seeds or peck at ripening cobs. Net young plants.",
     "Slugs — can decimate young seedlings. Use beer traps or barriers.",

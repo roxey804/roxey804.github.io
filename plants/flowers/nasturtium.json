@@ -18,7 +18,7 @@
     "hardiness": "Half-hardy (killed by frost)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun to partial shade (4+ hours)",
-    "waterNeeds": "high and THEN info: Low to moderate — actually flowers better in poor, dry soil",
+    "waterNeeds": "Low to Moderate — actually flowers better in poor, dry soil",
     "soilType": "Poor to average potting compost (don't enrich it!)",
     "containerSize": "5L+ pot or hanging basket"
   },
@@ -90,7 +90,7 @@
     "radish",
     "lettuce"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Blackfly / aphids — nasturtiums are 'trap plants' that attract aphids AWAY from your vegetables. This is actually useful! Blast with water if they get bad.",
     "Caterpillars — cabbage white butterflies love nasturtiums. Pick off caterpillars by hand.",
     "Too much foliage, not enough flowers — you're feeding/watering too much. Cut back on both."

@@ -19,7 +19,7 @@
     "hardiness": "Fully hardy",
     "lifespan": "Short-lived perennial (usually grown as annual)",
     "sunRequirement": "Full sun or partial shade",
-    "waterNeeds": "high and THEN info: Moderate — keep soil moist but not waterlogged",
+    "waterNeeds": "Moderate — keep soil moist but not waterlogged",
     "soilType": "Well-drained, fertile multi-purpose compost",
     "containerSize": "1–2L pot or window box"
   },
@@ -106,7 +106,7 @@
     "primrose",
     "viola"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Slugs and Snails — particularly problematic in damp autumn weather.",
     "Aphids — common in spring; rinse off with water.",
     "Powdery Mildew — greyish-white coating on leaves; improve airflow."

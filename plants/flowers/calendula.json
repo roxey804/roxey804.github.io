@@ -19,7 +19,7 @@
     "hardiness": "Hardy annual (tolerates light frost)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun to partial shade",
-    "waterNeeds": "high and THEN info: Moderate — water during dry spells",
+    "waterNeeds": "Moderate — water during dry spells",
     "soilType": "Well-drained, average fertility",
     "containerSize": "5L+ pot"
   },
@@ -101,7 +101,7 @@
     "carrot",
     "nasturtium"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Powdery Mildew — white coating on leaves in late summer. Improve spacing and water at base.",
     "Aphids — common on stems. Can be hosed off or left as a trap crop for beneficial insects.",
     "Slugs and Snails — protect young seedlings in spring."

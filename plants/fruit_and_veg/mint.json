@@ -18,7 +18,7 @@
     "hardiness": "Fully hardy",
     "lifespan": "Perennial",
     "sunRequirement": "Partial shade to full sun (3+ hours)",
-    "waterNeeds": "high and THEN info: Regular — likes moist soil",
+    "waterNeeds": "Moderate — likes moist soil",
     "soilType": "Any potting compost",
     "containerSize": "5L+ pot (keep it contained!)",
     "pinchOutTops": {
@@ -91,7 +91,7 @@
     "bush-tomato",
     "lettuce"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Mint rust — orange/brown spots on leaves. Remove and destroy affected stems. Don't compost them.",
     "Spreading too aggressively — ALWAYS keep in its own pot. Never plant with other herbs.",
     "Leggy growth — cut back hard in midsummer for a flush of fresh leaves."

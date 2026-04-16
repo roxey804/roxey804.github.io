@@ -18,7 +18,7 @@
     "hardiness": "Hardy (tolerates frost)",
     "lifespan": "Annual",
     "sunRequirement": "Partial shade to full sun",
-    "waterNeeds": "high and THEN info: Regular — keep moist to prevent bolting",
+    "waterNeeds": "Moderate — keep moist to prevent bolting",
     "soilType": "Any moisture-retentive potting compost",
     "containerSize": "2L+ pot or window box",
     "pinchOutTops": {
@@ -105,7 +105,7 @@
     "mint",
     "beetroot"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Flea beetle — tiny holes in leaves. Cover with fleece to prevent.",
     "Bolting — flowering prematurely due to heat or dryness. Keep watered and shaded in summer.",
     "Bitter taste — usually due to heat or old leaves."

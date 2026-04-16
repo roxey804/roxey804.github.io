@@ -1158,16 +1158,16 @@ function showProfile(id) {
           let displayVal = val;
           if (lbl === '💧 Water') {
             const lowMatch = val.toLowerCase().startsWith('low');
-            const medMatch = val.toLowerCase().startsWith('medium');
+            const medMatch = val.toLowerCase().startsWith('moderate');
             const highMatch = val.toLowerCase().startsWith('high');
-            
+
             if (lowMatch || medMatch || highMatch) {
               const label = lowMatch ? 'LOW' : (medMatch ? 'MED' : 'HIGH');
               const bgColor = lowMatch ? 'bg-green-100' : (medMatch ? 'bg-amber-100' : 'bg-red-100');
               const textColor = lowMatch ? 'text-green-700' : (medMatch ? 'text-amber-700' : 'text-red-700');
               const borderColor = lowMatch ? 'border-green-200' : (medMatch ? 'border-amber-200' : 'border-red-200');
-              
-              const cleanVal = val.replace(/^(low|medium|high)\s+and\s+THEN\s+info:\s*/i, '');
+
+              const cleanVal = val.replace(/^(low|moderate|high)\s*—\s*/i, '');
               displayVal = `<div class="flex flex-col gap-1.5">
                 <span class="inline-flex items-center justify-center w-fit px-2 py-0.5 rounded-md text-[10px] font-black leading-none ${bgColor} ${textColor} border ${borderColor} tracking-wider">
                   ${label}
@@ -1175,8 +1175,7 @@ function showProfile(id) {
                 <span class="leading-snug">${cleanVal}</span>
               </div>`;
             }
-          }
-          return `<div class="bg-gray-50 rounded-lg p-2.5"><span class="text-gray-400 text-xs block">${lbl}</span><span class="font-medium">${displayVal}</span></div>`;
+          }          return `<div class="bg-gray-50 rounded-lg p-2.5"><span class="text-gray-400 text-xs block">${lbl}</span><span class="font-medium">${displayVal}</span></div>`;
         }).join('')}
       </div>
     </div>`;
@@ -1305,10 +1304,10 @@ function showProfile(id) {
     </div>`;
   }
 
-  if (p.commonProblems?.length) {
+  if (p.troubleshooting?.length) {
     h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">⚠️ Common Problems</h2>
-      <ul class="space-y-2 text-sm text-gray-600">${p.commonProblems.map(x => `<li class="flex gap-2"><span class="text-amber-500 shrink-0">•</span>${x}</li>`).join('')}</ul>
+      <h2 class="font-bold text-forest mb-3">Troubleshooting</h2>
+      <ul class="space-y-2 text-sm text-gray-600">${p.troubleshooting.map(x => `<li class="flex gap-2"><span class="text-amber-500 shrink-0">•</span>${x}</li>`).join('')}</ul>
     </div>`;
   }
 

@@ -18,7 +18,7 @@
     "hardiness": "Fully hardy",
     "lifespan": "Perennial (5–15 years)",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "high and THEN info: Low — drought-tolerant once established",
+    "waterNeeds": "Low — drought-tolerant once established",
     "soilType": "Well-drained, gritty compost (add perlite or grit)",
     "containerSize": "5L+ pot with excellent drainage",
     "pinchOutTops": {
@@ -91,7 +91,7 @@
     "nasturtium",
     "chives"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Root rot — from overwatering or poor drainage. Ensure gritty compost and good drainage holes.",
     "Woody/leggy growth — prune annually after flowering. Never cut into old wood.",
     "Frost damage on wet roots — raise pots off the ground in winter to prevent waterlogging."

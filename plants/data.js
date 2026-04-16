@@ -20,7 +20,7 @@ window.PLANT_DATA = [
       "hardiness": "Tender (dislikes cold and frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: Moderate — keep moist but not waterlogged",
+      "waterNeeds": "Moderate — keep moist but not waterlogged",
       "soilType": "Rich, well-drained potting compost",
       "containerSize": "2L+ pot (or windowsill pot)",
       "pinchOutTops": {
@@ -100,7 +100,7 @@ window.PLANT_DATA = [
       "chives",
       "lettuce"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Bolting — flowers too quickly in heat or stress. Pinch out flower buds promptly.",
       "Cold damage — leaves turn black in cold. Keep above 10°C at all times.",
       "Overwatering — causes root rot. Let soil surface dry slightly between waterings.",
@@ -129,7 +129,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Annual",
       "sunRequirement": "Full sun or partial shade",
-      "waterNeeds": "high and THEN info: Regular, especially during flowering and pod development",
+      "waterNeeds": "Moderate, especially during flowering and pod development",
       "soilType": "Rich, well-drained compost",
       "containerSize": "10L+ pot (at least 20cm deep)",
       "pinchOutTops": {
@@ -208,7 +208,7 @@ window.PLANT_DATA = [
       "spinach",
       "lettuce"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Blackfly (aphids) — pinch out growing tips to prevent.",
       "Chocolate Spot — brown spots on leaves in damp weather; improve airflow.",
       "Mice — can dig up seeds; protect with wire mesh or start indoors."
@@ -236,7 +236,7 @@ window.PLANT_DATA = [
       "hardiness": "Hardy annual (tolerates light frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun to partial shade",
-      "waterNeeds": "high and THEN info: Moderate — water during dry spells",
+      "waterNeeds": "Moderate — water during dry spells",
       "soilType": "Well-drained, average fertility",
       "containerSize": "5L+ pot"
     },
@@ -318,7 +318,7 @@ window.PLANT_DATA = [
       "carrot",
       "nasturtium"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Powdery Mildew — white coating on leaves in late summer. Improve spacing and water at base.",
       "Aphids — common on stems. Can be hosed off or left as a trap crop for beneficial insects.",
       "Slugs and Snails — protect young seedlings in spring."
@@ -345,7 +345,7 @@ window.PLANT_DATA = [
       "hardiness": "Hardy perennial (London)",
       "lifespan": "Short-lived perennial",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: Moderate — well-drained soil is crucial",
+      "waterNeeds": "Moderate — well-drained soil is crucial",
       "soilType": "Well-drained, slightly alkaline to neutral potting compost",
       "containerSize": "2L+ pot"
     },
@@ -404,7 +404,7 @@ window.PLANT_DATA = [
     },
     "deadheading": {
       "required": true,
-      "notes": "Regularly remove spent flowers down to the base of the stem to encourage continuous blooming."
+      "notes": "Moderately remove spent flowers down to the base of the stem to encourage continuous blooming."
     },
     "edible": {
       "isEdible": true,
@@ -420,7 +420,7 @@ window.PLANT_DATA = [
       "salvia",
       "scabiosa"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Slugs on young growth",
       "Aphids",
       "Rust in damp conditions",
@@ -448,7 +448,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy (survives UK winters)",
       "lifespan": "Perennial",
       "sunRequirement": "Full sun to partial shade (4+ hours)",
-      "waterNeeds": "high and THEN info: Moderate — tolerates some dryness",
+      "waterNeeds": "Moderate — tolerates some dryness",
       "soilType": "Any reasonable potting compost",
       "containerSize": "2L+ pot",
       "pinchOutTops": {
@@ -525,7 +525,7 @@ window.PLANT_DATA = [
       "lettuce",
       "basil"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Rust — orange spots on leaves. Remove affected leaves and improve air circulation.",
       "Overcrowding — clumps get congested after 2–3 years. Divide and repot.",
       "Aphids — rarely serious. Wash off with water."
@@ -553,7 +553,7 @@ window.PLANT_DATA = [
       "hardiness": "Tender (not frost tolerant)",
       "lifespan": "Annual (grown as)",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: Very high — containers must stay moist",
+      "waterNeeds": "High — containers must stay moist",
       "soilType": "Rich, moisture-retentive compost",
       "containerSize": "10L+ pot per plant",
       "pinchOutTops": {
@@ -633,7 +633,7 @@ window.PLANT_DATA = [
       "sweet peas",
       "calendula"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Flower Drop — caused by dry soil or lack of bees. Water well and plant flowers to attract pollinators.",
       "Blackfly — aphids love new growth. Spray with water or soapy mix.",
       "Slugs — protect young seedlings with copper tape or grit."
@@ -660,7 +660,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (survives light frosts)",
       "lifespan": "Annual",
       "sunRequirement": "Partial shade (summer) to full sun (spring/autumn)",
-      "waterNeeds": "high and THEN info: Regular — keep soil moist to delay bolting",
+      "waterNeeds": "Moderate — keep soil moist to delay bolting",
       "soilType": "Light, well-drained potting compost",
       "containerSize": "2L+ pot (deep pot preferred for taproot)",
       "pinchOutTops": {
@@ -749,7 +749,7 @@ window.PLANT_DATA = [
       "chervil",
       "potatoes"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Bolting — flowers prematurely in heat/drought. Sow successional crops and keep watered.",
       "Aphids — can attack soft shoot tips.",
       "Root rot — if overwatered in winter."
@@ -776,7 +776,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy annual",
       "lifespan": "Annual",
       "sunRequirement": "Full sun",
-      "waterNeeds": "high and THEN info: Moderate — drought tolerant once established",
+      "waterNeeds": "Moderate — drought tolerant once established",
       "soilType": "Poor to moderately fertile, well-drained soil",
       "containerSize": "Large pot (30cm+) or open ground"
     },
@@ -839,7 +839,7 @@ window.PLANT_DATA = [
       "zinnia",
       "tomato"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Slugs and snails — especially on young seedlings.",
       "Aphids on soft shoot tips.",
       "Powdery mildew in late summer if crowded or dry at the roots."
@@ -867,7 +867,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (not frost tolerant)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: High — requires daily watering in summer",
+      "waterNeeds": "High — requires daily watering in summer",
       "soilType": "Rich, well-drained potting compost with added manure",
       "containerSize": "45cm+ (30-50L) pot",
       "pinchOutTops": {
@@ -943,12 +943,13 @@ window.PLANT_DATA = [
       "borage",
       "beans"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Powdery Mildew — white dusty coating on leaves. Improve airflow and water at base.",
       "Slugs and Snails — protect young seedlings after planting out.",
-      "Poor Pollination — if fruits shrivel, try hand-pollination."
+      "Poor Pollination — if fruits shrivel, try hand-pollination.",
+      "Tiny courgettes begin to form but then drop or shrivel are due to poor pollination. Plenty of flowers but no fruit forming. To help nature along and ensure successful fruit production, you can hand pollinate female flowers when natural methods fail: Pick a fresh male flower. Gently remove the petals to expose the stamen. Lightly brush it onto the stigma of a female flower. You can also use a small paintbrush or cotton bud if you don’t want to remove flowers. Do this early in the morning, when flowers are open and pollen is fresh."
     ],
-    "funFact": "If you don't harvest courgettes, they can grow into giant marrows over a metre long in just a few weeks!"
+    "funFact": "If you don't harvest courgettes, they can grow into giant marrows over a metre long in just a few weeks! Courgette flowers are edible, stuffed or deep-fried in batter, or added to pasta and stir-fry dishes."
   },
   {
     "id": "hellebore",
@@ -970,7 +971,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy (thrives in UK winters)",
       "lifespan": "Perennial",
       "sunRequirement": "Dappled shade to partial shade",
-      "waterNeeds": "high and THEN info: Moderate — prefers consistently moist but well-drained soil",
+      "waterNeeds": "Moderate — prefers consistently moist but well-drained soil",
       "soilType": "Rich, moisture-retentive but well-drained alkaline soil",
       "containerSize": "5L+ deep pot"
     },
@@ -1044,7 +1045,7 @@ window.PLANT_DATA = [
       "ferns",
       "hostas"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Hellebore Leaf Spot (black spots on leaves) — prune affected leaves promptly",
       "Aphids in spring — wash off with water",
       "Slugs on young growth — use grit or copper tape"
@@ -1071,7 +1072,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Short-lived perennial (often grown as biennial)",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: Regular — pots dry out fast in summer",
+      "waterNeeds": "Moderate — pots dry out fast in summer",
       "soilType": "Rich, well-drained potting compost",
       "containerSize": "15L+ deep pot (at least 40cm deep)"
     },
@@ -1155,7 +1156,7 @@ window.PLANT_DATA = [
       "nasturtiums",
       "lavender"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Hollyhock Rust — orange pustules on leaves. Pick off affected leaves early and keep foliage dry.",
       "Slugs and Snails — love young seedlings. Use beer traps or copper tape.",
       "Caterpillars — can shred leaves. Pick off by hand."
@@ -1182,7 +1183,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Perennial (5–15 years)",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: Low — drought-tolerant once established",
+      "waterNeeds": "Low — drought-tolerant once established",
       "soilType": "Well-drained, gritty compost (add perlite or grit)",
       "containerSize": "5L+ pot with excellent drainage",
       "pinchOutTops": {
@@ -1255,7 +1256,7 @@ window.PLANT_DATA = [
       "nasturtium",
       "chives"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Root rot — from overwatering or poor drainage. Ensure gritty compost and good drainage holes.",
       "Woody/leggy growth — prune annually after flowering. Never cut into old wood.",
       "Frost damage on wet roots — raise pots off the ground in winter to prevent waterlogging."
@@ -1283,7 +1284,7 @@ window.PLANT_DATA = [
       "hardiness": "Hardy (tolerates light frost)",
       "lifespan": "Annual",
       "sunRequirement": "Partial shade to full sun (3–6 hours)",
-      "waterNeeds": "high and THEN info: Regular — keep soil consistently moist",
+      "waterNeeds": "Moderate — keep soil consistently moist",
       "soilType": "Any good potting compost",
       "containerSize": "3L+ pot or window box",
       "pinchOutTops": {
@@ -1369,7 +1370,7 @@ window.PLANT_DATA = [
       "chives",
       "basil"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Bolting — shoots up and flowers in hot weather. Sow in partial shade and keep watered in summer.",
       "Slugs and snails — the number one enemy. Use copper tape, beer traps, or raise pots off the ground.",
       "Aphids — wash off with a jet of water or spray with diluted washing-up liquid."
@@ -1397,7 +1398,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (killed by frost, but thrives outdoors May-October in London)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours direct sunlight)",
-      "waterNeeds": "high and THEN info: Moderate — water when the top centimetre of compost feels dry, daily in hot spells",
+      "waterNeeds": "Moderate — water when the top centimetre of compost feels dry, daily in hot spells",
       "soilType": "Any well-drained multipurpose compost; not fussy about soil",
       "containerSize": "15cm+ per plant, or several in a 30cm+ pot"
     },
@@ -1462,7 +1463,7 @@ window.PLANT_DATA = [
       "nasturtium",
       "chives"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Slugs and snails on young plants — use copper tape around pots; balcony growing naturally reduces this risk",
       "Aphids on stems and buds — blast off with water or use insecticidal soap; marigolds actually deter aphids from neighbouring plants",
       "Powdery mildew (white coating on leaves) — improve air circulation between plants, water at the base not overhead",
@@ -1492,7 +1493,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy annual",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: Moderate — keep soil moist but not waterlogged",
+      "waterNeeds": "Moderate — keep soil moist but not waterlogged",
       "soilType": "Fertile, well-drained, neutral to slightly alkaline",
       "containerSize": "3-5L pot (or 15cm deep)"
     },
@@ -1574,7 +1575,7 @@ window.PLANT_DATA = [
       "calendula",
       "alyssum"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Downy Mildew — avoid overhead watering and ensure good air circulation.",
       "Aphids — can cluster on new growth. Wash off or use organic soap spray.",
       "Flea Beetle — can pepper leaves with small holes. Keep plants well-watered."
@@ -1601,7 +1602,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Perennial",
       "sunRequirement": "Partial shade to full sun (3+ hours)",
-      "waterNeeds": "high and THEN info: Regular — likes moist soil",
+      "waterNeeds": "Moderate — likes moist soil",
       "soilType": "Any potting compost",
       "containerSize": "5L+ pot (keep it contained!)",
       "pinchOutTops": {
@@ -1674,7 +1675,7 @@ window.PLANT_DATA = [
       "bush-tomato",
       "lettuce"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Mint rust — orange/brown spots on leaves. Remove and destroy affected stems. Don't compost them.",
       "Spreading too aggressively — ALWAYS keep in its own pot. Never plant with other herbs.",
       "Leggy growth — cut back hard in midsummer for a flush of fresh leaves."
@@ -1701,7 +1702,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (killed by frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun to partial shade (4+ hours)",
-      "waterNeeds": "high and THEN info: Low to moderate — actually flowers better in poor, dry soil",
+      "waterNeeds": "Low to Moderate — actually flowers better in poor, dry soil",
       "soilType": "Poor to average potting compost (don't enrich it!)",
       "containerSize": "5L+ pot or hanging basket"
     },
@@ -1773,7 +1774,7 @@ window.PLANT_DATA = [
       "radish",
       "lettuce"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Blackfly / aphids — nasturtiums are 'trap plants' that attract aphids AWAY from your vegetables. This is actually useful! Blast with water if they get bad.",
       "Caterpillars — cabbage white butterflies love nasturtiums. Pick off caterpillars by hand.",
       "Too much foliage, not enough flowers — you're feeding/watering too much. Cut back on both."
@@ -1801,7 +1802,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy",
       "lifespan": "Short-lived perennial (usually grown as annual)",
       "sunRequirement": "Full sun or partial shade",
-      "waterNeeds": "high and THEN info: Moderate — keep soil moist but not waterlogged",
+      "waterNeeds": "Moderate — keep soil moist but not waterlogged",
       "soilType": "Well-drained, fertile multi-purpose compost",
       "containerSize": "1–2L pot or window box"
     },
@@ -1888,7 +1889,7 @@ window.PLANT_DATA = [
       "primrose",
       "viola"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Slugs and Snails — particularly problematic in damp autumn weather.",
       "Aphids — common in spring; rinse off with water.",
       "Powdery Mildew — greyish-white coating on leaves; improve airflow."
@@ -1915,7 +1916,7 @@ window.PLANT_DATA = [
       "hardiness": "H2 (Tolerant of low temperatures but will not survive being frozen)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun",
-      "waterNeeds": "high and THEN info: Regular — keep soil moist to delay bolting",
+      "waterNeeds": "Moderate — keep soil moist to delay bolting",
       "soilType": "Moist but well-drained; Chalk, Clay, Loam, or Sand",
       "containerSize": "2L+ pot (at least 15cm deep)",
       "pinchOutTops": {
@@ -1998,12 +1999,124 @@ window.PLANT_DATA = [
       "chives",
       "nasturtium"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Slugs and Snails",
       "Flea beetles (which leave small holes in the leaves)",
       "Woody/pithy roots — left in the ground too long. Harvest promptly when ready."
     ],
     "funFact": "Extremely versatile in the kitchen—great for eating raw, pickling, or even cooking with butter and garlic!"
+  },
+  {
+    "id": "raspberries",
+    "commonName": "Raspberry",
+    "latinName": "Rubus idaeus",
+    "family": "Rosaceae",
+    "category": "fruit",
+    "variety": "General",
+    "description": "A delicious and popular soft fruit, raspberries are hardy and relatively easy to grow. They are categorized into summer-fruiting and autumn-fruiting varieties, providing a long harvest season from June to October. They are members of the rose family and thrive in the UK's climate.",
+    "images": {
+      "plant": "images/raspberries/plant.jpg",
+      "seedling": "images/raspberries/seedling.jpg",
+      "fruit": "images/raspberries/fruit.jpg"
+    },
+    "characteristics": {
+      "matureHeight": "1.2–1.8m",
+      "matureSpread": "0.5–1m",
+      "hardiness": "Fully hardy (perennial)",
+      "lifespan": "Perennial (productive for 10-15 years)",
+      "sunRequirement": "Full sun or partial shade",
+      "waterNeeds": "Moderate — keep well-watered, especially during fruit swelling",
+      "soilType": "Slightly acidic, moisture-retentive, well-drained soil",
+      "containerSize": "30-40L (if growing in pots)",
+      "pinchOutTops": {
+        "required": false,
+        "info": "Not typically required, but summer canes are tip-pruned in spring."
+      }
+    },
+    "schedule": {
+      "january": [
+        "🪴 Plant bare-root canes"
+      ],
+      "february": [
+        "🪴 Plant bare-root canes",
+        "✂️ Prune autumn-fruiting canes to ground"
+      ],
+      "march": [
+        "🪴 Plant bare-root canes",
+        "✂️ Tip-prune summer-fruiting canes"
+      ],
+      "april": [
+        "🪴 Plant potted canes"
+      ],
+      "may": [
+        "🪴 Plant potted canes",
+        "💧 Keep well-watered"
+      ],
+      "june": [
+        "🧺 Harvest summer varieties regularly"
+      ],
+      "july": [
+        "🧺 Harvest summer varieties regularly"
+      ],
+      "august": [
+        "🧺 Harvest summer and autumn varieties regularly",
+        "✂️ Prune summer canes after fruiting"
+      ],
+      "september": [
+        "🧺 Harvest autumn varieties regularly"
+      ],
+      "october": [
+        "🧺 Harvest autumn varieties regularly"
+      ],
+      "november": [
+        "🪴 Plant bare-root canes"
+      ],
+      "december": [
+        "🪴 Plant bare-root canes"
+      ],
+      "frostSensitive": false
+    },
+    "care": {
+      "sowIndoors": null,
+      "sowOutdoors": null,
+      "hardenOff": "Not required for bare-root or established canes.",
+      "plantOut": "Plant bare-root canes from Nov to Mar. Do not plant too deep; ensure the old soil mark is at the surface.",
+      "watering": "Water at the base, especially during dry spells and fruit development. Avoid wetting the leaves to prevent grey mould.",
+      "feeding": "Apply a general-purpose fertiliser and mulch in late February.",
+      "harvest": "Pick when fully colored and they pull away easily from the central core.",
+      "overwintering": "Autumn canes should be cut to the ground in Feb. Summer canes that have fruited should be cut back after harvest."
+    },
+    "propagation": {
+      "fromSeed": false,
+      "seedDescription": null,
+      "germinationDays": null,
+      "fromCuttings": false,
+      "cuttingsMethod": null,
+      "fromDivision": true,
+      "divisionMethod": "Raspberries spread via underground runners (suckers). These can be dug up and replanted in autumn or winter."
+    },
+    "deadheading": {
+      "required": true,
+      "notes": "Remove 'suckers' that appear outside the designated growing area to prevent spreading."
+    },
+    "seedSaving": {
+      "canSaveSeeds": false,
+      "method": "Not recommended; raspberries are best propagated via suckers.",
+      "seedPodDescription": null
+    },
+    "companionPlants": [
+      "Garlic",
+      "Chives",
+      "Marigolds",
+      "Nasturtiums"
+    ],
+    "troubleshooting": [
+      "Birds (use netting)",
+      "Raspberry Beetle",
+      "Grey mould (Botrytis)",
+      "Root rot"
+    ],
+    "funFact": "The word 'raspberry' is derived from the Old English 'rasp', which meant 'to scrape', referring to its thorny stems."
   },
   {
     "id": "rocket",
@@ -2025,7 +2138,7 @@ window.PLANT_DATA = [
       "hardiness": "Hardy (tolerates frost)",
       "lifespan": "Annual",
       "sunRequirement": "Partial shade to full sun",
-      "waterNeeds": "high and THEN info: Regular — keep moist to prevent bolting",
+      "waterNeeds": "Moderate — keep moist to prevent bolting",
       "soilType": "Any moisture-retentive potting compost",
       "containerSize": "2L+ pot or window box",
       "pinchOutTops": {
@@ -2112,7 +2225,7 @@ window.PLANT_DATA = [
       "mint",
       "beetroot"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Flea beetle — tiny holes in leaves. Cover with fleece to prevent.",
       "Bolting — flowering prematurely due to heat or dryness. Keep watered and shaded in summer.",
       "Bitter taste — usually due to heat or old leaves."
@@ -2140,7 +2253,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy annual",
       "lifespan": "Annual / Short-lived perennial",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: Moderate — keep moist but not waterlogged",
+      "waterNeeds": "Moderate — keep moist but not waterlogged",
       "soilType": "Well-drained, fertile soil",
       "containerSize": "1L+ pot (or larger for taller varieties)"
     },
@@ -2213,7 +2326,7 @@ window.PLANT_DATA = [
       "marigold",
       "zinnia"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Rust (Puccinia antirrhini)",
       "Aphids",
       "Slugs and snails (especially young plants)"
@@ -2238,7 +2351,7 @@ window.PLANT_DATA = [
       "hardiness": "Hardy",
       "lifespan": "Annual",
       "sunRequirement": "Partial shade to full sun",
-      "waterNeeds": "high and THEN info: Regular — never let soil dry out",
+      "waterNeeds": "Moderate — never let soil dry out",
       "soilType": "Fertile, moisture-retentive soil",
       "containerSize": "5L+ pot or window box",
       "pinchOutTops": {
@@ -2321,7 +2434,7 @@ window.PLANT_DATA = [
       "lettuce",
       "chives"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Bolting — caused by heat or dry soil. Keep well-watered and provide shade in mid-summer.",
       "Downy mildew — Apollo F1 is resistant, but ensure good air circulation.",
       "Slugs and snails — protect young seedlings."
@@ -2349,7 +2462,7 @@ window.PLANT_DATA = [
       "hardiness": "Fully hardy (perennial)",
       "lifespan": "Perennial (productive for 3-4 years)",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: High — keep well-watered when fruiting",
+      "waterNeeds": "High — keep well-watered when fruiting",
       "soilType": "Fertile, well-drained potting compost",
       "containerSize": "5L+ per plant (or a long trough)",
       "pinchOutTops": {
@@ -2419,7 +2532,7 @@ window.PLANT_DATA = [
       "borage",
       "lettuce"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Birds (use netting)",
       "Slugs",
       "Grey mould (Botrytis)",
@@ -2447,7 +2560,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6-8+ hours)",
-      "waterNeeds": "high and THEN info: High — 'water hogs' during peak growth",
+      "waterNeeds": "High — 'water hogs' during peak growth",
       "soilType": "Rich, fertile, well-drained soil (heavy feeders)",
       "containerSize": "15L+ pot for giant varieties (or large troughs for dwarfs)"
     },
@@ -2515,7 +2628,7 @@ window.PLANT_DATA = [
       "sweetcorn",
       "basil"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Slugs and snails (very dangerous to seedlings)",
       "Mildew",
       "Birds (eating seeds)",
@@ -2544,7 +2657,7 @@ window.PLANT_DATA = [
       "hardiness": "Tender (not frost tolerant)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: High — requires regular watering as cobs develop",
+      "waterNeeds": "High — requires regular watering as cobs develop",
       "soilType": "Rich, well-manured, well-drained soil",
       "containerSize": "Large (30L+) — needs 15-20 plants in a block for pollination",
       "pinchOutTops": {
@@ -2618,7 +2731,7 @@ window.PLANT_DATA = [
       "sunflower",
       "nasturtium"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Poor Pollination — results in missing kernels. Plant in blocks and shake plants daily.",
       "Birds and Mice — can pull up seeds or peck at ripening cobs. Net young plants.",
       "Slugs — can decimate young seedlings. Use beer traps or barriers.",
@@ -2647,7 +2760,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (killed by frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: High — daily watering essential in baskets",
+      "waterNeeds": "High — daily watering essential in baskets",
       "soilType": "Rich potting compost with water-retaining gel",
       "containerSize": "30cm+ hanging basket or tall pot",
       "pinchOutTops": {
@@ -2723,7 +2836,7 @@ window.PLANT_DATA = [
       "nasturtium",
       "marigold"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Drying out — the #1 issue with baskets. Water, water, water!",
       "Blossom end rot — caused by erratic watering.",
       "Aphids — wipe off or spray with soapy water."
@@ -2751,7 +2864,7 @@ window.PLANT_DATA = [
       "hardiness": "Half-hardy (killed by frost)",
       "lifespan": "Annual",
       "sunRequirement": "Full sun (6+ hours)",
-      "waterNeeds": "high and THEN info: High — daily watering essential in baskets",
+      "waterNeeds": "High — daily watering essential in baskets",
       "soilType": "Rich potting compost with water-retaining gel",
       "containerSize": "30cm+ hanging basket or tall pot",
       "pinchOutTops": {
@@ -2827,7 +2940,7 @@ window.PLANT_DATA = [
       "nasturtium",
       "lobelia"
     ],
-    "commonProblems": [
+    "troubleshooting": [
       "Drying out — hanging baskets are very prone to drought.",
       "Sunscald — fruit can get bleached spots in intense sun if foliage is sparse.",
       "Aphids — check the underside of leaves regularly."

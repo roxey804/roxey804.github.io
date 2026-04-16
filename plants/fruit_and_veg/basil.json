@@ -18,7 +18,7 @@
     "hardiness": "Tender (dislikes cold and frost)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "high and THEN info: Moderate — keep moist but not waterlogged",
+    "waterNeeds": "Moderate — keep moist but not waterlogged",
     "soilType": "Rich, well-drained potting compost",
     "containerSize": "2L+ pot (or windowsill pot)",
     "pinchOutTops": {
@@ -98,7 +98,7 @@
     "chives",
     "lettuce"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Bolting — flowers too quickly in heat or stress. Pinch out flower buds promptly.",
     "Cold damage — leaves turn black in cold. Keep above 10°C at all times.",
     "Overwatering — causes root rot. Let soil surface dry slightly between waterings.",

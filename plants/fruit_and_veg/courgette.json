@@ -19,7 +19,7 @@
     "hardiness": "Half-hardy (not frost tolerant)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "high and THEN info: High — requires daily watering in summer",
+    "waterNeeds": "High — requires daily watering in summer",
     "soilType": "Rich, well-drained potting compost with added manure",
     "containerSize": "45cm+ (30-50L) pot",
     "pinchOutTops": {
@@ -95,10 +95,11 @@
     "borage",
     "beans"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Powdery Mildew — white dusty coating on leaves. Improve airflow and water at base.",
     "Slugs and Snails — protect young seedlings after planting out.",
-    "Poor Pollination — if fruits shrivel, try hand-pollination."
+    "Poor Pollination — if fruits shrivel, try hand-pollination.",
+    "Tiny courgettes begin to form but then drop or shrivel are due to poor pollination. Plenty of flowers but no fruit forming. To help nature along and ensure successful fruit production, you can hand pollinate female flowers when natural methods fail: Pick a fresh male flower. Gently remove the petals to expose the stamen. Lightly brush it onto the stigma of a female flower. You can also use a small paintbrush or cotton bud if you don’t want to remove flowers. Do this early in the morning, when flowers are open and pollen is fresh."
   ],
-  "funFact": "If you don't harvest courgettes, they can grow into giant marrows over a metre long in just a few weeks!"
+  "funFact": "If you don't harvest courgettes, they can grow into giant marrows over a metre long in just a few weeks! Courgette flowers are edible, stuffed or deep-fried in batter, or added to pasta and stir-fry dishes."
 }

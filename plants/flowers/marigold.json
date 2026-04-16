@@ -19,7 +19,7 @@
     "hardiness": "Half-hardy (killed by frost, but thrives outdoors May-October in London)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours direct sunlight)",
-    "waterNeeds": "high and THEN info: Moderate — water when the top centimetre of compost feels dry, daily in hot spells",
+    "waterNeeds": "Moderate — water when the top centimetre of compost feels dry, daily in hot spells",
     "soilType": "Any well-drained multipurpose compost; not fussy about soil",
     "containerSize": "15cm+ per plant, or several in a 30cm+ pot"
   },
@@ -84,7 +84,7 @@
     "nasturtium",
     "chives"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Slugs and snails on young plants — use copper tape around pots; balcony growing naturally reduces this risk",
     "Aphids on stems and buds — blast off with water or use insecticidal soap; marigolds actually deter aphids from neighbouring plants",
     "Powdery mildew (white coating on leaves) — improve air circulation between plants, water at the base not overhead",

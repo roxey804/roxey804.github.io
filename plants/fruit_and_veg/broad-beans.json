@@ -19,7 +19,7 @@
     "hardiness": "Fully hardy",
     "lifespan": "Annual",
     "sunRequirement": "Full sun or partial shade",
-    "waterNeeds": "high and THEN info: Regular, especially during flowering and pod development",
+    "waterNeeds": "Moderate, especially during flowering and pod development",
     "soilType": "Rich, well-drained compost",
     "containerSize": "10L+ pot (at least 20cm deep)",
     "pinchOutTops": {
@@ -98,7 +98,7 @@
     "spinach",
     "lettuce"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Blackfly (aphids) — pinch out growing tips to prevent.",
     "Chocolate Spot — brown spots on leaves in damp weather; improve airflow.",
     "Mice — can dig up seeds; protect with wire mesh or start indoors."

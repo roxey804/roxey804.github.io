@@ -18,7 +18,7 @@
     "hardiness": "Fully hardy",
     "lifespan": "Short-lived perennial (often grown as biennial)",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "high and THEN info: Regular — pots dry out fast in summer",
+    "waterNeeds": "Moderate — pots dry out fast in summer",
     "soilType": "Rich, well-drained potting compost",
     "containerSize": "15L+ deep pot (at least 40cm deep)"
   },
@@ -102,7 +102,7 @@
     "nasturtiums",
     "lavender"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Hollyhock Rust — orange pustules on leaves. Pick off affected leaves early and keep foliage dry.",
     "Slugs and Snails — love young seedlings. Use beer traps or copper tape.",
     "Caterpillars — can shred leaves. Pick off by hand."

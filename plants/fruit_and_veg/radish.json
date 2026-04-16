@@ -18,7 +18,7 @@
     "hardiness": "H2 (Tolerant of low temperatures but will not survive being frozen)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun",
-    "waterNeeds": "high and THEN info: Regular — keep soil moist to delay bolting",
+    "waterNeeds": "Moderate — keep soil moist to delay bolting",
     "soilType": "Moist but well-drained; Chalk, Clay, Loam, or Sand",
     "containerSize": "2L+ pot (at least 15cm deep)",
     "pinchOutTops": {
@@ -101,7 +101,7 @@
     "chives",
     "nasturtium"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Slugs and Snails",
     "Flea beetles (which leave small holes in the leaves)",
     "Woody/pithy roots — left in the ground too long. Harvest promptly when ready."

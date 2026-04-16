@@ -18,7 +18,7 @@
     "hardiness": "Fully hardy (survives UK winters)",
     "lifespan": "Perennial",
     "sunRequirement": "Full sun to partial shade (4+ hours)",
-    "waterNeeds": "high and THEN info: Moderate — tolerates some dryness",
+    "waterNeeds": "Moderate — tolerates some dryness",
     "soilType": "Any reasonable potting compost",
     "containerSize": "2L+ pot",
     "pinchOutTops": {
@@ -95,7 +95,7 @@
     "lettuce",
     "basil"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Rust — orange spots on leaves. Remove affected leaves and improve air circulation.",
     "Overcrowding — clumps get congested after 2–3 years. Divide and repot.",
     "Aphids — rarely serious. Wash off with water."

@@ -18,7 +18,7 @@
     "hardiness": "Half-hardy",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6-8+ hours)",
-    "waterNeeds": "high and THEN info: High — 'water hogs' during peak growth",
+    "waterNeeds": "High — 'water hogs' during peak growth",
     "soilType": "Rich, fertile, well-drained soil (heavy feeders)",
     "containerSize": "15L+ pot for giant varieties (or large troughs for dwarfs)"
   },
@@ -86,7 +86,7 @@
     "sweetcorn",
     "basil"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Slugs and snails (very dangerous to seedlings)",
     "Mildew",
     "Birds (eating seeds)",

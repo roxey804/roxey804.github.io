@@ -1,0 +1,112 @@
+{
+  "id": "raspberries",
+  "commonName": "Raspberry",
+  "latinName": "Rubus idaeus",
+  "family": "Rosaceae",
+  "category": "fruit",
+  "variety": "General",
+  "description": "A delicious and popular soft fruit, raspberries are hardy and relatively easy to grow. They are categorized into summer-fruiting and autumn-fruiting varieties, providing a long harvest season from June to October. They are members of the rose family and thrive in the UK's climate.",
+  "images": {
+    "plant": "images/raspberries/plant.jpg",
+    "seedling": "images/raspberries/seedling.jpg",
+    "fruit": "images/raspberries/fruit.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "1.2–1.8m",
+    "matureSpread": "0.5–1m",
+    "hardiness": "Fully hardy (perennial)",
+    "lifespan": "Perennial (productive for 10-15 years)",
+    "sunRequirement": "Full sun or partial shade",
+    "waterNeeds": "Moderate — keep well-watered, especially during fruit swelling",
+    "soilType": "Slightly acidic, moisture-retentive, well-drained soil",
+    "containerSize": "30-40L (if growing in pots)",
+    "pinchOutTops": {
+      "required": false,
+      "info": "Not typically required, but summer canes are tip-pruned in spring."
+    }
+  },
+  "schedule": {
+    "january": [
+      "🪴 Plant bare-root canes"
+    ],
+    "february": [
+      "🪴 Plant bare-root canes",
+      "✂️ Prune autumn-fruiting canes to ground"
+    ],
+    "march": [
+      "🪴 Plant bare-root canes",
+      "✂️ Tip-prune summer-fruiting canes"
+    ],
+    "april": [
+      "🪴 Plant potted canes"
+    ],
+    "may": [
+      "🪴 Plant potted canes",
+      "💧 Keep well-watered"
+    ],
+    "june": [
+      "🧺 Harvest summer varieties regularly"
+    ],
+    "july": [
+      "🧺 Harvest summer varieties regularly"
+    ],
+    "august": [
+      "🧺 Harvest summer and autumn varieties regularly",
+      "✂️ Prune summer canes after fruiting"
+    ],
+    "september": [
+      "🧺 Harvest autumn varieties regularly"
+    ],
+    "october": [
+      "🧺 Harvest autumn varieties regularly"
+    ],
+    "november": [
+      "🪴 Plant bare-root canes"
+    ],
+    "december": [
+      "🪴 Plant bare-root canes"
+    ],
+    "frostSensitive": false
+  },
+  "care": {
+    "sowIndoors": null,
+    "sowOutdoors": null,
+    "hardenOff": "Not required for bare-root or established canes.",
+    "plantOut": "Plant bare-root canes from Nov to Mar. Do not plant too deep; ensure the old soil mark is at the surface.",
+    "watering": "Water at the base, especially during dry spells and fruit development. Avoid wetting the leaves to prevent grey mould.",
+    "feeding": "Apply a general-purpose fertiliser and mulch in late February.",
+    "harvest": "Pick when fully colored and they pull away easily from the central core.",
+    "overwintering": "Autumn canes should be cut to the ground in Feb. Summer canes that have fruited should be cut back after harvest."
+  },
+  "propagation": {
+    "fromSeed": false,
+    "seedDescription": null,
+    "germinationDays": null,
+    "fromCuttings": false,
+    "cuttingsMethod": null,
+    "fromDivision": true,
+    "divisionMethod": "Raspberries spread via underground runners (suckers). These can be dug up and replanted in autumn or winter."
+  },
+  "deadheading": {
+    "required": true,
+    "notes": "Remove 'suckers' that appear outside the designated growing area to prevent spreading."
+  },
+  "seedSaving": {
+    "canSaveSeeds": false,
+    "method": "Not recommended; raspberries are best propagated via suckers.",
+    "seedPodDescription": null
+  },
+  "companionPlants": [
+    "Garlic",
+    "Chives",
+    "Marigolds",
+    "Nasturtiums"
+  ],
+  "troubleshooting": [
+    "Birds (use netting)",
+    "Raspberry Beetle",
+    "Grey mould (Botrytis)",
+    "Root rot"
+  ],
+  "funFact": "The word 'raspberry' is derived from the Old English 'rasp', which meant 'to scrape', referring to its thorny stems."
+}

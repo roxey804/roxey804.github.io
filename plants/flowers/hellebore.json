@@ -18,7 +18,7 @@
     "hardiness": "Fully hardy (thrives in UK winters)",
     "lifespan": "Perennial",
     "sunRequirement": "Dappled shade to partial shade",
-    "waterNeeds": "high and THEN info: Moderate — prefers consistently moist but well-drained soil",
+    "waterNeeds": "Moderate — prefers consistently moist but well-drained soil",
     "soilType": "Rich, moisture-retentive but well-drained alkaline soil",
     "containerSize": "5L+ deep pot"
   },
@@ -92,7 +92,7 @@
     "ferns",
     "hostas"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Hellebore Leaf Spot (black spots on leaves) — prune affected leaves promptly",
     "Aphids in spring — wash off with water",
     "Slugs on young growth — use grit or copper tape"

@@ -19,7 +19,7 @@
     "hardiness": "Fully hardy (perennial)",
     "lifespan": "Perennial (productive for 3-4 years)",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "high and THEN info: High — keep well-watered when fruiting",
+    "waterNeeds": "High — keep well-watered when fruiting",
     "soilType": "Fertile, well-drained potting compost",
     "containerSize": "5L+ per plant (or a long trough)",
     "pinchOutTops": {
@@ -89,7 +89,7 @@
     "borage",
     "lettuce"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Birds (use netting)",
     "Slugs",
     "Grey mould (Botrytis)",

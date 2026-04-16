@@ -16,7 +16,7 @@
     "hardiness": "Hardy",
     "lifespan": "Annual",
     "sunRequirement": "Partial shade to full sun",
-    "waterNeeds": "high and THEN info: Regular — never let soil dry out",
+    "waterNeeds": "Moderate — never let soil dry out",
     "soilType": "Fertile, moisture-retentive soil",
     "containerSize": "5L+ pot or window box",
     "pinchOutTops": {
@@ -99,7 +99,7 @@
     "lettuce",
     "chives"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Bolting — caused by heat or dry soil. Keep well-watered and provide shade in mid-summer.",
     "Downy mildew — Apollo F1 is resistant, but ensure good air circulation.",
     "Slugs and snails — protect young seedlings."

@@ -18,7 +18,7 @@
     "hardiness": "Half-hardy annual",
     "lifespan": "Annual",
     "sunRequirement": "Full sun",
-    "waterNeeds": "high and THEN info: Moderate — drought tolerant once established",
+    "waterNeeds": "Moderate — drought tolerant once established",
     "soilType": "Poor to moderately fertile, well-drained soil",
     "containerSize": "Large pot (30cm+) or open ground"
   },
@@ -81,7 +81,7 @@
     "zinnia",
     "tomato"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Slugs and snails — especially on young seedlings.",
     "Aphids on soft shoot tips.",
     "Powdery mildew in late summer if crowded or dry at the roots."

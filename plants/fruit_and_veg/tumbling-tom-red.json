@@ -19,7 +19,7 @@
     "hardiness": "Half-hardy (killed by frost)",
     "lifespan": "Annual",
     "sunRequirement": "Full sun (6+ hours)",
-    "waterNeeds": "high and THEN info: High — daily watering essential in baskets",
+    "waterNeeds": "High — daily watering essential in baskets",
     "soilType": "Rich potting compost with water-retaining gel",
     "containerSize": "30cm+ hanging basket or tall pot",
     "pinchOutTops": {
@@ -95,7 +95,7 @@
     "nasturtium",
     "marigold"
   ],
-  "commonProblems": [
+  "troubleshooting": [
     "Drying out — the #1 issue with baskets. Water, water, water!",
     "Blossom end rot — caused by erratic watering.",
     "Aphids — wipe off or spray with soapy water."
