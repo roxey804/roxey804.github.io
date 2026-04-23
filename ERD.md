@@ -9,7 +9,7 @@ This diagram shows the relationship between users, their gardens, and the shared
 ```mermaid
 erDiagram
     PLANTS ||--o{ USER_PLANTS : "referenced by"
-    USER ||--|| PROFILE : "has"
+    USER ||--|| USER_PROFILES : "has"
     USER ||--o{ GARDENS : "owns"
     GARDENS ||--o{ USER_PLANTS : "contains"
     USER_PLANTS ||--o{ PLANTING_TRACKER : "logged in"
@@ -20,8 +20,9 @@ erDiagram
         string email
     }
 
-    PROFILE {
+    USER_PROFILES {
         uuid id PK, FK
+        string email
         string display_name
         string location_name
         boolean welcome_shown
@@ -45,27 +46,54 @@ erDiagram
     PLANTS {
         string id PK "e.g., basil, tomato"
         string common_name
-        string category "herb, vegetable, flower, fruit"
+        string latin_name
+        string family
+        plant_category category
+        string variety
+        string description
+        jsonb images
+        jsonb characteristics
+        jsonb schedule
+        jsonb care
+        jsonb propagation
+        jsonb deadheading "boolean or object {required, info}"
+        jsonb seed_saving
+        jsonb milestones
+        jsonb edible "boolean or object {isEdible, info}"
+        text[] varieties
+        text[] companion_plants "Soft Link: IDs if exist, otherwise text"
+        text[] troubleshooting
+        string fun_fact
     }
 
     PLANTING_TRACKER {
         uuid id PK
         uuid user_plant_id FK
         integer batch_no
+        integer year
+        string location
+        boolean covered
         string date_planted
+        string date_sprouted
+        string date_true_leaves
+        string date_first_flower
+        string date_first_fruit
     }
 
     WISHLIST {
         uuid id PK
         uuid user_id FK
         string common_name
+        string category
+        string image_url
+        string notes
     }
 ```
 
 ## Hierarchy Levels
 
 1.  **System Level (Shared)**: The `plants` table contains the master encyclopedic data. It is read-only for users.
-2.  **User Level (Identity)**: Managed by Supabase Auth (`USER`) and extended via the `PROFILE` table for app-specific settings.
+2.  **User Level (Identity)**: Managed by Supabase Auth (`USER`) and extended via the `USER_PROFILES` table for app-specific settings.
 3.  **Garden Level (Container)**: The `GARDENS` table allows a single user to manage multiple independent physical spaces.
 4.  **Instance Level (Specifics)**: `USER_PLANTS` links a master plant to a specific garden. This is where per-garden state (like "is currently growing") lives.
 5.  **Log Level (Activity)**: `PLANTING_TRACKER` stores historical and active growth data for a specific plant instance.
@@ -92,6 +120,10 @@ graph TD
         Vegetables --> Brassicaceae[Brassicaceae]
         Vegetables --> Cucurbitaceae[Cucurbitaceae]
         Vegetables --> Asteraceae_Veg[Asteraceae]
+        Vegetables --> Fabaceae_Veg[Fabaceae]
+        Vegetables --> Rosaceae_Fruit[Rosaceae]
+        Vegetables --> Amaranthaceae[Amaranthaceae]
+        Vegetables --> Poaceae[Poaceae]
     end
 
     %% Herbs Grouping
@@ -109,6 +141,9 @@ graph TD
         Flowers --> Tropaeolaceae[Tropaeolaceae]
         Flowers --> Brassicaceae_Flow[Brassicaceae]
         Flowers --> Caryophyllaceae[Caryophyllaceae]
+        Flowers --> Ranunculaceae[Ranunculaceae]
+        Flowers --> Malvaceae[Malvaceae]
+        Flowers --> Violaceae[Violaceae]
     end
 
     %% Plants - Solanaceae
@@ -117,7 +152,9 @@ graph TD
 
     %% Plants - Brassicaceae
     Brassicaceae --> Radish[Radish]
+    Brassicaceae_Veg --> Spinach_Note[Spinach - categorized here for ease]
     Brassicaceae_Herb --> Rocket[Rocket]
+    Brassicaceae_Flow --> Matthiola[Matthiola]
 
     %% Plants - Cucurbitaceae
     Cucurbitaceae --> Courgette[Courgette]
@@ -125,6 +162,23 @@ graph TD
     %% Plants - Asteraceae
     Asteraceae_Veg --> Lettuce[Lettuce]
     Asteraceae_Flow --> Marigold[Marigold]
+    Asteraceae_Flow --> Calendula[Calendula]
+    Asteraceae_Flow --> Cosmos[Cosmos]
+    Asteraceae_Flow --> Sunflower[Sunflower]
+
+    %% Plants - Fabaceae
+    Fabaceae_Veg --> BroadBeans[Broad Beans]
+    Fabaceae_Veg --> ClimbingBeans[Climbing Beans]
+
+    %% Plants - Rosaceae
+    Rosaceae_Fruit --> Strawberry[Strawberry]
+    Rosaceae_Fruit --> Raspberry[Raspberry]
+
+    %% Plants - Amaranthaceae
+    Amaranthaceae --> Spinach[Spinach 'Apollo' F1]
+
+    %% Plants - Poaceae
+    Poaceae --> Sweetcorn[Sweetcorn]
 
     %% Plants - Lamiaceae
     Lamiaceae_Herb --> Basil[Basil]
@@ -133,6 +187,7 @@ graph TD
 
     %% Plants - Apiaceae
     Apiaceae --> Coriander[Coriander]
+    Apiaceae --> Parsley[Parsley]
 
     %% Plants - Amaryllidaceae
     Amaryllidaceae --> Chives[Chives]
@@ -141,6 +196,9 @@ graph TD
     Plantaginaceae --> Snapdragon[Snapdragon]
     Tropaeolaceae --> Nasturtium[Nasturtium]
     Caryophyllaceae --> Carnation[Carnation Pinks]
+    Ranunculaceae --> Hellebore[Hellebore]
+    Malvaceae --> Hollyhock[Hollyhock]
+    Violaceae --> Pansy[Pansy]
 
     %% Styling
     classDef category fill:#2d6a4f,stroke:#fff,color:#fff,font-weight:bold;
@@ -148,8 +206,8 @@ graph TD
     classDef plant fill:#d8f3dc,stroke:#2d6a4f,color:#000;
 
     class Vegetables,Herbs,Flowers category;
-    class Solanaceae,Brassicaceae,Cucurbitaceae,Asteraceae_Veg,Lamiaceae_Herb,Apiaceae,Amaryllidaceae,Brassicaceae_Herb,Asteraceae_Flow,Plantaginaceae,Tropaeolaceae,Caryophyllaceae family;
-    class TT_Red,TT_Yellow,Radish,Rocket,Courgette,Lettuce,Marigold,Basil,Mint,Lavender,Coriander,Chives,Snapdragon,Nasturtium,Carnation plant;
+    class Solanaceae,Brassicaceae,Cucurbitaceae,Asteraceae_Veg,Lamiaceae_Herb,Apiaceae,Amaryllidaceae,Brassicaceae_Herb,Asteraceae_Flow,Plantaginaceae,Tropaeolaceae,Caryophyllaceae,Fabaceae_Veg,Rosaceae_Fruit,Amaranthaceae,Poaceae,Ranunculaceae,Malvaceae,Violaceae family;
+    class TT_Red,TT_Yellow,Radish,Rocket,Courgette,Lettuce,Marigold,Basil,Mint,Lavender,Coriander,Chives,Snapdragon,Nasturtium,Carnation,Parsley,Raspberry,Spinach,Hellebore,Hollyhock,Matthiola,Pansy,Strawberry,Sunflower,Sweetcorn,Calendula,Cosmos,BroadBeans,ClimbingBeans plant;
 ```
 
 ## Data Structure (JSON)
@@ -162,4 +220,4 @@ Each plant is defined in its own JSON file with the following relevant fields:
 | `family` | Botanical family (used here as a subcategory). | `Lamiaceae`, `Solanaceae` |
 | `id` | Unique slug/identifier for the plant. | `basil` |
 | `commonName`| User-friendly name. | `Basil` |
-| `edible` | Object describing if the plant/flower is edible (mostly for the flower category). | `{ "isEdible": true, "notes": "..." }` |
+| `edible` | Describes if the plant/flower is edible. | `true` or `{ "isEdible": true, "info": "..." }` |
