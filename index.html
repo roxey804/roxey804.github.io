@@ -3,7 +3,7 @@
 <head> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My plant db</title>
+  <title>My plant db (v2)</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <script>
     // Cache buster for data files
@@ -14,6 +14,7 @@
     document.write(`<script src="general_tasks.js?v=${cb}"><\/script>`);
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -51,10 +52,11 @@
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <span class="text-2xl">🌿</span>
-        <h1 class="text-lg font-bold tracking-tight">My plant db</h1>
+        <h1 class="text-lg font-bold tracking-tight">My plant db (v2)</h1>
         <span class="px-1.5 py-0.5 rounded bg-terra text-[10px] font-bold uppercase tracking-wider">WIP (Work In Progress)</span>
       </div>
       <div class="text-right text-sm">
+        <div id="userGreeting" class="font-bold text-leafLight mb-1 hidden"></div>
         <div id="currentDate" class="font-medium"></div>
         <div class="text-leafLight text-xs">📍 London, UK</div>
       </div>
@@ -86,7 +88,7 @@
     <div id="empty-state" class="hidden text-center py-20">
       <div class="text-6xl mb-6">🌱</div>
       <h2 class="text-2xl font-bold text-forest mb-3">No plants yet!</h2>
-      <p class="text-gray-600 mb-2 max-w-md mx-auto">Add plants using the <code class="bg-leafPale px-2 py-1 rounded text-forest font-mono text-sm">/plant</code> command in Claude Code.</p>
+      <p class="text-gray-600 mb-2 max-w-md mx-auto">Add plants using the <code class="bg-leafPale px-2 py-1 rounded text-forest font-mono text-sm">/plant</code> command in Gemini CLI.</p>
       <p class="text-gray-500 text-sm">Example: <code class="bg-leafPale px-2 py-1 rounded text-forest font-mono text-sm">/plant basil</code></p>
     </div>
 
@@ -287,6 +289,39 @@
     </div>
   </div>
 
+  <!-- Auth Modal -->
+  <div id="authModal" class="hidden fixed inset-0 bg-black/50 z-[250] flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl">
+      <div class="flex items-center justify-between mb-6">
+        <h2 id="authModalTitle" class="text-2xl font-bold text-forest">Login</h2>
+        <button onclick="closeAuthModal()" class="text-gray-400 hover:text-gray-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      
+      <form onsubmit="handleAuthSubmit(event)" id="authForm" class="space-y-4">
+        <div id="authError" class="hidden p-3 bg-red-50 text-red-700 text-xs rounded-lg border border-red-100"></div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+          <input type="email" name="email" required placeholder="your@email.com" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-leaf focus:border-leaf outline-none">
+        </div>
+        
+        <!-- <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+          <input type="password" name="password" required minlength="6" placeholder="••••••••" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-leaf focus:border-leaf outline-none">
+        </div> -->
+
+        <button type="submit" id="authSubmitBtn" class="w-full bg-forest text-white py-3 rounded-xl font-medium hover:bg-forest/90 transition-colors">Send Magic Link</button>
+      </form>
+
+      <div class="mt-6 text-center text-sm text-gray-500">
+        <span id="authSwitchText">Don't have an account?</span>
+        <button onclick="toggleAuthMode()" id="authSwitchBtn" class="text-forest font-bold hover:underline ml-1">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Planting Tracker Modal -->
   <div id="trackerModal" class="hidden fixed inset-0 bg-black/50 z-[200] flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl max-w-4xl w-full p-6 shadow-2xl overflow-y-auto max-h-[90vh]">
@@ -361,9 +396,11 @@ let state = {
   categoryFilter: 'all',
   welcomeShown: false,
   lastProfileId: null,
+  user: null,
+  gardenId: null,
 };
 
-function loadState() {
+function loadLocalState() {
   try {
     const s = JSON.parse(localStorage.getItem('roksanas-plants-state') || '{}');
     if (s.selectedPlants) state.selectedPlants = new Set(s.selectedPlants);
@@ -372,29 +409,12 @@ function loadState() {
     if (s.wishlist) state.wishlist = s.wishlist;
     if (s.localPlants) state.localPlants = s.localPlants;
     if (s.hiddenWishlistItems) state.hiddenWishlistItems = s.hiddenWishlistItems;
-    if (s.tracking) {
-      for (const id in s.tracking) {
-        if (!Array.isArray(s.tracking[id])) {
-          const oldData = s.tracking[id];
-          s.tracking[id] = [{
-            batch: 1,
-            year: 2026,
-            location: 'indoors',
-            covered: false,
-            seedPlantedDate: '',
-            seedlingAppearedDate: '',
-            trueLeavesAppearedDate: '',
-            firstFlowerDate: oldData.firstFlowerDate || '',
-            firstFruitDate: ''
-          }];
-        }
-      }
-      state.tracking = s.tracking;
-    }
+    if (s.tracking) state.tracking = s.tracking;
   } catch (e) {}
 }
 
-function saveState() {
+async function saveState() {
+  // Always save to localStorage as backup/for guests
   localStorage.setItem('roksanas-plants-state', JSON.stringify({
     selectedPlants: [...state.selectedPlants],
     completedTasks: state.completedTasks,
@@ -404,6 +424,130 @@ function saveState() {
     hiddenWishlistItems: state.hiddenWishlistItems,
     tracking: state.tracking,
   }));
+
+  if (state.user && state.gardenId) {
+    // Supabase sync logic will be added here
+  }
+}
+
+// ============================================================
+// SUPABASE DATA
+// ============================================================
+let supabaseClient = null;
+const SUPABASE_URL = 'https://zkshgncrjuhpqnohsyoh.supabase.co'; 
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inprc2hnbmNyanVocHFub2hzeW9oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ4MDk2NjcsImV4cCI6MjA5MDM4NTY2N30.DwqTmyKg5TNoXgvBvjahm44eXVrSAG2Ibv4nkyRDVIM';
+
+if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+  supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+
+async function fetchPlants() {
+  if (!supabaseClient) return window.PLANT_DATA || [];
+  const { data, error } = await supabaseClient
+    .from('plants')
+    .select('*')
+    .order('common_name');
+  
+  if (error) {
+    console.error('Error fetching plants:', error);
+    return window.PLANT_DATA || [];
+  }
+
+  return data.map(p => ({
+    id: p.id,
+    commonName: p.common_name,
+    latinName: p.latin_name,
+    family: p.family,
+    category: p.category,
+    variety: p.variety,
+    description: p.description,
+    images: p.images,
+    characteristics: p.characteristics,
+    schedule: p.schedule,
+    care: p.care,
+    propagation: p.propagation,
+    deadheading: p.deadheading,
+    seedSaving: p.seed_saving,
+    milestones: p.milestones,
+    edible: p.edible,
+    varieties: p.varieties,
+    companionPlants: p.companion_plants,
+    troubleshooting: p.troubleshooting,
+    funFact: p.fun_fact
+  }));
+}
+
+async function syncState() {
+  if (!supabaseClient) return;
+
+  const { data: { user } } = await supabaseClient.auth.getUser();
+  state.user = user;
+
+  if (user) {
+    // 1. Get or Create Default Garden
+    let { data: gardens } = await supabaseClient
+      .from('gardens')
+      .select('id')
+      .eq('user_id', user.id)
+      .eq('is_default', true);
+    
+    if (!gardens || gardens.length === 0) {
+      const { data: newGarden } = await supabaseClient
+        .from('gardens')
+        .insert({ user_id: user.id, name: 'My Garden', is_default: true })
+        .select()
+        .single();
+      state.gardenId = newGarden.id;
+    } else {
+      state.gardenId = gardens[0].id;
+    }
+
+    // 2. Fetch User Plants & Tracking
+    const { data: userPlants } = await supabaseClient
+      .from('user_plants')
+      .select('id, plant_id, is_growing, planting_tracker(*)')
+      .eq('garden_id', state.gardenId);
+    
+    if (userPlants) {
+      state.selectedPlants = new Set(userPlants.filter(up => up.is_growing).map(up => up.plant_id));
+      
+      // Re-populate state.tracking from DB
+      state.tracking = {};
+      for (const up of userPlants) {
+        if (up.planting_tracker && up.planting_tracker.length > 0) {
+          state.tracking[up.plant_id] = up.planting_tracker.map(t => ({
+            dbId: t.id,
+            userPlantId: up.id,
+            batch: t.batch_no,
+            year: t.year,
+            location: t.location,
+            covered: t.covered,
+            seedPlantedDate: t.date_planted,
+            seedlingAppearedDate: t.date_sprouted,
+            trueLeavesAppearedDate: t.date_true_leaves,
+            firstFlowerDate: t.date_first_flower,
+            firstFruitDate: t.date_first_fruit
+          })).sort((a, b) => a.batch - b.batch);
+        }
+      }
+    }
+
+    // 3. Fetch Wishlist
+    const { data: wishlist } = await supabaseClient
+      .from('wishlist')
+      .select('*')
+      .eq('user_id', user.id);
+    
+    if (wishlist) {
+      state.wishlist = wishlist.map(w => ({
+        id: w.id,
+        commonName: w.common_name,
+        category: w.category,
+        images: { plant: w.image_url },
+        notes: w.notes
+      }));
+    }
+  }
 }
 
 // ============================================================
@@ -425,7 +569,6 @@ function weekDates(wk, yr = new Date().getFullYear()) {
   return { mon, sun, label: `${f(mon)} – ${f(sun)}` };
 }
 
-const MONTH_NAMES = ['january','february','march','april','may','june','july','august','september','october','november','december'];
 function monthName(i) { return ['January','February','March','April','May','June','July','August','September','October','November','December'][i]; }
 function getMonthIndex(wk) {
   if (wk >= 1 && wk <= 4) return 0;
@@ -441,13 +584,6 @@ function getMonthIndex(wk) {
   if (wk >= 45 && wk <= 48) return 10;
   if (wk >= 49 && wk <= 52) return 11;
   return 0;
-}
-
-// ============================================================
-// PLANT LOADING
-// ============================================================
-function loadPlants() {
-  return window.PLANT_DATA || [];
 }
 
 // ============================================================
@@ -485,7 +621,7 @@ function taskKey(pid, taskText) {
 function catEmoji(c) { return { vegetable:'🥬', herb:'🌿', flower:'🌸', fruit:'🍓', houseplant:'🏠' }[c] || '🌱'; }
 
 // ============================================================
-// THIS WEEK VIEW
+// VIEW: THIS WEEK
 // ============================================================
 function renderWeek() {
   const wk = state.viewWeek;
@@ -505,7 +641,7 @@ function renderWeek() {
   document.getElementById('progressText').textContent = `${done} tasks completed`;
 
   const tasks = tasksForMonth(mIdx);
-  const mName = MONTH_NAMES[mIdx];
+  const mName = ['january','february','march','april','may','june','july','august','september','october','november','december'][mIdx];
   const generalTasks = (window.GENERAL_TASKS && window.GENERAL_TASKS[mName]) || [];
   
   const container = document.getElementById('weekTasks');
@@ -516,7 +652,7 @@ function renderWeek() {
     empty.classList.remove('hidden');
     let nmIdx = (mIdx + 1) % 12;
     let count = 0;
-    while (count < 12 && !tasksForMonth(nmIdx).length && !(window.GENERAL_TASKS && window.GENERAL_TASKS[MONTH_NAMES[nmIdx]])) { nmIdx = (nmIdx + 1) % 12; count++; }
+    while (count < 12 && !tasksForMonth(nmIdx).length && !(window.GENERAL_TASKS && window.GENERAL_TASKS[['january','february','march','april','may','june','july','august','september','october','november','december'][nmIdx]])) { nmIdx = (nmIdx + 1) % 12; count++; }
     document.getElementById('nextTaskInfo').textContent = count < 12
       ? `Next tasks in ${monthName(nmIdx)}`
       : 'No tasks scheduled for the rest of the year!';
@@ -584,7 +720,7 @@ function toggleTask(k) { state.completedTasks[k] = !state.completedTasks[k]; sav
 function navigateWeek(d) { state.viewWeek = Math.max(1, Math.min(52, state.viewWeek + d)); renderWeek(); }
 
 // ============================================================
-// TRACKER MODAL LOGIC
+// MODAL: TRACKER
 // ============================================================
 function openTrackerModal(plantId) {
   const p = state.plants.find(x => x.id === plantId);
@@ -596,43 +732,11 @@ function openTrackerModal(plantId) {
 
 function closeTrackerModal() {
   document.getElementById('trackerModal').classList.add('hidden');
-  // Refresh profile if open to show updated batch dates
   const activeProfileId = document.getElementById('trackerPlantName').getAttribute('data-plant-id');
   if (state.currentTab === 'profile' && activeProfileId) {
-    showProfile(activeProfileId, true);
+    showProfile(activeProfileId);
   }
 }
-
-// ============================================================
-// IMAGE ZOOM LOGIC
-// ============================================================
-function openZoom(src) {
-  const modal = document.getElementById('zoomModal');
-  const img = document.getElementById('zoomedImage');
-  if (!modal || !img) return;
-  img.src = src;
-  modal.classList.remove('hidden');
-  document.body.style.overflow = 'hidden'; // Prevent scrolling
-  setTimeout(() => img.classList.remove('scale-95'), 10);
-}
-
-function closeZoom() {
-  const modal = document.getElementById('zoomModal');
-  const img = document.getElementById('zoomedImage');
-  if (!modal || !img) return;
-  img.classList.add('scale-95');
-  document.body.style.overflow = ''; // Restore scrolling
-  setTimeout(() => modal.classList.add('hidden'), 200);
-}
-
-// Handle Escape key for all modals
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeZoom();
-    closeTrackerModal();
-    closeWishlistModal();
-  }
-});
 
 function renderTracker(plantId) {
   const p = state.plants.find(x => x.id === plantId);
@@ -644,7 +748,6 @@ function renderTracker(plantId) {
     <h3 class="font-bold text-forest text-lg">Batches</h3>
     <button onclick="addTrackingBatch('${plantId}')" class="text-xs bg-terra text-white px-3 py-1.5 rounded-lg font-medium hover:bg-terra/90 transition-colors">+ Add New Batch</button>
   </div>`;
-// ... (rest of renderTracker logic)
   
   if (batches.length === 0) {
     h += `<p class="text-sm text-gray-400 italic text-center py-8 bg-gray-50 rounded-xl border border-dashed border-gray-200">No tracking data yet. Start a new batch to track your plant's progress!</p>`;
@@ -707,14 +810,13 @@ function renderTracker(plantId) {
       `).join('')}
     </div>`;
   }
-  
   container.innerHTML = h;
 }
 
-function addTrackingBatch(plantId) {
+async function addTrackingBatch(plantId) {
   if (!state.tracking[plantId]) state.tracking[plantId] = [];
   const nextBatchNum = state.tracking[plantId].length + 1;
-  state.tracking[plantId].push({
+  const newBatch = {
     batch: nextBatchNum,
     year: new Date().getFullYear(),
     location: 'indoors',
@@ -724,36 +826,97 @@ function addTrackingBatch(plantId) {
     trueLeavesAppearedDate: '',
     firstFlowerDate: '',
     firstFruitDate: ''
-  });
-  saveState();
-  renderTracker(plantId);
-}
-
-function updateTrackingBatch(plantId, index, field, value) {
-  if (!state.tracking[plantId] || !state.tracking[plantId][index]) return;
+  };
   
-  if (field === 'covered') {
-    state.tracking[plantId][index][field] = value === 'true';
-  } else if (field === 'batch' || field === 'year') {
-    state.tracking[plantId][index][field] = parseInt(value) || value;
-  } else {
-    state.tracking[plantId][index][field] = value;
+  if (state.user && state.gardenId) {
+    // 1. Ensure user_plant exists
+    let { data: up } = await supabaseClient.from('user_plants').select('id').eq('garden_id', state.gardenId).eq('plant_id', plantId).single();
+    if (!up) {
+      const { data: newUp } = await supabaseClient.from('user_plants').insert({ garden_id: state.gardenId, plant_id: plantId }).select().single();
+      up = newUp;
+    }
+    // 2. Insert tracker entry
+    const { data: t } = await supabaseClient.from('planting_tracker').insert({
+      user_plant_id: up.id,
+      batch_no: nextBatchNum,
+      year: newBatch.year,
+      location: newBatch.location,
+      covered: newBatch.covered
+    }).select().single();
+    newBatch.dbId = t.id;
+    newBatch.userPlantId = up.id;
   }
+
+  state.tracking[plantId].push(newBatch);
   saveState();
   renderTracker(plantId);
 }
 
-function deleteTrackingBatch(plantId, index) {
+async function updateTrackingBatch(plantId, index, field, value) {
+  const b = state.tracking[plantId]?.[index];
+  if (!b) return;
+
+  if (field === 'covered') b[field] = value === 'true';
+  else if (field === 'batch' || field === 'year') b[field] = parseInt(value) || value;
+  else b[field] = value;
+
+  if (state.user && b.dbId) {
+    const mapping = {
+      batch: 'batch_no', year: 'year', location: 'location', covered: 'covered',
+      seedPlantedDate: 'date_planted', seedlingAppearedDate: 'date_sprouted',
+      trueLeavesAppearedDate: 'date_true_leaves', firstFlowerDate: 'date_first_flower',
+      firstFruitDate: 'date_first_fruit'
+    };
+    const dbField = mapping[field] || field;
+    await supabaseClient.from('planting_tracker').update({ [dbField]: b[field] }).eq('id', b.dbId);
+  }
+  
+  saveState();
+  renderTracker(plantId);
+}
+
+async function deleteTrackingBatch(plantId, index) {
+  const b = state.tracking[plantId]?.[index];
+  if (!b) return;
+
   if (confirm('Are you sure you want to delete this tracking batch?')) {
+    if (state.user && b.dbId) {
+      await supabaseClient.from('planting_tracker').delete().eq('id', b.dbId);
+    }
     state.tracking[plantId].splice(index, 1);
-    state.tracking[plantId].forEach((b, i) => b.batch = i + 1);
+    state.tracking[plantId].forEach((batch, i) => {
+      batch.batch = i + 1;
+      if (state.user && batch.dbId) supabaseClient.from('planting_tracker').update({ batch_no: batch.batch }).eq('id', batch.dbId);
+    });
     saveState();
     renderTracker(plantId);
   }
 }
 
 // ============================================================
-// TIMELINE VIEW
+// MODAL: IMAGE ZOOM
+// ============================================================
+function openZoom(src) {
+  const modal = document.getElementById('zoomModal');
+  const img = document.getElementById('zoomedImage');
+  if (!modal || !img) return;
+  img.src = src;
+  modal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => img.classList.remove('scale-95'), 10);
+}
+
+function closeZoom() {
+  const modal = document.getElementById('zoomModal');
+  const img = document.getElementById('zoomedImage');
+  if (!modal || !img) return;
+  img.classList.add('scale-95');
+  document.body.style.overflow = '';
+  setTimeout(() => modal.classList.add('hidden'), 200);
+}
+
+// ============================================================
+// VIEW: TIMELINE
 // ============================================================
 function renderTimeline() {
   const plants = activePlants();
@@ -788,13 +951,12 @@ function renderTimeline() {
 
     for (const p of ps) {
       h += `<div class="grid border-b border-gray-50 hover:bg-gray-50/50" style="grid-template-columns: 160px repeat(12, 1fr);">`;
-      h += `<div class="p-2 text-xs font-medium text-gray-700 border-r border-gray-100 t2cate cursor-pointer hover:text-forest" onclick="showProfile('${p.id}')">${p.commonName}</div>`;
+      h += `<div class="p-2 text-xs font-medium text-gray-700 border-r border-gray-100 cursor-pointer hover:text-forest" onclick="showProfile('${p.id}')">${p.commonName}</div>`;
 
       const s = p.schedule || {};
       for (let m = 0; m < 12; m++) {
         const mName = monthName(m).toLowerCase();
         const mTasks = s[mName] || [];
-        
         h += `<div class="relative border-r border-gray-50 flex flex-col gap-0.5 p-0.5 ${m === curMIdx ? 'bg-red-50/30' : ''}">`;
         if (mTasks.length) {
           const types = new Set();
@@ -808,10 +970,8 @@ function renderTimeline() {
             else if (t.includes('🧣')) types.add('protect');
             else types.add('maintain');
           }
-          
           for (const type of types) {
-            const color = TASK_TYPES[type]?.barColor || '#d1d5db';
-            h += `<div class="h-1.5 w-full rounded-full" style="background:${color}" title="${mTasks.join(', ')}"></div>`;
+            h += `<div class="h-1.5 w-full rounded-full" style="background:${TASK_TYPES[type]?.barColor || '#d1d5db'}" title="${mTasks.join(', ')}"></div>`;
           }
         }
         h += '</div>';
@@ -823,11 +983,10 @@ function renderTimeline() {
 }
 
 // ============================================================
-// MY PLANTS VIEW
+// VIEW: MY PLANTS
 // ============================================================
 function renderPlants() {
   const catLabels = { all:'🌱 All', fruitveg:'🥗 Fruit & Veg', herb:'🌿 Herbs', flower:'🌸 Flowers', houseplant:'🏠 Houseplant' };
-
   document.getElementById('categoryFilters').innerHTML = ['all','fruitveg','herb','flower','houseplant'].map(c =>
     `<button onclick="state.categoryFilter='${c}';renderPlants()" class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${state.categoryFilter === c ? 'bg-forest text-white' : 'bg-white text-gray-600 hover:bg-leafPale'}">${catLabels[c]}</button>`
   ).join('');
@@ -837,7 +996,14 @@ function renderPlants() {
     if (state.categoryFilter === 'fruitveg') return p.category === 'fruit' || p.category === 'vegetable';
     return p.category === state.categoryFilter;
   });
-  document.getElementById('plantCount').textContent = `${plants.length} plant${plants.length !== 1 ? 's' : ''}`;
+  const totalInView = plants.length;
+  const growingInView = plants.filter(p => state.selectedPlants.has(p.id)).length;
+
+  if (growingInView > 0) {
+    document.getElementById('plantCount').textContent = `Growing ${growingInView} plants out of a possible ${totalInView}`;
+  } else {
+    document.getElementById('plantCount').textContent = `${totalInView} plant${totalInView !== 1 ? 's' : ''}`;
+  }
 
   document.getElementById('plantGrid').innerHTML = plants.map(p => {
     const isGrowing = state.selectedPlants.has(p.id);
@@ -857,132 +1023,86 @@ function renderPlants() {
   }).join('');
 }
 
-function togglePlant(id) {
+async function togglePlant(id) {
   if (state.selectedPlants.has(id)) {
     state.selectedPlants.delete(id);
+    if (state.user && state.gardenId) {
+      await supabaseClient.from('user_plants').delete().eq('garden_id', state.gardenId).eq('plant_id', id);
+    }
   } else {
     state.selectedPlants.add(id);
+    if (state.user && state.gardenId) {
+      await supabaseClient.from('user_plants').upsert({ garden_id: state.gardenId, plant_id: id, is_growing: true });
+    }
   }
   saveState(); renderPlants();
 }
 
 // ============================================================
-// WISHLIST VIEW
+// VIEW: WISHLIST
 // ============================================================
 function renderWishlist() {
   const grid = document.getElementById('wishlistGrid');
-  const allWishlist = [...(window.WISHLIST_DATA || []), ...state.wishlist];
-  const wishlistItems = allWishlist.filter(item => !state.hiddenWishlistItems.includes(item.id));
+  const wishlistItems = state.wishlist.filter(item => !state.hiddenWishlistItems.includes(item.id));
   
   if (!wishlistItems.length) {
-    grid.innerHTML = `<div class="col-span-full py-20 text-center">
-      <div class="text-6xl mb-4">✨</div>
-      <p class="text-gray-500">Your wishlist is empty. Add plants you'd like to grow!</p>
-    </div>`;
+    grid.innerHTML = `<div class="col-span-full py-20 text-center"><div class="text-6xl mb-4">✨</div><p class="text-gray-500">Your wishlist is empty. Add plants you'd like to grow!</p></div>`;
     return;
   }
 
-  grid.innerHTML = wishlistItems.map(item => {
-    const isAlreadyInPlants = state.plants.some(p => p.id === item.id);
-    return `<div onclick="editWishlistItem('${item.id}')" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group cursor-pointer hover:shadow-md transition-shadow">
+  grid.innerHTML = wishlistItems.map(item => `
+    <div onclick="editWishlistItem('${item.id}')" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group cursor-pointer hover:shadow-md transition-shadow">
       <div class="relative h-32">
         ${item.images?.plant ? `<img src="${item.images.plant}" alt="${item.commonName}" class="w-full h-full object-cover">` : `<div class="img-placeholder w-full h-full">${catEmoji(item.category)}</div>`}
-        <button onclick="event.stopPropagation();removeWishlistItem('${item.id}')" class="absolute top-2 right-2 p-1.5 bg-black/20 hover:bg-red-500 text-white rounded-full transition-colors opacity-0 group-hover:opacity-100 shadow-sm" title="Remove from wishlist">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-        </button>
+        <button onclick="event.stopPropagation();removeWishlistItem('${item.id}')" class="absolute top-2 right-2 p-1.5 bg-black/20 hover:bg-red-500 text-white rounded-full transition-colors opacity-0 group-hover:opacity-100 shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
       </div>
       <div class="p-3">
         <h3 class="font-semibold text-gray-800 text-sm">${item.commonName}</h3>
         <p class="text-[10px] text-forest font-medium mt-0.5 uppercase tracking-wider">${item.category}</p>
         ${item.notes ? `<p class="text-xs text-gray-500 mt-2 line-clamp-2 italic">"${item.notes}"</p>` : ''}
-        <button onclick="event.stopPropagation();moveToGrowing('${item.id}')" class="mt-3 w-full py-2 rounded-lg text-xs font-bold transition-colors bg-forest text-white hover:bg-forest/90">
-          + Move to Growing
-        </button>
+        <button onclick="event.stopPropagation();moveToGrowing('${item.id}')" class="mt-3 w-full py-2 rounded-lg text-xs font-bold transition-colors bg-forest text-white hover:bg-forest/90">+ Move to Growing</button>
       </div>
-    </div>`;
-  }).join('');
+    </div>`).join('');
 }
 
-function renderWeeds() {
-  const grid = document.getElementById('weedGrid');
-  const weeds = window.WEED_DATA || [];
-  
-  if (!weeds.length) {
-    grid.innerHTML = `<p class="col-span-full text-center text-gray-500 py-4">No weeds in the database yet.</p>`;
-    return;
-  }
-
-  grid.innerHTML = weeds.map(item => `
-    <div onclick="showProfile('${item.id}')" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group cursor-pointer hover:shadow-md transition-shadow">
-      <div class="relative h-32">
-        ${item.images?.plant ? `<img src="${item.images.plant}" alt="${item.commonName}" class="w-full h-full object-cover">` : `<div class="img-placeholder w-full h-full">🌿</div>`}
-      </div>
-      <div class="p-3">
-        <h3 class="font-semibold text-gray-800 text-sm">${item.commonName}</h3>
-        <div class="flex items-center gap-2 mt-0.5">
-          <p class="text-[10px] text-terra font-medium uppercase tracking-wider">WEED</p>
-        </div>
-        ${item.latinName ? `<p class="text-xs italic text-gray-400 mt-1">${item.latinName}</p>` : ''}
-      </div>
-    </div>
-  `).join('');
-}
-
-function moveToGrowing(id) {
-  const wishlistItems = [...(window.WISHLIST_DATA || []), ...state.wishlist];
-  const item = wishlistItems.find(i => i.id === id);
+async function moveToGrowing(id) {
+  const item = state.wishlist.find(i => i.id === id);
   if (!item) return;
 
-  // Add to localPlants if not in main plants list
-  if (!state.plants.some(p => p.id === item.id)) {
-    state.localPlants.push({
-      ...item,
-      id: item.id.startsWith('wish-') ? item.id.replace('wish-', 'local-') : item.id
-    });
-    // Update the ID in case it was a temp wish- ID
-    const newId = item.id.startsWith('wish-') ? item.id.replace('wish-', 'local-') : item.id;
-    state.selectedPlants.add(newId);
+  if (state.user && state.gardenId) {
+    await supabaseClient.from('user_plants').upsert({ garden_id: state.gardenId, plant_id: item.id, is_growing: true });
+    await supabaseClient.from('wishlist').delete().eq('id', id);
+    await syncState();
   } else {
     state.selectedPlants.add(item.id);
+    state.wishlist = state.wishlist.filter(i => i.id !== id);
+    saveState();
   }
-
-  // Remove from local wishlist if it was there
-  state.wishlist = state.wishlist.filter(i => i.id !== id);
-  
-  saveState();
-  // Re-sync state.plants
-  const basePlants = window.PLANT_DATA || [];
-  state.plants = [...basePlants, ...state.localPlants];
-  
-  switchTab('plants');
-  renderPlants();
-  
-  alert(`Moved ${item.commonName} to your plants! 🌱\nNote: To make this permanent and get full care guides, run 'plant ${item.commonName}' in Gemini CLI.`);
+  switchTab('plants'); renderPlants(); alert(`Moved ${item.commonName} to your plants! 🌱`);
 }
+
+function editWishlistItem(id) {
+  openWishlistModal(id);
+}
+
 
 function openWishlistModal(id = null) {
   const form = document.getElementById('wishlistForm');
-  const title = document.getElementById('wishlistModalTitle');
-  const submitBtn = document.getElementById('wishlistSubmitBtn');
-  
-  form.reset();
-  form.id.value = id || '';
-  
+  form.reset(); form.id.value = id || '';
   if (id) {
-    const item = state.wishlist.find(i => i.id === id) || (window.WISHLIST_DATA || []).find(i => i.id === id);
+    const item = state.wishlist.find(i => i.id === id);
     if (item) {
-      title.textContent = 'Edit Wishlist Plant';
-      submitBtn.textContent = 'Save Changes ✨';
+      document.getElementById('wishlistModalTitle').textContent = 'Edit Wishlist Plant';
+      document.getElementById('wishlistSubmitBtn').textContent = 'Save Changes ✨';
       form.commonName.value = item.commonName;
       form.category.value = item.category;
       form.imageUrl.value = item.images?.plant || '';
       form.notes.value = item.notes || '';
     }
   } else {
-    title.textContent = 'Add to Wishlist';
-    submitBtn.textContent = 'Add Plant ✨';
+    document.getElementById('wishlistModalTitle').textContent = 'Add to Wishlist';
+    document.getElementById('wishlistSubmitBtn').textContent = 'Add Plant ✨';
   }
-  
   document.getElementById('wishlistModal').classList.remove('hidden');
 }
 
@@ -992,112 +1112,79 @@ async function handleWishlistSubmit(event) {
   event.preventDefault();
   const form = event.target;
   const id = form.id.value;
-  const file = form.imageFile.files[0];
-  let imageUrl = form.imageUrl.value;
-
-  if (file) {
-    imageUrl = await new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result);
-      reader.readAsDataURL(file);
-    });
-  }
-
   const itemData = {
     commonName: form.commonName.value,
     category: form.category.value,
-    images: { plant: imageUrl || null },
+    images: { plant: form.imageUrl.value || null },
     notes: form.notes.value,
   };
 
-  if (id && id.startsWith('wish-')) {
-    const index = state.wishlist.findIndex(i => i.id === id);
-    if (index !== -1) {
-      state.wishlist[index] = { ...state.wishlist[index], ...itemData };
-    }
+  if (state.user) {
+    await supabaseClient.from('wishlist').upsert({
+      id: id.startsWith('wish-') ? undefined : id,
+      user_id: state.user.id,
+      common_name: itemData.commonName,
+      category: itemData.category,
+      image_url: itemData.images.plant,
+      notes: itemData.notes
+    });
   } else {
-    const newItem = {
-      id: 'wish-' + Date.now(),
-      ...itemData,
-      addedDate: new Date().toISOString()
-    };
-    state.wishlist.push(newItem);
-  }
-
-  saveState();
-  renderWishlist();
-  closeWishlistModal();
-}
-
-function editWishlistItem(id) {
-  if (id.startsWith('wish-')) {
-    openWishlistModal(id);
-  } else {
-    const globalItem = (window.WISHLIST_DATA || []).find(i => i.id === id);
-    if (globalItem) {
-      alert("This is a system-wide plant. To edit it, a local copy will be created.");
-      const newItem = {
-        ...globalItem,
-        id: 'wish-' + Date.now(),
-        addedDate: new Date().toISOString()
-      };
-      state.wishlist.push(newItem);
-      saveState();
-      renderWishlist();
-      openWishlistModal(newItem.id);
+    if (id && id.startsWith('wish-')) {
+      const idx = state.wishlist.findIndex(i => i.id === id);
+      if (idx !== -1) state.wishlist[idx] = { ...state.wishlist[idx], ...itemData };
+    } else {
+      state.wishlist.push({ id: 'wish-' + Date.now(), ...itemData });
     }
   }
+  await syncState(); saveState(); renderWishlist(); closeWishlistModal();
 }
 
 function removeWishlistItem(id) {
   if (!confirm('Remove this plant from your wishlist?')) return;
-  
-  // Remove from local wishlist if it exists there
-  state.wishlist = state.wishlist.filter(i => i.id !== id);
-  
-  // If it's a system plant (not starting with wish-), add to hidden list
-  if (!id.startsWith('wish-')) {
-    if (!state.hiddenWishlistItems.includes(id)) {
-      state.hiddenWishlistItems.push(id);
-    }
+  if (state.user) {
+    supabaseClient.from('wishlist').delete().eq('id', id).then(() => syncState().then(renderWishlist));
+  } else {
+    state.wishlist = state.wishlist.filter(i => i.id !== id);
+    saveState(); renderWishlist();
   }
-  
-  saveState();
-  renderWishlist();
 }
 
 // ============================================================
-// PLANT PROFILE
+// VIEW: WEEDS
+// ============================================================
+function renderWeeds() {
+  const weeds = state.plants.filter(p => p.category === 'weed');
+  document.getElementById('weedGrid').innerHTML = weeds.map(item => `
+    <div onclick="showProfile('${item.id}')" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group cursor-pointer hover:shadow-md transition-shadow">
+      <div class="relative h-32">
+        ${item.images?.plant ? `<img src="${item.images.plant}" alt="${item.commonName}" class="w-full h-full object-cover">` : `<div class="img-placeholder w-full h-full">🌿</div>`}
+      </div>
+      <div class="p-3">
+        <h3 class="font-semibold text-gray-800 text-sm">${item.commonName}</h3>
+        <p class="text-[10px] text-terra font-medium uppercase tracking-wider">WEED</p>
+        ${item.latinName ? `<p class="text-xs italic text-gray-400 mt-1">${item.latinName}</p>` : ''}
+      </div>
+    </div>`).join('');
+}
+
+// ============================================================
+// VIEW: PLANT PROFILE
 // ============================================================
 function showProfile(id) {
-  const p = state.plants.find(x => x.id === id) || (window.WEED_DATA || []).find(x => x.id === id);
+  const p = state.plants.find(x => x.id === id);
   if (!p) return;
-
   state.lastProfileId = id;
   const isWeed = p.category === 'weed';
   
-  // Update back buttons
   const backBtn = document.getElementById('profile-back-btn');
   const floatingBtn = document.getElementById('profile-floating-back-btn');
   const targetTab = isWeed ? 'weeds' : 'plants';
   const label = isWeed ? 'Back to Weeds' : 'Back to My Plants';
   
-  if (backBtn) {
-    backBtn.setAttribute('onclick', `switchTab('${targetTab}')`);
-    backBtn.querySelector('span').textContent = label;
-  }
-  if (floatingBtn) {
-    floatingBtn.setAttribute('onclick', `switchTab('${targetTab}')`);
-    floatingBtn.querySelector('span').textContent = label;
-  }
+  if (backBtn) { backBtn.setAttribute('onclick', `switchTab('${targetTab}')`); backBtn.querySelector('span').textContent = label; }
+  if (floatingBtn) { floatingBtn.setAttribute('onclick', `switchTab('${targetTab}')`); floatingBtn.querySelector('span').textContent = label; }
 
-  const ch = p.characteristics || {};
-  const s = p.schedule || {};
-  const ca = p.care || {};
-  const pr = p.propagation || {};
-  const dh = p.deadheading || {};
-  const ss = p.seedSaving || {};
-  const im = p.images || {};
+  const ch = p.characteristics || {}, s = p.schedule || {}, ca = p.care || {}, pr = p.propagation || {}, dh = p.deadheading || {}, ss = p.seedSaving || {}, im = p.images || {};
   const diffCol = { easy:'bg-green-100 text-green-700', moderate:'bg-amber-100 text-amber-700', challenging:'bg-red-100 text-red-700' };
 
   let h = `
@@ -1108,9 +1195,7 @@ function showProfile(id) {
         <div>
           <div class="flex items-center gap-2 flex-wrap">
             <h1 class="text-2xl font-bold text-forest">${p.commonName}</h1>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-leafPale text-forest border border-leafLight/30">
-              ${isWeed ? '🌿 WEED' : `${catEmoji(p.category)} ${p.category}`}
-            </span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-leafPale text-forest border border-leafLight/30">${isWeed ? '🌿 WEED' : `${catEmoji(p.category)} ${p.category}`}</span>
             ${((p.edible === true) || (p.edible && p.edible.isEdible)) && !isWeed ? `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-700 border border-amber-200">😋 Edible</span>` : ''}
           </div>
           ${p.latinName ? `<p class="text-sm italic text-gray-400 mt-1">${p.latinName}</p>` : ''}
@@ -1125,269 +1210,125 @@ function showProfile(id) {
   const imgs = Object.entries(im).filter(([_, v]) => v);
   if (imgs.length > 1) {
     const labels = { plant:'Plant', flower:'Flower', seedPod:'Seed Pod', seed:'Seeds', seedling:'Seedling', fruit:'Fruit' };
-    let sortOrder = ['plant', 'flower', 'seedPod', 'seed', 'fruit', 'seedling'];
-    imgs.sort((a, b) => sortOrder.indexOf(a[0]) - sortOrder.indexOf(b[0]));
-
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">📸 Gallery</h2>
-      <div class="grid grid-cols-3 md:grid-cols-5 gap-2">
-        ${imgs.map(([k, src]) => `<div class="text-center"><img src="${src}" alt="${k}" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openZoom('${src}')" onerror="this.parentElement.style.display='none'"><span class="text-[10px] text-gray-400 mt-1 block">${labels[k] || k}</span></div>`).join('')}
-      </div>
-    </div>`;
+    imgs.sort((a, b) => ['plant', 'flower', 'seedPod', 'seed', 'fruit', 'seedling'].indexOf(a[0]) - ['plant', 'flower', 'seedPod', 'seed', 'fruit', 'seedling'].indexOf(b[0]));
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4"><h2 class="font-bold text-forest mb-3">📸 Gallery</h2><div class="grid grid-cols-3 md:grid-cols-5 gap-2">${imgs.map(([k, src]) => `<div class="text-center"><img src="${src}" alt="${k}" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openZoom('${src}')" onerror="this.parentElement.style.display='none'"><span class="text-[10px] text-gray-400 mt-1 block">${labels[k] || k}</span></div>`).join('')}</div></div>`;
   }
 
-  const glance = [
-    ch.matureHeight && ['📏 Height', ch.matureHeight],
-    // ch.matureSpread && ['↔️ Spread', ch.matureSpread],
-    ch.sunRequirement && ['☀️ Sun', ch.sunRequirement],
-    ch.waterNeeds && ['💧 Water', ch.waterNeeds],
-    // ch.containerSize && ['🪴 Pot', ch.containerSize],
-    ch.lifespan && ['⏳ Lifespan', ch.lifespan],
-    ch.hardiness && ['❄️ Hardiness', ch.hardiness],
-    ch.habit && ['🌳 Habit', ch.habit],
-    ch.soilType && ['🏺 Soil', ch.soilType],
-    ch.pinchOutTops && ['✂️ Pinch Out', `${ch.pinchOutTops.required ? 'Yes' : 'No'} — ${ch.pinchOutTops.info}`],
-  ].filter(Boolean);
-
+  const glance = [ch.matureHeight && ['📏 Height', ch.matureHeight], ch.sunRequirement && ['☀️ Sun', ch.sunRequirement], ch.waterNeeds && ['💧 Water', ch.waterNeeds], ch.lifespan && ['⏳ Lifespan', ch.lifespan], ch.hardiness && ['❄️ Hardiness', ch.hardiness], ch.habit && ['🌳 Habit', ch.habit], ch.soilType && ['🏺 Soil', ch.soilType], ch.pinchOutTops && ['✂️ Pinch Out', `${ch.pinchOutTops.required ? 'Yes' : 'No'} — ${ch.pinchOutTops.info}`]].filter(Boolean);
   if (glance.length) {
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">📋 At a Glance</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
-        ${glance.map(([lbl, val]) => {
-          let displayVal = val;
-          if (lbl === '💧 Water') {
-            const lowMatch = val.toLowerCase().startsWith('low');
-            const medMatch = val.toLowerCase().startsWith('moderate');
-            const highMatch = val.toLowerCase().startsWith('high');
-
-            if (lowMatch || medMatch || highMatch) {
-              const label = lowMatch ? 'LOW' : (medMatch ? 'MED' : 'HIGH');
-              const bgColor = lowMatch ? 'bg-green-100' : (medMatch ? 'bg-amber-100' : 'bg-red-100');
-              const textColor = lowMatch ? 'text-green-700' : (medMatch ? 'text-amber-700' : 'text-red-700');
-              const borderColor = lowMatch ? 'border-green-200' : (medMatch ? 'border-amber-200' : 'border-red-200');
-
-              const cleanVal = val.replace(/^(low|moderate|high)\s*—\s*/i, '');
-              displayVal = `<div class="flex flex-col gap-1.5">
-                <span class="inline-flex items-center justify-center w-fit px-2 py-0.5 rounded-md text-[10px] font-black leading-none ${bgColor} ${textColor} border ${borderColor} tracking-wider">
-                  ${label}
-                </span>
-                <span class="leading-snug">${cleanVal}</span>
-              </div>`;
-            }
-          }          return `<div class="bg-gray-50 rounded-lg p-2.5"><span class="text-gray-400 text-xs block">${lbl}</span><span class="font-medium">${displayVal}</span></div>`;
-        }).join('')}
-      </div>
-    </div>`;
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4"><h2 class="font-bold text-forest mb-3">📋 At a Glance</h2><div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">${glance.map(([lbl, val]) => `<div class="bg-gray-50 rounded-lg p-2.5"><span class="text-gray-400 text-xs block">${lbl}</span><span class="font-medium">${val}</span></div>`).join('')}</div></div>`;
   }
 
-  if (p.category === 'flower' || p.category === 'fruit' || p.category === 'vegetable' || p.category === 'herb') {
-    const batches = state.tracking[id] || [];
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4 border-2 border-terra/20">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-2">
-          <span class="text-xl">📋</span>
-          <div>
-            <h2 class="font-bold text-forest">Planting Tracker</h2>
-            <p class="text-xs text-gray-500">Track seeds, sprouts, and harvests</p>
-          </div>
-        </div>
-        <button onclick="openTrackerModal('${id}')" class="bg-terra text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-terra/90 transition-colors">Open Tracker</button>
-      </div>
-      
-      ${batches.length > 0 ? `
-        <div class="space-y-2 border-t border-terra/10 pt-4">
-          <h3 class="text-[10px] font-bold uppercase text-gray-400 mb-2">Current Batches</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            ${batches.map((b, idx) => `
-              <button onclick="openTrackerModal('${id}')" class="flex items-center justify-between p-3 bg-terra/5 hover:bg-terra/10 border border-terra/10 rounded-lg transition-colors text-left">
-                <div class="min-w-0">
-                  <div class="text-xs font-bold text-terra">Batch ${b.batch} <span class="font-normal text-gray-400">(${b.year})</span></div>
-                  <div class="text-sm font-medium text-forest truncate">
-                    ${b.seedPlantedDate ? `Planted: ${b.seedPlantedDate}` : '<span class="text-gray-400 italic">No date set</span>'}
-                  </div>
-                </div>
-                <div class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded ${b.location === 'indoors' ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700'}">
-                  ${b.location === 'indoors' ? '🏠 Indoors' : '🌤️ Outdoors'}
-                </div>
-              </button>
-            `).join('')}
-          </div>
-        </div>
-      ` : ''}
-    </div>`;
+  const batches = state.tracking[id] || [];
+  if (!isWeed) {
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4 border-2 border-terra/20"><div class="flex items-center justify-between mb-4"><div class="flex items-center gap-2"><span class="text-xl">📋</span><div><h2 class="font-bold text-forest">Planting Tracker</h2><p class="text-xs text-gray-500">Track seeds, sprouts, and harvests</p></div></div><button onclick="openTrackerModal('${id}')" class="bg-terra text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-terra/90 transition-colors">Open Tracker</button></div>${batches.length > 0 ? `<div class="space-y-2 border-t border-terra/10 pt-4"><h3 class="text-[10px] font-bold uppercase text-gray-400 mb-2">Current Batches</h3><div class="grid grid-cols-1 sm:grid-cols-2 gap-2">${batches.map(b => `<button onclick="openTrackerModal('${id}')" class="flex items-center justify-between p-3 bg-terra/5 hover:bg-terra/10 border border-terra/10 rounded-lg transition-colors text-left"><div class="min-w-0"><div class="text-xs font-bold text-terra">Batch ${b.batch} <span class="font-normal text-gray-400">(${b.year})</span></div><div class="text-sm font-medium text-forest truncate">${b.seedPlantedDate ? `Planted: ${b.seedPlantedDate}` : '<span class="text-gray-400 italic">No date set</span>'}</div></div><div class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded ${b.location === 'indoors' ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700'}">${b.location === 'indoors' ? '🏠 Indoors' : '🌤️ Outdoors'}</div></button>`).join('')}</div></div>` : ''}</div>`;
   }
 
-  const hasSchedule = MONTH_NAMES.some(m => s[m]?.length);
+  const hasSchedule = ['january','february','march','april','may','june','july','august','september','october','november','december'].some(m => s[m]?.length);
   if (hasSchedule) {
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">📅 Growing Calendar</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm">
-        ${MONTH_NAMES.map((m, i) => {
-          const tasks = s[m] || [];
-          return `<div class="flex items-start gap-3 py-2 ${i < 10 ? 'border-b border-gray-50' : ''} ${tasks.length ? '' : 'opacity-40'}">
-            <span class="w-10 font-bold text-forest uppercase text-[10px] mt-1">${m.substring(0, 3)}</span>
-            <div class="flex-1">
-              ${tasks.length ? tasks.map(t => `<div class="text-gray-700 mb-1">${t}</div>`).join('') : '<span class="text-gray-400 italic">No tasks</span>'}
-            </div>
-          </div>`;
-        }).join('')}
-      </div>
-    </div>`;
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4"><h2 class="font-bold text-forest mb-3">📅 Growing Calendar</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm">${['january','february','march','april','may','june','july','august','september','october','november','december'].map((m, i) => {
+      const tasks = s[m] || [];
+      return `<div class="flex items-start gap-3 py-2 ${i < 11 ? 'border-b border-gray-50' : ''} ${tasks.length ? '' : 'opacity-40'}"><span class="w-10 font-bold text-forest uppercase text-[10px] mt-1">${m.substring(0, 3)}</span><div class="flex-1">${tasks.length ? tasks.map(t => `<div class="text-gray-700 mb-1">${t}</div>`).join('') : '<span class="text-gray-400 italic">No tasks</span>'}</div></div>`;
+    }).join('')}</div></div>`;
   }
 
-  const careItems = [
-    [ca.sowIndoors, 'sowIndoors', 'Sow Indoors'],
-    [ca.sowOutdoors, 'sowOutdoors', 'Sow Outdoors'],
-    [ca.hardenOff, 'hardenOff', 'Harden Off'],
-    [ca.plantOut, 'plantOut', 'Plant Out'],
-    [ca.watering, null, 'Watering', '💧'],
-    [ca.feeding, null, 'Feeding', '🧪'],
-    [ca.harvest, 'harvest', 'Harvest'],
-    [ca.overwintering, 'protect', 'Overwintering'],
-  ].filter(([v]) => v);
-
+  const careItems = [[ca.sowIndoors, 'sowIndoors', 'Sow Indoors'], [ca.sowOutdoors, 'sowOutdoors', 'Sow Outdoors'], [ca.hardenOff, 'hardenOff', 'Harden Off'], [ca.plantOut, 'plantOut', 'Plant Out'], [ca.watering, null, 'Watering', '💧'], [ca.feeding, null, 'Feeding', '🧪'], [ca.harvest, 'harvest', 'Harvest'], [ca.overwintering, 'protect', 'Overwintering']].filter(([v]) => v);
   if (careItems.length) {
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">🌱 How to Grow</h2>
-      <div class="space-y-3 text-sm">
-        ${careItems.map(([text, type, label, icon]) => `<div class="flex gap-3"><span class="text-lg shrink-0">${icon || TASK_TYPES[type]?.icon || '🌱'}</span><div><strong class="text-gray-700">${label}</strong><p class="text-gray-600 mt-0.5">${text}</p></div></div>`).join('')}
-      </div>
-    </div>`;
+    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4"><h2 class="font-bold text-forest mb-3">🌱 How to Grow</h2><div class="space-y-3 text-sm">${careItems.map(([text, type, label, icon]) => `<div class="flex gap-3"><span class="text-lg shrink-0">${icon || TASK_TYPES[type]?.icon || '🌱'}</span><div><strong class="text-gray-700">${label}</strong><p class="text-gray-600 mt-0.5">${text}</p></div></div>`).join('')}</div></div>`;
   }
 
-  if (pr.fromSeed || pr.fromCuttings || pr.fromDivision) {
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">🧬 Propagation</h2>
-      <div class="space-y-3 text-sm">
-        ${pr.fromSeed ? `<div><strong class="text-gray-700">From Seed</strong>${pr.seedDescription ? `<p class="text-gray-600 mt-0.5">${pr.seedDescription}</p>` : ''}${pr.germinationDays ? `<p class="text-gray-500 text-xs mt-1">⏱️ ${pr.germinationDays}</p>` : ''}</div>` : ''}
-        ${pr.fromCuttings && pr.cuttingsMethod ? `<div><strong class="text-gray-700">From Cuttings</strong><p class="text-gray-600 mt-0.5">${pr.cuttingsMethod}</p></div>` : ''}
-        ${pr.fromDivision && pr.divisionMethod ? `<div><strong class="text-gray-700">By Division</strong><p class="text-gray-600 mt-0.5">${pr.divisionMethod}</p></div>` : ''}
-      </div>
-    </div>`;
-  }
-
-  if (dh.notes) {
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">✂️ Deadheading</h2>
-      <div class="flex items-start gap-2 text-sm">
-        <span class="px-2 py-0.5 rounded-full text-xs font-medium ${dh.required ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700'}">${dh.required ? 'Yes' : 'Not needed'}</span>
-        <p class="text-gray-600">${dh.notes}</p>
-      </div>
-    </div>`;
-  }
-
-  if (ss.method) {
-    const seedImg = im.seed;
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3 ${seedImg ? 'cursor-pointer hover:text-leaf transition-colors flex items-center gap-2' : ''}" 
-          ${seedImg ? `onclick="openZoom('${seedImg}')" title="Click to view seed image"` : ''}>
-        <span>🫘 Seed Saving</span>
-        ${seedImg ? '<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>' : ''}
-      </h2>
-      <div class="text-sm text-gray-600 space-y-1">
-        <p>${ss.method}</p>
-        ${ss.seedPodDescription ? `<p class="text-xs text-gray-500">${ss.seedPodDescription}</p>` : ''}
-      </div>
-    </div>`;
-  }
-
-  if (p.varieties?.length) {
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">🏷️ Varieties</h2>
-      <div class="flex flex-wrap gap-2">${p.varieties.map(v => `<span class="bg-leafPale text-forest px-3 py-1 rounded-full text-sm">${v}</span>`).join('')}</div>
-    </div>`;
-  }
-
-  if (p.companionPlants?.length) {
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">🤝 Companions</h2>
-      <div class="flex flex-wrap gap-2">${p.companionPlants.map(cp => {
-        const c = state.plants.find(x => x.id === cp);
-        return c ? `<button onclick="showProfile('${cp}')" class="bg-white border border-leafLight text-forest px-3 py-1 rounded-full text-sm hover:bg-leafPale">${c.commonName}</button>` : `<span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">${cp}</span>`;
-      }).join('')}</div>
-    </div>`;
-  }
-
-  if (p.troubleshooting?.length) {
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">Troubleshooting</h2>
-      <ul class="space-y-2 text-sm text-gray-600">${p.troubleshooting.map(x => `<li class="flex gap-2"><span class="text-amber-500 shrink-0">•</span>${x}</li>`).join('')}</ul>
-    </div>`;
-  }
-
-  if (p.usage) {
-    h += `<div class="bg-white rounded-xl p-5 shadow-sm mb-4">
-      <h2 class="font-bold text-forest mb-3">🌿 Herbal Medicine</h2>
-      <p class="text-sm text-gray-600 leading-relaxed">${p.usage}</p>
-    </div>`;
-  }
-
-  if (p.funFact) {
-    h += `<div class="bg-leafPale/50 rounded-xl p-5 mb-4 border border-leafLight/30">
-      <h2 class="font-bold text-forest mb-2">💡 Did You Know?</h2>
-      <p class="text-sm text-gray-700">${p.funFact}</p>
-      ${im.didYouKnow ? `<img src="${im.didYouKnow}" alt="Did you know?" class="mt-3 rounded-xl w-full cursor-zoom-in hover:opacity-95 transition-opacity" onclick="openZoom('${im.didYouKnow}')">` : ''}
-    </div>`;
-  }
-
-  document.getElementById('profileContent').innerHTML = h;
-  switchTab('profile');
+  document.getElementById('profileContent').innerHTML = h; switchTab('profile');
 }
 
 // ============================================================
-// TAB SWITCHING
+// UI HELPERS
 // ============================================================
 function switchTab(tab) {
   state.currentTab = tab;
   document.querySelectorAll('[id^="view-"]').forEach(el => el.classList.add('hidden'));
   document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('bg-cream','text-forest'); b.classList.add('text-leafLight'); });
-
-  const view = document.getElementById(`view-${tab}`);
-  if (view) view.classList.remove('hidden');
-
-  let activeTabBtnId = `tab-${tab}`;
-  if (tab === 'profile') {
-    const p = state.plants.find(x => x.id === state.lastProfileId) || (window.WEED_DATA || []).find(x => x.id === state.lastProfileId);
-    activeTabBtnId = (p && p.category === 'weed') ? 'tab-weeds' : 'tab-plants';
-  }
-  
-  const btn = document.getElementById(activeTabBtnId);
-  if (btn) { btn.classList.add('bg-cream','text-forest'); btn.classList.remove('text-leafLight'); }
-
-  if (tab === 'week') renderWeek();
-  if (tab === 'timeline') renderTimeline();
-  if (tab === 'plants') renderPlants();
-  if (tab === 'wishlist') renderWishlist();
-  if (tab === 'weeds') renderWeeds();
-
+  const view = document.getElementById(`view-${tab}`); if (view) view.classList.remove('hidden');
+  let btnId = `tab-${tab}`; if (tab === 'profile') { const p = state.plants.find(x => x.id === state.lastProfileId); btnId = (p && p.category === 'weed') ? 'tab-weeds' : 'tab-plants'; }
+  const btn = document.getElementById(btnId); if (btn) { btn.classList.add('bg-cream','text-forest'); btn.classList.remove('text-leafLight'); }
+  if (tab === 'week') renderWeek(); if (tab === 'timeline') renderTimeline(); if (tab === 'plants') renderPlants(); if (tab === 'wishlist') renderWishlist(); if (tab === 'weeds') renderWeeds();
   window.scrollTo(0, 0);
 }
 
-function closeWelcome() {
+async function closeWelcome() {
   document.getElementById('welcomeModal').classList.add('hidden');
   state.welcomeShown = true;
+  if (state.user) {
+    await supabaseClient.from('profiles').update({ welcome_shown: true }).eq('id', state.user.id);
+  }
   saveState();
+}
+
+// ============================================================
+// SUPABASE AUTH
+// ============================================================
+function openAuthModal() { state.authMode = 'login'; updateAuthModalUI(); document.getElementById('authModal').classList.remove('hidden'); }
+function closeAuthModal() { document.getElementById('authModal').classList.add('hidden'); }
+function toggleAuthMode() { state.authMode = state.authMode === 'login' ? 'signup' : 'login'; updateAuthModalUI(); }
+function updateAuthModalUI() {
+  const title = document.getElementById('authModalTitle'), submitBtn = document.getElementById('authSubmitBtn'), switchText = document.getElementById('authSwitchText'), switchBtn = document.getElementById('authSwitchBtn');
+  document.getElementById('authError').classList.add('hidden');
+  if (state.authMode === 'login') { title.textContent = 'Login'; submitBtn.textContent = 'Send Magic Link'; switchText.textContent = "Don't have an account?"; switchBtn.textContent = 'Sign Up'; }
+  else { title.textContent = 'Sign Up'; submitBtn.textContent = 'Create Account'; switchText.textContent = "Already have an account?"; switchBtn.textContent = 'Login'; }
+}
+
+async function handleAuthSubmit(event) {
+  event.preventDefault();
+  const email = event.target.email.value, errorEl = document.getElementById('authError'), submitBtn = document.getElementById('authSubmitBtn');
+  if (!supabaseClient) return alert('Supabase not configured.');
+  submitBtn.disabled = true; submitBtn.textContent = 'Processing...'; errorEl.classList.add('hidden');
+  try {
+    const { error } = await supabaseClient.auth.signInWithOtp({ email });
+    if (error) { errorEl.textContent = error.message; errorEl.classList.remove('hidden'); }
+    else { alert('Magic Link sent! Check your email.'); closeAuthModal(); }
+  } catch (e) { errorEl.textContent = 'Error occurred.'; errorEl.classList.remove('hidden'); }
+  finally { submitBtn.disabled = false; updateAuthModalUI(); }
+}
+
+async function handleLogout() { await supabaseClient.auth.signOut(); window.location.reload(); }
+
+async function updateUserGreeting() {
+  const greetingEl = document.getElementById('userGreeting'); greetingEl.classList.remove('hidden');
+  const loginBtn = 'Hello - <button onclick="openAuthModal()" class="hover:text-white underline decoration-leafLight decoration-2 underline-offset-4">Login</button>';
+  if (!supabaseClient) { greetingEl.innerHTML = loginBtn; return; }
+  const { data: { user } } = await supabaseClient.auth.getUser();
+  if (user) {
+    const { data: profile } = await supabaseClient.from('profiles').select('display_name').eq('id', user.id).single();
+    greetingEl.innerHTML = `Hello ${profile?.display_name || user.email.split('@')[0]}! <button onclick="handleLogout()" class="text-[10px] uppercase font-bold text-leafLight hover:text-white ml-2 opacity-60">Logout</button>`;
+  } else { greetingEl.innerHTML = loginBtn; }
+}
+
+async function detectLocation() {
+  try {
+    const res = await fetch('https://ipapi.co/json/');
+    const data = await res.json();
+    if (data.city && data.country_name) {
+      const locStr = `📍 ${data.city}, ${data.country_name}`;
+      document.querySelector('.text-leafLight.text-xs').textContent = locStr;
+      if (state.user) {
+        await supabaseClient.from('profiles').update({ location_name: locStr }).eq('id', state.user.id);
+      }
+    }
+  } catch (e) { console.error('Location detection failed:', e); }
 }
 
 // ============================================================
 // INIT
 // ============================================================
-function init() {
-  loadState();
-  const now = new Date();
-  state.viewWeek = getISOWeek(now);
+async function init() {
+  loadLocalState();
+  await syncState();
+  updateUserGreeting();
+  detectLocation();
+  const now = new Date(); state.viewWeek = getISOWeek(now);
   document.getElementById('currentDate').textContent = `Week ${state.viewWeek} — ${now.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}`;
-
-  const basePlants = loadPlants();
-  state.plants = [...basePlants, ...state.localPlants];
-  
+  state.plants = await fetchPlants();
   document.getElementById('loading').classList.add('hidden');
-
-  if (!state.plants.length) {
-    document.getElementById('empty-state').classList.remove('hidden');
-    return;
-  }
-
+  if (!state.plants.length) { document.getElementById('empty-state').classList.remove('hidden'); return; }
   if (!state.welcomeShown) document.getElementById('welcomeModal').classList.remove('hidden');
   switchTab('plants');
 }
