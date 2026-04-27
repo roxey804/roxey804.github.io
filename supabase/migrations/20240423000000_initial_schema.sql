@@ -1,6 +1,6 @@
 -- 0. Custom ENUM Types
 CREATE TYPE plant_category AS ENUM ('herb', 'vegetable', 'fruit', 'flower', 'houseplant', 'weed');
-CREATE TYPE tracker_location AS ENUM ('indoors', 'outdoors');
+CREATE TYPE tracker_location AS ENUM ('indoors', 'outdoors', '9EL balcony', '6EL balcony', '2nd floor balcony');
 
 -- 1. Master Plants Table (Shared/Read-Only for users)
 CREATE TABLE plants (

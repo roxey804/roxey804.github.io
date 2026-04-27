@@ -791,9 +791,12 @@ function renderTracker(plantId) {
               <select onchange="updateTrackingBatch('${plantId}', ${idx}, 'location', this.value)" class="bg-white border border-gray-200 rounded px-2 py-1.5 text-sm outline-none focus:ring-1 focus:ring-terra w-full">
                 <option value="indoors" ${b.location === 'indoors' ? 'selected' : ''}>🏠 Indoors</option>
                 <option value="outdoors" ${b.location === 'outdoors' ? 'selected' : ''}>🌤️ Outdoors</option>
+                <option value="9EL balcony" ${b.location === '9EL balcony' ? 'selected' : ''}>🏙️ 9EL Balcony</option>
+                <option value="6EL balcony" ${b.location === '6EL balcony' ? 'selected' : ''}>🏙️ 6EL Balcony</option>
+                <option value="2nd floor balcony" ${b.location === '2nd floor balcony' ? 'selected' : ''}>🏙️ 2nd Floor Balcony</option>
               </select>
             </div>
-            <div class="${b.location === 'outdoors' ? '' : 'hidden'}">
+            <div class="${(b.location === 'outdoors' || b.location.includes('balcony')) ? '' : 'hidden'}">
               <label class="block text-[10px] font-bold uppercase text-gray-400 mb-1">Covered?</label>
               <label class="flex items-center gap-2 cursor-pointer mt-2">
                 <input type="checkbox" ${b.covered ? 'checked' : ''} onchange="updateTrackingBatch('${plantId}', ${idx}, 'covered', this.checked ? 'true' : 'false')" class="w-5 h-5 rounded border-gray-300 text-terra focus:ring-terra">

@@ -1,0 +1,112 @@
+{
+  "id": "jasminum-polyanthum",
+  "commonName": "Pink Jasmine",
+  "latinName": "Jasminum polyanthum",
+  "family": "Oleaceae",
+  "category": "flower",
+  "edible": false,
+  "variety": "",
+  "description": "A highly fragrant, vigorous evergreen climber native to China. It produces masses of white, star-shaped flowers that emerge from pink buds in late winter and spring. In the UK, it is often grown as a houseplant or in a conservatory due to its tender nature, but can be enjoyed outdoors in summer.",
+  "images": {
+    "plant": "images/jasminum-polyanthum/plant.jpg",
+    "flower": "images/jasminum-polyanthum/flower.jpg",
+    "seedling": "images/jasminum-polyanthum/seedling.jpg",
+    "seed": "images/jasminum-polyanthum/seed.jpg"
+  },
+  "characteristics": {
+    "matureHeight": "Up to 6m",
+    "matureSpread": "Up to 3m",
+    "hardiness": "Tender (RHS H2) \u2014 minimum 1\u00b0C to 5\u00b0C",
+    "lifespan": "Perennial climber",
+    "sunRequirement": "Bright filtered light or full sun",
+    "waterNeeds": "Moderate \u2014 keep moist but well-drained",
+    "soilType": "Well-drained, loam-based compost",
+    "containerSize": "10L+ pot with support"
+  },
+  "schedule": {
+    "january": [],
+    "february": [
+      "\ud83c\udf38 Flowering begins (indoors)"
+    ],
+    "march": [
+      "\ud83c\udf38 Peak flowering",
+      "\u2702\ufe0f Prune after flowering ends"
+    ],
+    "april": [
+      "\ud83c\udf38 Flowering continues",
+      "\u2702\ufe0f Prune after flowering ends"
+    ],
+    "may": [
+      "\ud83e\udeb4 Move outdoors to a sheltered spot (after frost)",
+      "\u2702\ufe0f Prune if not yet done"
+    ],
+    "june": [
+      "\ud83e\udeb4 Move outdoors",
+      "\ud83e\udeb4 Feed every two weeks"
+    ],
+    "july": [
+      "\ud83e\udeb4 Feed every two weeks",
+      "\ud83c\udf3f Take semi-ripe cuttings"
+    ],
+    "august": [
+      "\ud83e\udeb4 Feed every two weeks",
+      "\ud83c\udf3f Take semi-ripe cuttings"
+    ],
+    "september": [
+      "\ud83e\udeb4 Reduce feeding"
+    ],
+    "october": [
+      "\ud83c\udfe0 Move indoors before first frost (Wk 44)",
+      "\ud83d\udca7 Reduce watering"
+    ],
+    "november": [
+      "\ud83c\udfe0 Keep cool and bright indoors"
+    ],
+    "december": [
+      "\ud83c\udfe0 Keep cool (approx 10\u00b0C) to encourage flower buds"
+    ],
+    "frostSensitive": true
+  },
+  "care": {
+    "sowIndoors": "Rarely grown from seed in the UK. Propagate from cuttings instead.",
+    "sowOutdoors": "Not recommended.",
+    "hardenOff": "Acclimatise to outdoor conditions in May by placing in a sheltered spot for a few hours daily.",
+    "plantOut": "Grow in a large pot with a trellis or hoop support. If planting in a conservatory, use well-drained loam-based compost.",
+    "watering": "Water regularly during the growing season (spring/summer). In winter, allow the top of the soil to dry out between waterings.",
+    "feeding": "Apply a balanced liquid fertiliser every two weeks from spring to early autumn.",
+    "harvest": "Pick flowers for indoor fragrance or to press. Not typically harvested for food.",
+    "overwintering": "Must be kept frost-free. A cool, bright room or conservatory is ideal. Temperatures around 10\u00b0C in autumn help initiate flower buds."
+  },
+  "propagation": {
+    "fromSeed": false,
+    "seedDescription": "Rarely produced in the UK.",
+    "germinationDays": "N/A",
+    "fromCuttings": true,
+    "cuttingsMethod": "Take semi-ripe cuttings in summer (July-August). Select a healthy stem and cut just below a leaf node. Use rooting hormone and provide bottom heat if possible."
+  },
+  "deadheading": {
+    "required": false,
+    "info": "Not strictly required for blooming, but remove spent flowers to keep the plant tidy."
+  },
+  "seedSaving": {
+    "canSaveSeeds": false,
+    "method": "N/A"
+  },
+  "companionPlants": [
+    "Lavender",
+    "Clematis",
+    "Roses"
+  ],
+  "troubleshooting": [
+    "Red spider mite \u2014 common in dry indoor air. Mist regularly.",
+    "Aphids \u2014 check new growth.",
+    "Mealybugs \u2014 look for white cottony tufts."
+  ],
+  "funFact": "The buds are pink, but the flowers open to a brilliant white, giving the plant its name 'Pink Jasmine'.",
+  "milestones": {
+    "2026": {
+      "firstFlowerDate": "",
+      "firstFruitDate": ""
+    }
+  }
+}
